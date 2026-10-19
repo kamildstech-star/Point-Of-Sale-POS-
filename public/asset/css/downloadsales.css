@@ -1,0 +1,45 @@
+.table th{
+    vertical-align: middle;
+    background-color: #1d1d50;
+    color:white
+}
+#sale-data td{
+    vertical-align: middle;
+}
+#sale-data .fetchedschool{
+    max-width: 30%;
+    flex-wrap: wrap;
+}
+.card.saletable{
+    display:none;
+    margin-top: 1rem !important;
+}
+.container .card .card-header{
+    background-color: #1d1d50;
+    color:white;
+}
+.container .card .card-body .btn.checkbtn {
+    background-color: rgb(223, 197, 148);
+    font-weight:600;
+    margin-top:30px;
+    outline:none;
+}
+.container .download .downloadbtn{
+    background-color:rgb(223, 197, 148);
+    font-weight:bold;
+}
+.container .download{
+    display: none;
+}
+.container .card .card-footer{
+    background-color: #1d1d50;
+    color:white;    
+    text-align: right;
+}
+.container .card .card-footer label{
+    text-align: right;
+}
+.container .downloadWrapper{
+    display: flex;
+    justify-content: end;
+}

@@ -1,0 +1,30 @@
+.card-body .search-area .search{
+    border-radius: .25rem 0 0 .25rem;
+}
+ .card-body .search-area .fa-search{
+    border-radius: 0 6px 6px 0;
+    font-size: 20px;
+    padding: 10px 10px 0 12px;
+    height: 38px;
+    background-color: rgb(223, 197, 148);
+    cursor: pointer;
+}
+ .card-body .search-area button{
+    border: inherit;
+    padding: inherit;
+    background-color: inherit;
+    cursor: pointer;
+}
+.card .card-body .table .date-th{
+    width: 11%;
+}
+.card .card-body .table .description-th{
+    width: 40%;
+}
+.card .card-body .table .balanceType-th{
+    width: 12%;
+}
+.card .card-body .table .balance-th{
+    width: 20%;
+}
+

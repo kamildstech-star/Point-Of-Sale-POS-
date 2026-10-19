@@ -1,0 +1,36 @@
+.container .card .card-header{
+    background-color: #1d1d50;
+    color:white
+}
+.container .card .card-body .checkAllStock{
+    width:150px;
+    background-color: rgb(223, 197, 148);
+    font-weight:600;
+    margin-top:30px;
+    outline:none;
+}
+.container .card .card-body .checkLowStock{
+    background-color: rgb(223, 197, 148);
+    font-weight:600;
+    margin-top:30px;
+    outline:none;
+}
+
+.container .downloadWrapper{
+    display:flex;
+    justify-content: end;
+}
+.container .downloadWrapper .downloadbtn{
+    display:none;
+    background-color:rgb(223, 197, 148);
+    font-weight: bold;
+
+}
+.saletable{
+    margin-top: 1rem !important;
+}
+.saletable .table th{
+    background-color: #1d1d50;
+    color:white
+}
+

@@ -1,0 +1,115 @@
+.items-container .items-row .total-wrapper{
+    flex: 0 0 12%;
+    max-width: 12%;
+}
+.items-container .items-row .return-wrapper{
+    max-width: 7.3%;
+    padding-left: 0px;
+}
+.items-container .items-row .price-wrapper{
+    flex: 0 0 12.3%;
+    max-width: 12.3%;
+}
+.items-container .items-row .discount-wrapper{
+    flex: 0 0 10%;
+    max-width: 10%;
+}
+.totalCalculation{
+    border-bottom: 1px solid #ced4da;
+}
+.container .card-header .search-area .search{
+    border-radius: .25rem 0 0 .25rem;
+}
+.container .card-header .search-area .fa-search{
+    border-radius: 0 6px 6px 0;
+    font-size: 20px;
+    padding: 10px 10px 0 12px;
+    height: 38px;
+    background-color: rgb(223, 197, 148);
+    cursor: pointer;
+}
+
+.order-not-found{
+    text-align: center;
+}
+
+.return.na{
+        border:2px solid red !important;
+        padding: 6px 10px;
+        background-color: #e9ecef;
+        opacity: 1;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        width: 105%;
+        display:none;
+}
+.return{
+    border:2px solid red !important;
+    width: 110% !important;
+}
+
+.container .card .card-header{
+    background-color: #1d1d50;
+    color:white
+}
+.container .card .card-footer .btn{
+
+    background-color: rgb(223, 197, 148);
+    font-weight:600;
+    color: black;
+    
+}
+.container .card .card-footer{
+
+    background-color: #1d1d50;
+    text-align: right;
+
+
+    
+}
+
+.items-row .col-md-2.school-col{
+    padding-right: 5px;
+    padding-left: 3px;
+    max-width: 13% !important;
+
+}
+.items-row .col-md-2.product-col{
+    padding-right: 3px;
+    padding-left: 3px;
+    max-width: 12% !important;
+
+
+}
+.items-row .col-md-1.size-col{
+    padding-right: 3px;
+    padding-left: 3px;
+
+}
+.items-row .col-md-1.discount-wrapper{
+    padding-right: 3px;
+    padding-left: 3px;
+
+}
+.items-row .col-md-1.price-wrapper{
+    padding-right: 3px;
+    padding-left: 3px;
+    max-width: 10% !important;
+
+
+}
+.items-row .col-md-2.total-wrapper{
+    padding-right: 3px;
+    padding-left: 3px;
+
+}
+.items-row .col-md-1.quantity-col{
+    padding-right: 3px;
+    padding-left: 3px;
+
+}
+.items-row .col-md-1.returned-col{
+    padding-right: 3px;
+    padding-left: 3px;
+
+}

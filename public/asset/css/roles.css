@@ -1,0 +1,10 @@
+.container .card .card-header{
+    background-color: #1d1d50;
+    color: white;
+}
+.container .card .card-footer{
+    background-color: #1d1d50;
+    text-align: right;
+
+}
+
