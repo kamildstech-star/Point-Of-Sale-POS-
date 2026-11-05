@@ -1,0 +1,11 @@
+# HTTPS staging handoff
+
+Deploy the frontend build from `POS Frontend/dist` and point Laravel's document root at `POS backend/public`. Both processes must share one browser origin, routing `/api/*` and `/sanctum/*` to Laravel and React paths to `index.html`. An example Nginx server fragment is in `deploy/nginx-staging.conf.example`; substitute real paths, hostname and certificate files before use. Keep the existing legacy POS on its existing vhost until cutover.
+
+In staging configuration, set `APP_ENV=staging`, `APP_DEBUG=false`, `APP_URL=https://your-staging-host`, `SESSION_SECURE_COOKIE=true`, `SESSION_HTTP_ONLY=true`, `SESSION_SAME_SITE=lax`, and `SPA_ALLOWED_ORIGINS=https://your-staging-host`. `SANCTUM_STATEFUL_DOMAINS` contains hostnames with ports where applicable, never schemes. For a same-origin deployment leave `SESSION_DOMAIN` unset and `VITE_API_URL` empty. Preserve the established `APP_KEY`. Use a private staging database restored from an approved backup and a working session/cache driver. Never copy production outbound service behavior into staging.
+
+If TLS terminates at an upstream proxy, configure only the actual trusted proxies in Laravel infrastructure configuration so HTTPS detection and secure cookies are reliable. Do not blindly trust arbitrary forwarded headers. Ensure backend files outside `public` are inaccessible. Run PHP workers with only required write access to `storage` and `bootstrap/cache`.
+
+Before acceptance, use an actual browser under HTTPS to verify: guest redirect; valid staff login; invalid login; no customer login; XSRF cookie initialization and rejected missing CSRF; HttpOnly secure session cookie; session rotation; reload persistence; permitted/denied menu items; disabled business picker; rejected arbitrary tenant switch; connection-error retry; unknown route; POST logout; rejected reuse of the old session; and no credentialed CORS access from another origin. Repeat at mobile and desktop widths. Record results and staging URL in the blueprint tracker.
+
+The user confirmed that no staging server is available yet. The implementation and example configuration are prepared locally; no public deployment is claimed. Supply a staging server, hostname and certificates when that environment is ready.

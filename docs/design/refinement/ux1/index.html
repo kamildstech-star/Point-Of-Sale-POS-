@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Universal POS — UX-1 design review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fb;color:#1e293b;font:14px/1.5 system-ui,sans-serif;padding:24px}h1{font-size:24px}h2{font-size:18px;margin-top:32px}p{max-width:900px}a{color:#1d4ed8}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}figure{margin:0;border:1px solid #cbd5e1;border-radius:8px;background:white;overflow:hidden}figcaption{padding:12px;font-weight:600}img{display:block;width:100%;height:auto}@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+<h1>UX-1 — Navigation and dashboard hierarchy</h1>
+<p>Review the grouped sidebar, business context, collapsed/mobile navigation and dashboard priorities. These screenshots use synthetic data. Select an image to inspect its full size.</p>
+<p><a href="../../../UX1_REFINEMENT.md">Implementation and verification</a> · <a href="../../../UI_UX_REFINEMENT_AUDIT.md">Audit and prioritized plan</a></p>
+<main id="gallery"></main>
+<script>
+const views=[
+['Owner dashboard','before/dashboard-light-1440.png','after/dashboard-light-1440.png','after/dashboard-dark-1440.png'],
+['Product list shell','before/products-light-1440.png','after/products-light-1440.png','after/products-dark-1440.png'],
+['Mobile dashboard','before/dashboard-light-360.png','after/dashboard-light-360.png','after/dashboard-dark-360.png'],
+['Collapsed navigation',null,'after/sidebar-collapsed-light.png','after/sidebar-collapsed-dark.png'],
+['Navigation drawer',null,'after/navigation-drawer-light.png','after/navigation-drawer-dark.png'],
+['Business switcher',null,'after/business-switcher-light.png','after/business-switcher-dark.png'],
+['Manager dashboard',null,'staff/manager-light-1440.png','staff/manager-dark-1440.png'],
+['Cashier dashboard',null,'staff/cashier-light-1440.png','staff/cashier-dark-1440.png']
+];
+for(const [label,...files] of views){const section=document.createElement('section'),heading=document.createElement('h2'),grid=document.createElement('div');heading.textContent=label;grid.className='grid';section.append(heading,grid);files.forEach((file,i)=>{if(!file)return;const figure=document.createElement('figure'),caption=document.createElement('figcaption'),link=document.createElement('a'),img=document.createElement('img');caption.textContent=['Before','Updated light','Updated dark'][i];link.href=file;img.src=file;img.alt=label+' — '+caption.textContent;img.loading='lazy';link.append(img);figure.append(caption,link);grid.append(figure)});document.querySelector('#gallery').append(section)}
+</script>
+</html>

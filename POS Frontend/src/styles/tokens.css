@@ -1,0 +1,165 @@
+﻿/* Identity palette from the UI guide, with stronger text/control variants for AA contrast. */
+:root {
+  color-scheme: light;
+  --app-font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --app-bg: #f5f7fb;
+  --app-card: #ffffff;
+  --app-elevated: #ffffff;
+  --app-sidebar: #0b1f3a;
+  --app-sidebar-foreground: #f8fafc;
+  --app-sidebar-muted: #b7c6db;
+  --app-sidebar-active: #243c5c;
+  --app-text: #1e293b;
+  --app-muted: #64748b;
+  --app-muted-text: #586980;
+  --app-border: #e2e8f0;
+  --app-control-border: #8391a7;
+  --app-input-border: var(--app-control-border);
+  --app-subtle: #f1f5f9;
+  --app-hover: #e8eef7;
+  --app-primary: #2563eb;
+  --app-primary-hover: #1d4ed8;
+  --app-action: #2563eb;
+  --app-action-hover: #1d4ed8;
+  --app-action-foreground: #ffffff;
+  --app-on-action: var(--app-action-foreground);
+  --app-link: #1d4ed8;
+  --app-accent-subtle: #eff6ff;
+  --app-accent-border: #bfdbfe;
+  --app-success: #059669;
+  --app-success-text: #047857;
+  --app-success-bg: #ecfdf5;
+  --app-success-border: #a7f3d0;
+  --app-warning: #d97706;
+  --app-warning-text: #92400e;
+  --app-warning-bg: #fffbeb;
+  --app-warning-border: #fde68a;
+  --app-danger: #dc2626;
+  --app-danger-text: #b91c1c;
+  --app-danger-bg: #fef2f2;
+  --app-danger-border: #fecaca;
+  --app-danger-action: #b91c1c;
+  --app-danger-hover: #991b1b;
+  --app-danger-foreground: #ffffff;
+  --app-info-text: #1d4ed8;
+  --app-info-bg: #eff6ff;
+  --app-info-border: #bfdbfe;
+  --app-focus: #60a5fa;
+  --app-focus-ring: #1d4ed8;
+  --app-overlay: rgba(11, 31, 58, .58);
+  --app-shadow: 0 2px 8px rgba(11, 31, 58, .06);
+  --app-dialog-shadow: 0 24px 80px rgba(11, 31, 58, .24);
+  --app-skeleton: #e2e8f0;
+  --app-skeleton-highlight: #f1f5f9;
+  --app-radius-card: 8px;
+  --app-radius-control: 8px;
+  --app-space-1: 4px;
+  --app-space-2: 8px;
+  --app-space-3: 12px;
+  --app-space-4: 16px;
+  --app-space-5: 20px;
+  --app-space-6: 24px;
+  --app-space-8: 32px;
+  /* Compact Enterprise sizing. Colors and sizing are independent of theme. */
+  --app-text-body: .875rem;
+  --app-text-label: .8125rem;
+  --app-text-small: .75rem;
+  --app-text-table: .8125rem;
+  --app-text-title: 1.375rem;
+  --app-text-section: 1rem;
+  --app-text-kpi: 1.5rem;
+  --app-icon-action: 16px;
+  --app-icon-navigation: 18px;
+  --app-sidebar-width: 232px;
+  --app-sidebar-collapsed-width: 72px;
+  --app-header-height: 58px;
+  --app-nav-height: 40px;
+}
+:root, [data-density='compact'] {
+  --app-control-height: 36px;
+  --app-control-small: 32px;
+  --app-control-padding: 7px 12px;
+  --app-table-row-height: 44px;
+  --app-table-header-height: 40px;
+  --app-table-cell-padding: 3px 12px;
+  --app-card-padding: 16px;
+  --app-page-padding: 20px 24px;
+  --app-page-gap: 16px;
+  --app-field-gap: 12px;
+  --app-label-gap: 4px;
+}
+
+/* Route scopes and portal dialogs inherit the same profile. No root scaling. */
+[data-density='comfortable'] {
+  --app-control-height: 48px;
+  --app-control-small: 48px;
+  --app-control-padding: 12px 16px;
+  --app-table-row-height: 56px;
+  --app-table-cell-padding: 8px 12px;
+  --app-card-padding: 20px;
+  --app-field-gap: 16px;
+  --app-label-gap: 8px;
+}
+
+/* Small screens / coarse pointers receive generous targets in both profiles. */
+@media (max-width: 760px), (pointer: coarse) {
+  :root, [data-density='compact'], [data-density='comfortable'] {
+    --app-control-height: 48px;
+    --app-control-small: 48px;
+    --app-control-padding: 12px 14px;
+    --app-nav-height: 48px;
+    --app-table-row-height: 56px;
+    --app-table-cell-padding: 6px 12px;
+    --app-page-padding: 16px;
+  }
+}
+:root.dark {
+  color-scheme: dark;
+  --app-bg: #0b1220;
+  --app-card: #151f31;
+  --app-elevated: #1b2940;
+  --app-sidebar: #0a1020;
+  --app-sidebar-foreground: #f8fafc;
+  --app-sidebar-muted: #a7b4c8;
+  --app-sidebar-active: #293251;
+  --app-text: #f1f5f9;
+  --app-muted: #a7b4c8;
+  --app-muted-text: #a7b4c8;
+  --app-border: #2a3950;
+  --app-control-border: #71829b;
+  --app-subtle: #1b2940;
+  --app-hover: #25364f;
+  --app-primary: #8b5cf6;
+  --app-primary-hover: #7c3aed;
+  --app-action: #7c3aed;
+  --app-action-hover: #6d28d9;
+  --app-action-foreground: #ffffff;
+  --app-link: #c4b5fd;
+  --app-accent-subtle: #241d3e;
+  --app-accent-border: #514075;
+  --app-success: #34d399;
+  --app-success-text: #34d399;
+  --app-success-bg: #102c29;
+  --app-success-border: #256b57;
+  --app-warning: #fbbf24;
+  --app-warning-text: #fbbf24;
+  --app-warning-bg: #332918;
+  --app-warning-border: #806428;
+  --app-danger: #f87171;
+  --app-danger-text: #f87171;
+  --app-danger-bg: #351e29;
+  --app-danger-border: #824550;
+  --app-danger-action: #b91c1c;
+  --app-danger-hover: #991b1b;
+  --app-danger-foreground: #ffffff;
+  --app-info-text: #93c5fd;
+  --app-info-bg: #142b45;
+  --app-info-border: #315e8a;
+  --app-focus: #a78bfa;
+  --app-focus-ring: #a78bfa;
+  --app-overlay: rgba(3, 7, 18, .76);
+  --app-shadow: 0 2px 8px rgba(0, 0, 0, .16);
+  --app-dialog-shadow: 0 24px 80px rgba(0, 0, 0, .5);
+  --app-skeleton: #2a3950;
+  --app-skeleton-highlight: #354762;
+}

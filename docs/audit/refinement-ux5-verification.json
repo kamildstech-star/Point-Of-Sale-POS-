@@ -1,0 +1,170 @@
+{
+  "phase": "UX-5 accessibility and performance",
+  "verified_on": "2026-11-05",
+  "passed": true,
+  "react": {
+    "tests": 278,
+    "files": 24,
+    "failed": 0,
+    "focused_accessibility_tests": 19,
+    "focused_files": 2
+  },
+  "browser": {
+    "accessibility_checks": 56,
+    "role_checks": 144,
+    "pos_checks": 46,
+    "total_checks": 246,
+    "screenshots": 81,
+    "baseline_screenshots": 8
+  },
+  "performance": {
+    "initial_js_before": {
+      "name": "index-DT1qZYIE.js",
+      "bytes": 490660
+    },
+    "initial_js_after": {
+      "name": "index-C_9Kqbu5.js",
+      "bytes": 416871
+    },
+    "bytes_saved": 73789,
+    "reduction_percent": 15.04,
+    "note": "Production initial JS bundle bytes; not a latency benchmark. Heavy route modules load on demand."
+  },
+  "production_build": {
+    "passed": true,
+    "assets": [
+      {
+        "name": "BillingPage-aUiEn9O5.js",
+        "bytes": 5548
+      },
+      {
+        "name": "BusinessDashboard-DF4QfRmN.js",
+        "bytes": 12167
+      },
+      {
+        "name": "CapabilityDashboard-kMz_Z6XL.js",
+        "bytes": 4860
+      },
+      {
+        "name": "CashPage-CyIbTp6C.js",
+        "bytes": 4671
+      },
+      {
+        "name": "CatalogPage-zy7KbARf.js",
+        "bytes": 4680
+      },
+      {
+        "name": "DashboardDrilldown-BnO4O7DT.js",
+        "bytes": 826
+      },
+      {
+        "name": "DateRangeFilter-H-GacFDF.js",
+        "bytes": 17721
+      },
+      {
+        "name": "ExpensesPage-CUTtcCbW.js",
+        "bytes": 2740
+      },
+      {
+        "name": "HeldCartControls-Brkv43No.js",
+        "bytes": 7131
+      },
+      {
+        "name": "index-6x7EjAQ8.css",
+        "bytes": 65084
+      },
+      {
+        "name": "index-C_9Kqbu5.js",
+        "bytes": 416871
+      },
+      {
+        "name": "InventoryPage-BbBzNnOc.js",
+        "bytes": 6523
+      },
+      {
+        "name": "LegacyPage-BkoHcW_V.js",
+        "bytes": 7301
+      },
+      {
+        "name": "PosPage-C6a07eK2.js",
+        "bytes": 16154
+      },
+      {
+        "name": "PosSettingsPage-CcireboY.js",
+        "bytes": 3625
+      },
+      {
+        "name": "ProductForms-CUJv6Qhd.js",
+        "bytes": 4848
+      },
+      {
+        "name": "ProductPage-BW36J_r7.js",
+        "bytes": 5682
+      },
+      {
+        "name": "PurchasingPage-J4tJbxMo.js",
+        "bytes": 7700
+      },
+      {
+        "name": "ReferencePage-D1hwt9IJ.js",
+        "bytes": 9434
+      },
+      {
+        "name": "ReportsPage-DudI2rEc.js",
+        "bytes": 3336
+      },
+      {
+        "name": "ReturnsPage-CDmgC-N2.js",
+        "bytes": 6029
+      },
+      {
+        "name": "SalesPage-Bn3Cr8qn.js",
+        "bytes": 5598
+      },
+      {
+        "name": "StaffDashboard-CX4MzQ1u.js",
+        "bytes": 14819
+      },
+      {
+        "name": "TeamPage-Cpl0oHMp.js",
+        "bytes": 4631
+      },
+      {
+        "name": "WorkspaceToolsPage-BMs8e8yS.js",
+        "bytes": 8451
+      }
+    ],
+    "new_dependencies": 0,
+    "source_sha256": {
+      "src/app/App.jsx": "39c5c4e44163d2f9664edaeafcca2e744f5eb06df245916ee38d93dae07ce020",
+      "src/layouts/TenantLayout.jsx": "e6175b94f625cbb9fed13710d37a8ad9aece4e3f75285a16878af01e2f068149",
+      "src/components/layout/RouteAccessibility.jsx": "3de833b66bc57ef588c20d18ca46c44a722b609a05e54c04de6b2262366f800c",
+      "src/components/Modal.jsx": "20d73af93fd2bfb3507b2c46f21252c2309383c123bdff368fc4dae6380a6cd7",
+      "src/components/ui/ListPatterns.jsx": "a8e3d2714c38fbb9b1ff6ce9850a0a697198d556217a520ece37fb4326bd3a76",
+      "src/components/ui/TableViewport.jsx": "0618cc6393701e8239f82a056ff46189cfc43991d398dd29bda1bb3a902e258d",
+      "src/features/dashboard/dashboardData.js": "3ed45fa48453fbd28b78dbf5d18f14f42655ef53bb7de0ef4726f86a30ae3c08",
+      "src/features/dashboard/useBusinessDashboard.js": "d5ffebaaff2b3b9492a3fdac5a9468ec06291296bdc0586bfe1a631e03ed62be",
+      "src/features/dashboard/WorkspaceOverview.jsx": "208fd16a344a8c19fcab5353ed063bea41007fd885d40b228c9d4b743f4e8b3f",
+      "src/styles/shell.css": "5f1a83def88cdaa32fb82612ed7216d7661c8214cfc7caf945d010a4c2f5406b",
+      "src/styles/notifications.css": "79ddcfc3a68162c133a416f0b14fc8c25b39c0f1683ff2f3e1b4cc389f65e385"
+    }
+  },
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "backend_code_changes": false,
+  "database_migrations": 0,
+  "evidence": {
+    "react": "docs/audit/private/refinement-ux5-vitest.json",
+    "focused": "docs/audit/private/refinement-ux5-accessibility-vitest.json",
+    "accessibility": "docs/audit/refinement-ux5-after.json",
+    "roles": "docs/audit/refinement-ux5-role-after.json",
+    "pos": "docs/audit/refinement-ux5-pos-after.json",
+    "before": "docs/audit/refinement-ux5-before.json"
+  },
+  "limits": [
+    "Native NVDA/JAWS/VoiceOver usability testing remains manual; semantic DOM and Chrome accessibility tree were checked.",
+    "Zoom checks use equivalent emulated viewports; actual browser/device checks remain release validation.",
+    "No live staging/production deployment, payment transaction or new preferences/action-center product feature.",
+    "UX-4 Laravel evidence is referenced separately; no fresh backend-suite claim in UX-5."
+  ]
+}

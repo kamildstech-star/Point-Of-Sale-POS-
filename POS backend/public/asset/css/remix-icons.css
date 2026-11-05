@@ -1,0 +1,17 @@
+/* Generated from @remixicon/react 4.9.0. Run npm run icons:sync in POS Frontend. See asset/licenses/remix-icon.txt. */
+
+.remix-icon { display:inline-block; vertical-align:-.15em; flex-shrink:0; }
+.remix-icon-holder { display:inline-flex!important; align-items:center; justify-content:center; font-style:normal; line-height:1; }
+.remix-icon-holder::before { display:none!important; content:none!important; }
+.remix-icon-holder > .remix-icon { width:1em; height:1em; vertical-align:0; pointer-events:none; }
+.btn.remix-control-with-text > .remix-icon-holder { margin-inline-end:.35em; }
+.remix-button-icon { margin-inline-end:.4em; pointer-events:none; }
+.fa-fw { width:1.25em; text-align:center; }.fa-lg{font-size:1.3333em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}
+.fa-spin,.remix-icon-spin{animation:remix-icon-spin 1s linear infinite}
+@keyframes remix-icon-spin{to{transform:rotate(360deg)}}
+.nav-sidebar .menu-open>.nav-link .right.remix-icon-holder{transform:rotate(-90deg)}
+@media(prefers-reduced-motion:reduce){.fa-spin,.remix-icon-spin{animation:none}}
+#toast-container>.toast-success{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M12%2022C17.5228%2022%2022%2017.5228%2022%2012C22%206.47715%2017.5228%202%2012%202C6.47715%202%202%206.47715%202%2012C2%2017.5228%206.47715%2022%2012%2022ZM17.4571%209.45711L11%2015.9142L6.79289%2011.7071L8.20711%2010.2929L11%2013.0858L16.0429%208.04289L17.4571%209.45711Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E")!important}
+#toast-container>.toast-error{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M12%2022C6.47715%2022%202%2017.5228%202%2012C2%206.47715%206.47715%202%2012%202C17.5228%202%2022%206.47715%2022%2012C22%2017.5228%2017.5228%2022%2012%2022ZM12%2010.5858L9.17157%207.75736L7.75736%209.17157L10.5858%2012L7.75736%2014.8284L9.17157%2016.2426L12%2013.4142L14.8284%2016.2426L16.2426%2014.8284L13.4142%2012L16.2426%209.17157L14.8284%207.75736L12%2010.5858Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E")!important}
+#toast-container>.toast-warning{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M12%2022C6.47715%2022%202%2017.5228%202%2012C2%206.47715%206.47715%202%2012%202C17.5228%202%2022%206.47715%2022%2012C22%2017.5228%2017.5228%2022%2012%2022ZM11%2015V17H13V15H11ZM11%207V13H13V7H11Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E")!important}
+#toast-container>.toast-info{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M12%2022C6.47715%2022%202%2017.5228%202%2012C2%206.47715%206.47715%202%2012%202C17.5228%202%2022%206.47715%2022%2012C22%2017.5228%2017.5228%2022%2012%2022ZM11%2011V17H13V11H11ZM11%207V9H13V7H11Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E")!important}

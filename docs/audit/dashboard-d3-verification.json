@@ -1,0 +1,77 @@
+{
+  "checked_at": "2026-11-03T12:57:02.937Z",
+  "phase": "D3",
+  "scope": "Business Owner and Business Admin dashboards only",
+  "backend": {
+    "passed": true,
+    "tests": 121,
+    "assertions": 2347,
+    "dashboard_tests": 36,
+    "dashboard_assertions": 875,
+    "command": "php artisan test --do-not-cache-result"
+  },
+  "frontend_full": {
+    "passed": true,
+    "tests": 191,
+    "passed_tests": 191,
+    "failed_tests": 0,
+    "files": 17
+  },
+  "frontend_post_refinement": {
+    "passed": true,
+    "tests": 43,
+    "passed_tests": 43,
+    "failed_tests": 0,
+    "files": 4
+  },
+  "frontend_report_final": {
+    "passed": true,
+    "tests": 5,
+    "passed_tests": 5,
+    "failed_tests": 0,
+    "files": 1
+  },
+  "build": {
+    "passed": true,
+    "command": "npm.cmd run build",
+    "assets": [
+      {
+        "file": "BusinessDashboard-1JyJPQQ7.js",
+        "bytes": 20055
+      },
+      {
+        "file": "index-BU-akv-E.css",
+        "bytes": 47616
+      },
+      {
+        "file": "index-CB5bMmQW.js",
+        "bytes": 491994
+      }
+    ]
+  },
+  "browser": {
+    "passed": true,
+    "fixture_only": true,
+    "checks": 44,
+    "screenshots": 20,
+    "report": "dashboard-d3-browser.json"
+  },
+  "real_database": {
+    "driver": "mysql",
+    "read_only": true,
+    "dashboard_operations_passed": 11,
+    "working_data_writes": 0,
+    "migrations_added": 0
+  },
+  "php_formatting": {
+    "passed": true,
+    "files": 8
+  },
+  "pending": [
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "Staging deployment"
+  ]
+}

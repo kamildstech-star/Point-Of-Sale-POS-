@@ -1,0 +1,376 @@
+{
+  "passed": true,
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "checks": {
+    "cashier_light_360_fits": true,
+    "cashier_light_768_fits": true,
+    "cashier_light_1280_fits": true,
+    "cashier_light_1440_fits": true,
+    "cashier_light_text_contrast": true,
+    "light_cashier_primary_action_and_privacy": true,
+    "cashier_dark_360_fits": true,
+    "cashier_dark_768_fits": true,
+    "cashier_dark_1280_fits": true,
+    "cashier_dark_1440_fits": true,
+    "cashier_dark_text_contrast": true,
+    "dark_cashier_primary_action_and_privacy": true,
+    "manager_light_360_fits": true,
+    "manager_light_768_fits": true,
+    "manager_light_1280_fits": true,
+    "manager_light_1440_fits": true,
+    "manager_light_text_contrast": true,
+    "light_manager_branch_and_staff_links": true,
+    "manager_dark_360_fits": true,
+    "manager_dark_768_fits": true,
+    "manager_dark_1280_fits": true,
+    "manager_dark_1440_fits": true,
+    "manager_dark_text_contrast": true,
+    "dark_manager_branch_and_staff_links": true,
+    "personal_endpoint_used": true,
+    "personal_receipt_drilldown": true,
+    "recall_dialog_focus_isolation": true,
+    "recall_clears_quote_and_uses_own_shift": true,
+    "fresh_quote_bound_to_held_cart": true,
+    "recalled_cart_checkout": true,
+    "hold_saves_cart_without_payments": true,
+    "no_shift_opens_actual_register_form": true,
+    "empty_assignment_hides_branch_figures": true,
+    "optional_widget_retry": true,
+    "revoked_access_clears_figures": true,
+    "named_loading_state": true
+  },
+  "screenshots": [
+    "cashier-light-360.png",
+    "cashier-light-768.png",
+    "cashier-light-1280.png",
+    "cashier-light-1440.png",
+    "cashier-dark-360.png",
+    "cashier-dark-768.png",
+    "cashier-dark-1280.png",
+    "cashier-dark-1440.png",
+    "manager-light-360.png",
+    "manager-light-768.png",
+    "manager-light-1280.png",
+    "manager-light-1440.png",
+    "manager-dark-360.png",
+    "manager-dark-768.png",
+    "manager-dark-1280.png",
+    "manager-dark-1440.png",
+    "held-carts-desktop.png",
+    "hold-cart-popup.png",
+    "open-shift-dialog.png",
+    "manager-partial-error.png",
+    "staff-loading.png"
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/cashier-summary?from=2026-11-05&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/cashier-summary?from=2026-11-05&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&branch_id=1&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/recent-sales?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/staff-activity?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&branch_id=1&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/recent-sales?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/staff-activity?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/cashier-summary?from=2026-11-05&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sales/31?own=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/cashier-summary?from=2026-11-05&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions?own=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/held-carts?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/held-carts/8"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/checkout"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/held-carts"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/cashier-summary?from=2026-11-05&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions?own=1&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/registers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&branch_id=1&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/recent-sales?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/staff-activity?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&branch_id=1&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/recent-sales?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/staff-activity?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&branch_id=1&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/recent-sales?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/staff-activity?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&branch_id=1&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/recent-sales?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/staff-activity?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&branch_id=1&per_page=5&limit=5&page=1"
+    }
+  ]
+}

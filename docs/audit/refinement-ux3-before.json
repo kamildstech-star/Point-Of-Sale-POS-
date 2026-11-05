@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "phase": "before",
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "checks": {},
+  "screenshots": [
+    "checkout-light-1440.png",
+    "checkout-light-360.png",
+    "checkout-dark-1440.png",
+    "checkout-dark-360.png"
+  ],
+  "measurements": {},
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          }
+        ]
+      }
+    }
+  ]
+}

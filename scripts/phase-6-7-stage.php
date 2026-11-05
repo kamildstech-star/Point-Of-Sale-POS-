@@ -1,0 +1,5 @@
+<?php
+use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Support\Facades\{DB,Schema};
+require __DIR__.'/../POS backend/vendor/autoload.php';$app=require __DIR__.'/../POS backend/bootstrap/app.php';$app->make(Kernel::class)->bootstrap();
+$stageEvidence=json_decode(file_get_contents(__DIR__.'/../docs/audit/private/phase-6-7-rehearsal.json'),true,512,JSON_THROW_ON_ERROR);$stageDatabase=$stageEvidence['staging_database']??'';$stageSource=DB::connection()->getConfig();if(empty($stageEvidence['original_fields_unchanged'])||!preg_match('/^bu_restore_[a-f0-9]{16}$/D',$stageDatabase)||$stageDatabase===$stageSource['database']||!in_array($stageSource['host'],['127.0.0.1','localhost','::1'],true))throw new RuntimeException('Verified isolated phase 6/7 restore required.');config(['database.connections.phase67'=>array_merge($stageSource,['database'=>$stageDatabase,'name'=>'phase67','url'=>null]),'database.default'=>'phase67']);DB::purge('phase67');if(DB::selectOne('SELECT DATABASE() AS db')->db!==$stageDatabase||DB::connection()->getName()!=='phase67')throw new RuntimeException('Unexpected staging connection.');Schema::swap(DB::connection()->getSchemaBuilder());

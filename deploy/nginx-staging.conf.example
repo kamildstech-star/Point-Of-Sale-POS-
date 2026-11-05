@@ -1,0 +1,21 @@
+# Example only: substitute hostname, certificate, PHP socket and absolute paths.
+server {
+    listen 443 ssl;
+    server_name pos-staging.example.com;
+    ssl_certificate /etc/ssl/pos-staging/fullchain.pem;
+    ssl_certificate_key /etc/ssl/pos-staging/privkey.pem;
+    root /srv/pos/frontend/dist;
+    index index.html;
+
+    location / { try_files $uri $uri/ /index.html; }
+    location ~ ^/(api|sanctum)(/|$) {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME /srv/pos/backend/public/index.php;
+        fastcgi_param SCRIPT_NAME /index.php;
+        fastcgi_param DOCUMENT_ROOT /srv/pos/backend/public;
+        fastcgi_param HTTPS on;
+        fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+    }
+    location ~ /\. { deny all; }
+    location ~ \.php$ { return 404; }
+}

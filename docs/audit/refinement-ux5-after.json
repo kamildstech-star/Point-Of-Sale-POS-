@@ -1,0 +1,255 @@
+{
+  "passed": true,
+  "phase": "after",
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "checks": {
+    "light_role_page_title": true,
+    "light_unchanged_period_no_requests": true,
+    "light_dashboard_contrast": true,
+    "light_unopened_pages_not_downloaded": true,
+    "light_catalog_uses_one_server_page": true,
+    "light_route_title_and_focus": true,
+    "light_heading_focus_visible": true,
+    "light_page_count_live_region": true,
+    "light_modal_initial_field": true,
+    "light_modal_tab_contained": true,
+    "light_dialog_accessibility_tree": true,
+    "light_form_360_reflows": true,
+    "light_form_zoom-200_reflows": true,
+    "light_modal_returns_to_trigger": true,
+    "light_skip_first": true,
+    "light_skip_enters_content": true,
+    "light_360_catalog_reflows": true,
+    "light_768_catalog_reflows": true,
+    "light_1280_catalog_reflows": true,
+    "light_1440_catalog_reflows": true,
+    "light_1920_catalog_reflows": true,
+    "light_drawer_keyboard": true,
+    "light_drawer_focus_restored": true,
+    "light_1.25_zoom_reflows": true,
+    "light_2_zoom_reflows": true,
+    "light_catalog_contrast": true,
+    "dark_role_page_title": true,
+    "dark_unchanged_period_no_requests": true,
+    "dark_dashboard_contrast": true,
+    "dark_unopened_pages_not_downloaded": true,
+    "dark_catalog_uses_one_server_page": true,
+    "dark_route_title_and_focus": true,
+    "dark_heading_focus_visible": true,
+    "dark_page_count_live_region": true,
+    "dark_modal_initial_field": true,
+    "dark_modal_tab_contained": true,
+    "dark_dialog_accessibility_tree": true,
+    "dark_form_360_reflows": true,
+    "dark_form_zoom-200_reflows": true,
+    "dark_modal_returns_to_trigger": true,
+    "dark_skip_first": true,
+    "dark_skip_enters_content": true,
+    "dark_360_catalog_reflows": true,
+    "dark_768_catalog_reflows": true,
+    "dark_1280_catalog_reflows": true,
+    "dark_1440_catalog_reflows": true,
+    "dark_1920_catalog_reflows": true,
+    "dark_drawer_keyboard": true,
+    "dark_drawer_focus_restored": true,
+    "dark_1.25_zoom_reflows": true,
+    "dark_2_zoom_reflows": true,
+    "dark_catalog_contrast": true,
+    "reduced_motion_loaders_static": true,
+    "pos_density_preserved": true,
+    "reduced_motion_hides_countdown_without_disabling_timer": true,
+    "toast_dismissal_timer_animation_preserved": true
+  },
+  "screenshots": [
+    "dashboard-light-1440.png",
+    "catalog-focus-light-1440.png",
+    "product-form-light-1440.png",
+    "product-form-light-360.png",
+    "product-form-light-zoom-200.png",
+    "catalog-light-360.png",
+    "catalog-light-zoom-125.png",
+    "catalog-light-zoom-200.png",
+    "dashboard-dark-1440.png",
+    "catalog-focus-dark-1440.png",
+    "product-form-dark-1440.png",
+    "product-form-dark-360.png",
+    "product-form-dark-zoom-200.png",
+    "catalog-dark-360.png",
+    "catalog-dark-zoom-125.png",
+    "catalog-dark-zoom-200.png",
+    "pos-reduced-motion.png"
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    }
+  ],
+  "assets": [
+    {
+      "name": "index-6x7EjAQ8.css",
+      "bytes": 65084
+    },
+    {
+      "name": "index-C_9Kqbu5.js",
+      "bytes": 416871
+    }
+  ]
+}

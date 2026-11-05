@@ -1,0 +1,47 @@
+/* Selling desk keeps the established comfortable controls and exact server amounts. */
+.pos-page .page-heading { margin-bottom: 16px; }
+.pos-page h1:focus, #pos-checkout-title:focus { outline: 2px solid var(--app-focus-ring); outline-offset: 4px; }
+.pos-context { color: var(--app-muted-text); margin: 0; font-size: var(--app-text-label); }
+.pos-page .pos-layout { align-items: start; }
+.pos-page .checkout-panel { position: sticky; top: calc(var(--app-header-height) + 16px); max-height: calc(100dvh - var(--pos-visible-top, var(--app-header-height)) - 16px); overflow-y: auto; scrollbar-width: thin; scroll-padding-block: 12px 140px; }
+.pos-page .checkout-panel > h2 { margin: 0 0 12px; scroll-margin-top: calc(var(--app-header-height) + 16px); }
+.pos-search-actions, .pos-cart-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+.pos-search-actions h2, .pos-cart-heading h2 { margin: 0; }
+.pos-search-actions button { font-size: var(--app-text-label); }
+.pos-search-actions kbd { margin-inline-start: 4px; padding: 2px 5px; border: 1px solid var(--app-border); border-radius: 4px; font: inherit; font-size: var(--app-text-small); }
+.pos-search-hint, .pos-cart-heading > span, .pos-payment-policy { font-size: var(--app-text-small); color: var(--app-muted-text); }
+.pos-cart-lines .operation-line > strong { overflow-wrap: anywhere; }
+.pos-cart-empty { display: flex; gap: 12px; align-items: center; padding: 20px 0; color: var(--app-muted-text); }
+.pos-cart-empty p { margin: 0; }
+.pos-quote-action { width: 100%; margin-top: 16px; }
+.pos-quote-status, .pos-quote-empty { margin-top: 16px; border: 1px solid var(--app-border); border-radius: var(--app-radius-control); padding: 12px; background: var(--app-subtle); }
+.pos-quote-status strong { display: flex; align-items: center; font-size: var(--app-text-label); }
+.pos-quote-status p, .pos-quote-empty p { color: var(--app-muted-text); margin: 4px 0 0; font-size: var(--app-text-small); }
+.pos-quote-status.is-expired { border-color: var(--app-warning-border); color: var(--app-warning-text); background: var(--app-warning-bg); }
+.pos-quote-status.is-expired p { color: inherit; }
+.pos-quote-status button { margin-top: 12px; }
+.pos-checkout-actions { position: sticky; bottom: calc(-1 * var(--app-card-padding)); padding: 12px var(--app-card-padding); margin: 16px calc(-1 * var(--app-card-padding)) calc(-1 * var(--app-card-padding)); background: var(--app-card); border-top: 1px solid var(--app-border); z-index: 2; }
+.pos-checkout-actions .checkout-button { margin: 0; }
+.pos-footer-total { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+.pos-footer-total span { font-size: var(--app-text-small); color: var(--app-muted-text); }
+.pos-footer-total strong { font-size: 20px; overflow-wrap: anywhere; }
+.pos-transaction-status { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 16px; padding: 16px; margin: 16px 0; border: 1px solid var(--app-border); border-radius: var(--app-radius-card); scroll-margin-top: 160px; }
+.pos-transaction-status strong { display: flex; align-items: center; }
+.pos-transaction-status p { margin: 4px 0 0; font-size: var(--app-text-label); color: inherit; }
+.pos-transaction-status.is-completed { background: var(--app-success-bg); border-color: var(--app-success-border); color: var(--app-success-text); }
+.pos-transaction-status.is-unconfirmed { background: var(--app-warning-bg); border-color: var(--app-warning-border); color: var(--app-warning-text); }
+.pos-transaction-status.is-rejected { background: var(--app-danger-bg); border-color: var(--app-danger-border); color: var(--app-danger-text); }
+.pos-status-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.pos-mobile-summary { display: none; }
+@media (max-width: 1050px) {
+  .pos-page { padding-bottom: 120px !important; }
+  .pos-page .checkout-panel { position: static; max-height: none; overflow: visible; }
+  .pos-page .checkout-panel > h2 { scroll-margin-top: 160px; }
+  .pos-checkout-actions { position: static; }
+  .pos-mobile-summary { position: fixed; inset-inline: 0; bottom: 0; z-index: 35; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--app-elevated); border-top: 1px solid var(--app-border); box-shadow: 0 -2px 8px var(--app-border); }
+  .pos-mobile-summary > div { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+  .pos-mobile-summary span { display: block; color: var(--app-muted-text); font-size: var(--app-text-small); }
+  .pos-mobile-summary strong { display: block; font-size: var(--app-text-body); font-variant-numeric: tabular-nums; }
+  .pos-mobile-summary button, .pos-mobile-summary a { flex-shrink: 0; }
+}
+@media print { .pos-mobile-summary { display: none; } .pos-page .checkout-panel { position: static; max-height: none; overflow: visible; } }

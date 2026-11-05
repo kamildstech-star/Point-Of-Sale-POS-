@@ -1,0 +1,33 @@
+{
+  "name": "universal-pos-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "npm run icons:sync && vite build",
+    "icons:sync": "node scripts/sync-remix-icons.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fontsource/inter": "5.3.0",
+    "@remixicon/react": "4.9.0",
+    "axios": "^1.8.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.0",
+    "react-toastify": "^11.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^4.4.1",
+    "jsdom": "^26.0.0",
+    "tailwindcss": "4.3.3",
+    "vite": "^6.3.0",
+    "vitest": "^3.1.1"
+  }
+}

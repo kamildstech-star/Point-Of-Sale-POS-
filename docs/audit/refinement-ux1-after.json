@@ -1,0 +1,1333 @@
+{
+  "passed": true,
+  "phase": "after",
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "checks": {
+    "dashboard_light_contrast": true,
+    "light_readable_chart_labels": true,
+    "light_header_scope": true,
+    "light_primary_verified_metrics": true,
+    "light_exceptions_before_tools": true,
+    "light_primary_chart_hierarchy": true,
+    "light_grouped_sidebar_and_business_context": true,
+    "light_collapsed_navigation": true,
+    "light_nested_dialog_focus": true,
+    "light_drawer_restores_document": true,
+    "dashboard_light_360_reflows": true,
+    "dashboard_light_768_reflows": true,
+    "dashboard_light_1280_reflows": true,
+    "dashboard_light_1920_reflows": true,
+    "dashboard_light_1.25_zoom_reflow": true,
+    "dashboard_light_2_zoom_reflow": true,
+    "products_light_contrast": true,
+    "light_admin_sizes": true,
+    "light_table_density": true,
+    "light_long_product_wraps": true,
+    "light_navigation_sizes": true,
+    "light_keyboard_focus_visible": true,
+    "light_sidebar_stays_fixed": true,
+    "products_light_360_reflows": true,
+    "products_light_768_reflows": true,
+    "products_light_1280_reflows": true,
+    "products_light_1920_reflows": true,
+    "products_light_1.25_zoom_reflow": true,
+    "products_light_2_zoom_reflow": true,
+    "product-form_light_contrast": true,
+    "light_admin_dialog_focus_and_density": true,
+    "light_validation_preserved": true,
+    "product-form_light_360_reflows": true,
+    "product-form_light_768_reflows": true,
+    "product-form_light_1280_reflows": true,
+    "product-form_light_1920_reflows": true,
+    "product-form_light_1.25_zoom_reflow": true,
+    "product-form_light_2_zoom_reflow": true,
+    "reports_light_contrast": true,
+    "reports_light_360_reflows": true,
+    "reports_light_768_reflows": true,
+    "reports_light_1280_reflows": true,
+    "reports_light_1920_reflows": true,
+    "reports_light_1.25_zoom_reflow": true,
+    "reports_light_2_zoom_reflow": true,
+    "checkout_light_contrast": true,
+    "light_checkout_touch_targets": true,
+    "light_checkout_total_hierarchy": true,
+    "light_checkout_dialog_density": true,
+    "checkout_light_360_reflows": true,
+    "checkout_light_768_reflows": true,
+    "checkout_light_1280_reflows": true,
+    "checkout_light_1920_reflows": true,
+    "checkout_light_1.25_zoom_reflow": true,
+    "checkout_light_2_zoom_reflow": true,
+    "dashboard_dark_contrast": true,
+    "dark_readable_chart_labels": true,
+    "dark_header_scope": true,
+    "dark_primary_verified_metrics": true,
+    "dark_exceptions_before_tools": true,
+    "dark_primary_chart_hierarchy": true,
+    "dark_grouped_sidebar_and_business_context": true,
+    "dark_collapsed_navigation": true,
+    "dark_nested_dialog_focus": true,
+    "dark_drawer_restores_document": true,
+    "dashboard_dark_360_reflows": true,
+    "dashboard_dark_768_reflows": true,
+    "dashboard_dark_1280_reflows": true,
+    "dashboard_dark_1920_reflows": true,
+    "dashboard_dark_1.25_zoom_reflow": true,
+    "dashboard_dark_2_zoom_reflow": true,
+    "products_dark_contrast": true,
+    "dark_admin_sizes": true,
+    "dark_table_density": true,
+    "dark_long_product_wraps": true,
+    "dark_navigation_sizes": true,
+    "dark_keyboard_focus_visible": true,
+    "dark_sidebar_stays_fixed": true,
+    "products_dark_360_reflows": true,
+    "products_dark_768_reflows": true,
+    "products_dark_1280_reflows": true,
+    "products_dark_1920_reflows": true,
+    "products_dark_1.25_zoom_reflow": true,
+    "products_dark_2_zoom_reflow": true,
+    "product-form_dark_contrast": true,
+    "dark_admin_dialog_focus_and_density": true,
+    "dark_validation_preserved": true,
+    "product-form_dark_360_reflows": true,
+    "product-form_dark_768_reflows": true,
+    "product-form_dark_1280_reflows": true,
+    "product-form_dark_1920_reflows": true,
+    "product-form_dark_1.25_zoom_reflow": true,
+    "product-form_dark_2_zoom_reflow": true,
+    "reports_dark_contrast": true,
+    "reports_dark_360_reflows": true,
+    "reports_dark_768_reflows": true,
+    "reports_dark_1280_reflows": true,
+    "reports_dark_1920_reflows": true,
+    "reports_dark_1.25_zoom_reflow": true,
+    "reports_dark_2_zoom_reflow": true,
+    "checkout_dark_contrast": true,
+    "dark_checkout_touch_targets": true,
+    "dark_checkout_total_hierarchy": true,
+    "dark_checkout_dialog_density": true,
+    "checkout_dark_360_reflows": true,
+    "checkout_dark_768_reflows": true,
+    "checkout_dark_1280_reflows": true,
+    "checkout_dark_1920_reflows": true,
+    "checkout_dark_1.25_zoom_reflow": true,
+    "checkout_dark_2_zoom_reflow": true,
+    "refused_switch_keeps_scope_and_selection": true,
+    "business_switch_uses_real_activation_flow": true,
+    "empty_state": true,
+    "error_state": true,
+    "retry": true,
+    "tablet_touch_targets": true,
+    "keyboard_scanner": true
+  },
+  "screenshots": [
+    "dashboard-light-1440.png",
+    "business-switcher-light.png",
+    "sidebar-collapsed-light.png",
+    "navigation-drawer-light.png",
+    "dashboard-light-360.png",
+    "dashboard-light-1920.png",
+    "dashboard-light-zoom-200.png",
+    "products-light-1440.png",
+    "products-light-360.png",
+    "products-light-1920.png",
+    "products-light-zoom-200.png",
+    "product-form-light-1440.png",
+    "product-form-light-360.png",
+    "product-form-light-1920.png",
+    "product-form-light-zoom-200.png",
+    "reports-light-1440.png",
+    "reports-light-360.png",
+    "reports-light-1920.png",
+    "reports-light-zoom-200.png",
+    "checkout-light-1440.png",
+    "checkout-light-360.png",
+    "checkout-light-1920.png",
+    "checkout-light-zoom-200.png",
+    "dashboard-dark-1440.png",
+    "business-switcher-dark.png",
+    "sidebar-collapsed-dark.png",
+    "navigation-drawer-dark.png",
+    "dashboard-dark-360.png",
+    "dashboard-dark-1920.png",
+    "dashboard-dark-zoom-200.png",
+    "products-dark-1440.png",
+    "products-dark-360.png",
+    "products-dark-1920.png",
+    "products-dark-zoom-200.png",
+    "product-form-dark-1440.png",
+    "product-form-dark-360.png",
+    "product-form-dark-1920.png",
+    "product-form-dark-zoom-200.png",
+    "reports-dark-1440.png",
+    "reports-dark-360.png",
+    "reports-dark-1920.png",
+    "reports-dark-zoom-200.png",
+    "checkout-dark-1440.png",
+    "checkout-dark-360.png",
+    "checkout-dark-1920.png",
+    "checkout-dark-zoom-200.png"
+  ],
+  "measurements": {
+    "dashboard-light": {
+      "body": {
+        "height": 2683.421875,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 560.84375,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 935.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 123.890625,
+        "width": 1129,
+        "font": "14px",
+        "padding": "16px",
+        "gap": "16px"
+      },
+      "control": {
+        "height": 37.59375,
+        "width": 306.359375,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 165.828125,
+        "font": "13px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 708,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": {
+        "height": 225.59375,
+        "width": 270.25,
+        "font": "14px",
+        "padding": "16px",
+        "gap": "normal"
+      },
+      "visibleRows": 0
+    },
+    "products-light": {
+      "body": {
+        "height": 1245,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1129,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 935.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 922.5,
+        "width": 1129,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 36,
+        "width": 336.6875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 95.3125,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1127,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 16
+    },
+    "product-form-light": {
+      "body": {
+        "height": 1245,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 935.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 922.5,
+        "width": 1144,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 36,
+        "width": 336.6875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 95.3125,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1142,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 16
+    },
+    "reports-light": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 935.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 196.09375,
+        "width": 1144,
+        "font": "14px",
+        "padding": "16px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 37.59375,
+        "width": 210,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 118.84375,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": null,
+      "kpi": null,
+      "visibleRows": 0
+    },
+    "checkout-light": {
+      "body": {
+        "height": 1447.734375,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 123.140625,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 953.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 65,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 1177.234375,
+        "width": 629.078125,
+        "font": "14px",
+        "padding": "20px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 48.390625,
+        "width": 587.078125,
+        "font": "16px",
+        "padding": "12px 16px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 48,
+        "width": 112.84375,
+        "font": "13px",
+        "padding": "12px 16px",
+        "gap": "normal"
+      },
+      "row": null,
+      "kpi": null,
+      "visibleRows": 0
+    },
+    "dashboard-dark": {
+      "body": {
+        "height": 2683.421875,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 560.84375,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 935.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 123.890625,
+        "width": 1129,
+        "font": "14px",
+        "padding": "16px",
+        "gap": "16px"
+      },
+      "control": {
+        "height": 37.59375,
+        "width": 306.359375,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 165.828125,
+        "font": "13px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 708,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": {
+        "height": 225.59375,
+        "width": 270.25,
+        "font": "14px",
+        "padding": "16px",
+        "gap": "normal"
+      },
+      "visibleRows": 0
+    },
+    "products-dark": {
+      "body": {
+        "height": 1245,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1129,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 935.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 922.5,
+        "width": 1129,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 36,
+        "width": 336.6875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 95.3125,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1127,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 16
+    },
+    "product-form-dark": {
+      "body": {
+        "height": 1245,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 935.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 922.5,
+        "width": 1144,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 36,
+        "width": 336.6875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 95.3125,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1142,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 16
+    },
+    "reports-dark": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 935.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 196.09375,
+        "width": 1144,
+        "font": "14px",
+        "padding": "16px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 37.59375,
+        "width": 210,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 118.84375,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": null,
+      "kpi": null,
+      "visibleRows": 0
+    },
+    "checkout-dark": {
+      "body": {
+        "height": 1447.734375,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 123.140625,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 953.1875,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 198,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 65,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 1177.234375,
+        "width": 629.078125,
+        "font": "14px",
+        "padding": "20px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 48.390625,
+        "width": 587.078125,
+        "font": "16px",
+        "padding": "12px 16px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 48,
+        "width": 112.84375,
+        "font": "13px",
+        "padding": "12px 16px",
+        "gap": "normal"
+      },
+      "row": null,
+      "kpi": null,
+      "visibleRows": 0
+    }
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tenants"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tenants"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tenants"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/summary?from=2026-11-01&to=2026-11-04"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tenants"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tenants"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tenants"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/summary?from=2026-11-01&to=2026-11-04"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tenants"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tenants/2/activate"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tenants"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tenants/2/activate"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tenants"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tenants/1/activate"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search=SYNTH-SHIRT&scan=1"
+    }
+  ]
+}

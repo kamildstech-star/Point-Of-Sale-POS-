@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-11-03T14:12:55.477Z",
+  "phase": "D4",
+  "scope": "Cashier and Branch Manager dashboards; private Hold/Recall workflow",
+  "backend": {
+    "passed": true,
+    "tests": 133,
+    "assertions": 2633,
+    "command": "php artisan test --do-not-cache-result"
+  },
+  "frontend": {
+    "passed": true,
+    "tests": 208,
+    "passed_tests": 208,
+    "failed_tests": 0,
+    "files": 19
+  },
+  "browser": {
+    "passed": true,
+    "fixture_only": true,
+    "checks": 36,
+    "screenshots": 21
+  },
+  "build": {
+    "passed": true,
+    "command": "npm.cmd run build",
+    "assets": [
+      {
+        "file": "AlertList-Cxsc7Ywj.js",
+        "bytes": 7265
+      },
+      {
+        "file": "BusinessDashboard-CzP6QxRy.js",
+        "bytes": 12977
+      },
+      {
+        "file": "HeldCartControls-BXjokJdK.js",
+        "bytes": 7128
+      },
+      {
+        "file": "index-DioQJ2Jx.js",
+        "bytes": 496032
+      },
+      {
+        "file": "index-Zj5LBLmj.css",
+        "bytes": 49053
+      },
+      {
+        "file": "StaffDashboard-Cf71tdeI.js",
+        "bytes": 15556
+      }
+    ]
+  },
+  "php_formatting": {
+    "passed": true,
+    "files": 15
+  },
+  "database": {
+    "driver": "mysql",
+    "read_only_sql_checks": 13,
+    "migration_applied": true,
+    "migration": "2026_11_03_170000_create_pos_held_carts",
+    "original_tables_checked": 103,
+    "business_rows_unchanged": true,
+    "environment_unchanged": true,
+    "existing_role_grants_unchanged": true
+  },
+  "pending": [
+    "D5",
+    "D6",
+    "D7",
+    "Staging deployment"
+  ]
+}

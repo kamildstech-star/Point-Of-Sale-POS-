@@ -1,0 +1,41 @@
+{
+  "phase": "UX-1",
+  "verified_on": "2026-11-05",
+  "passed": true,
+  "react": {
+    "passed": 217,
+    "files": 20
+  },
+  "focused_dashboard_regression_after_responsive_chart_change": {
+    "passed": 35,
+    "files": 3
+  },
+  "browser": {
+    "ui_checks": 117,
+    "staff_checks": 36,
+    "screenshots": 67,
+    "synthetic_http_fixtures": true
+  },
+  "production_build": {
+    "command": "npm.cmd run build",
+    "passed": true,
+    "assets": [
+      {
+        "name": "index-CA3Kd_3U.css",
+        "bytes": 57338
+      },
+      {
+        "name": "index-CCwqlafl.js",
+        "bytes": 499801
+      }
+    ]
+  },
+  "working_database_writes": 0,
+  "backend_changes": false,
+  "pending_review": [
+    "UX-2",
+    "UX-3",
+    "UX-4",
+    "UX-5"
+  ]
+}

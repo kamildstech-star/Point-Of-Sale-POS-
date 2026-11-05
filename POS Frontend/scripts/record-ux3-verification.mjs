@@ -1,0 +1,37 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { createHash } from 'node:crypto';
+const frontend = path.resolve(import.meta.dirname, '..'), root = path.dirname(frontend);
+const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8').replace(/^\uFEFF/, ''));
+const unitFile = 'docs/audit/private/refinement-ux3-vitest.json', focusedFile = 'docs/audit/private/refinement-ux3-focused-vitest.json';
+const coreFile = 'docs/audit/refinement-ux3-after.json', staffFile = 'docs/audit/refinement-ux3-staff-browser.json';
+const unit = read(unitFile), focused = read(focusedFile), core = read(coreFile), staff = read(staffFile), before = read('docs/audit/refinement-ux3-before.json');
+if (!unit.success || unit.numFailedTests || unit.numPassedTests < 245 || !focused.success || focused.numFailedTests || focused.numPassedTests < 33 || !core.passed || !staff.passed || !before.passed) throw Error('UX-3 verification incomplete');
+for (const [file, report] of [[coreFile, core], [staffFile, staff]]) {
+  if (!Object.values(report.checks).every(Boolean) || report.working_database_writes !== 0) throw Error(`Invalid evidence: ${file}`);
+  if (fs.statSync(path.join(root, file)).mtimeMs < fs.statSync(path.join(frontend, 'dist/index.html')).mtimeMs) throw Error(`Browser evidence predates final build: ${file}`);
+}
+const directory = path.join(root, 'docs/design/refinement/ux3');
+for (const [folder, report] of [['before', before], ['after', core], ['staff', staff]]) for (const file of report.screenshots) if (!fs.existsSync(path.join(directory, folder, file))) throw Error(`Missing image: ${folder}/${file}`);
+const assets = fs.readdirSync(path.join(frontend, 'dist/assets')).filter(name => /^(index|PosPage)-.*\.(js|css)$/.test(name)).map(name => ({ name, bytes: fs.statSync(path.join(frontend, 'dist/assets', name)).size }));
+const sourceHashes = Object.fromEntries(['src/features/operations/PosPage.jsx', 'src/features/operations/OperationUI.jsx', 'src/features/operations/posUsability.js', 'src/features/operations/PosQuoteStatus.jsx', 'src/styles/pos.css', 'src/app/App.jsx'].map(file => [file, createHash('sha256').update(fs.readFileSync(path.join(frontend, file))).digest('hex')]));
+const summary = {
+  phase: 'UX-3 cashier usability', verified_on: '2026-11-05', timezone: 'Asia/Karachi', passed: true,
+  react: { tests: unit.numPassedTests, files: unit.testResults.length, failed: unit.numFailedTests, focused_tests: focused.numPassedTests, focused_files: focused.testResults.length },
+  browser: { core_checks: Object.keys(core.checks).length, staff_checks: Object.keys(staff.checks).length, total_checks: Object.keys(core.checks).length + Object.keys(staff.checks).length, screenshots: core.screenshots.length + staff.screenshots.length, baseline_screenshots: before.screenshots.length },
+  production_build: { passed: true, assets, source_sha256: sourceHashes, new_dependencies: 0 }, fixture_only: true, working_database_writes: 0, backend_changes: false,
+  evidence: { react: unitFile, focused: focusedFile, core: coreFile, staff: staffFile },
+  limitations: ['Synthetic HTTP browser fixtures; no working-database writes or fresh live-backend isolation audit.', 'Keyboard-wedge events are tested; physical scanner hardware is not.', 'UX-4 onward and optional table preferences remain outside this approval.'],
+};
+fs.writeFileSync(path.join(root, 'docs/audit/refinement-ux3-verification.json'), JSON.stringify(summary, null, 2));
+const escape = value => value.replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+const title = file => file.replace(/\.png$/, '').replaceAll('-', ' ');
+const figure = (folder, file) => `<figure data-area="${folder}" data-theme="${file.includes('-dark') ? 'dark' : file.includes('-light') ? 'light' : 'other'}"><a href="${folder}/${file}"><img src="${folder}/${file}" alt="${escape(title(file))}" loading="lazy" width="1440" height="1000"></a><figcaption>${escape(title(file))}</figcaption></figure>`;
+const comparison = before.screenshots.map(file => `<details${file === before.screenshots[0] ? ' open' : ''}><summary>${escape(title(file))} — before / after</summary><div class="grid">${figure('before', file)}${figure('after', file)}</div></details>`).join('\n');
+const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Universal POS — UX-3 review</title><style>:root{font-family:system-ui,sans-serif;color:#1e293b;background:#f5f7fb}body{max-width:1500px;margin:0 auto;padding:24px}h1{font-size:26px}h2{font-size:20px;margin-top:32px}a{color:#1d4ed8}p{line-height:1.6}header,.controls{padding:16px;background:white;border:1px solid #e2e8f0;border-radius:8px}.controls{position:sticky;top:0;z-index:1;display:flex;gap:16px;flex-wrap:wrap}select{padding:8px;font:inherit}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}figure{margin:0;border:1px solid #e2e8f0;border-radius:8px;background:white;overflow:hidden}figure[hidden]{display:none}img{display:block;width:100%;max-width:100%;height:300px;object-fit:contain;background:#e2e8f0}figcaption{padding:12px;font-size:13px}details{margin:20px 0}summary{cursor:pointer;padding:12px;background:white}footer{padding:24px 0}a:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #2563eb;outline-offset:3px}</style></head><body>
+<header><h1>UX-3 — Cashier usability</h1><p>Safe search focus, F2, persistent payment amount/action, mobile payment anchoring and explicit quote/checkout states. Click an image for its full resolution. All previews use synthetic data and write nothing to the working POS database.</p><p><strong>${summary.react.tests} React tests · ${summary.browser.total_checks} browser checks · ${summary.browser.screenshots} current screenshots</strong></p><p><a href="../../../UX3_REFINEMENT.md">Implementation details</a> · <a href="../../../audit/refinement-ux3-verification.json">Verification summary</a> · <a href="../ux2/index.html">UX-2 gallery</a></p></header>
+<h2>Before and after</h2><p>Baseline screenshots were captured from the verified UX-2 build. Both versions use the same synthetic checkout amounts.</p>${comparison}
+<h2>Current screens and transaction states</h2><div class="controls"><label>Theme <select id="theme"><option value="all">Both themes</option><option value="light">Light</option><option value="dark">Dark</option></select></label><label>Area <select id="area"><option value="all">All screens</option><option value="after">Cashier usability</option><option value="staff">Staff regression</option></select></label></div>
+<div class="grid" id="screens">${core.screenshots.map(file => figure('after', file)).join('\n')}${staff.screenshots.map(file => figure('staff', file)).join('\n')}</div><footer>Screen widths 360/768/1280/1440/1920 and effective 125%/200% reflow. Physical scanner operation still requires hardware testing.</footer><script>function filter(){const theme=document.getElementById('theme').value,area=document.getElementById('area').value;document.querySelectorAll('#screens figure').forEach(f=>f.hidden=(theme!=='all'&&f.dataset.theme!==theme&&f.dataset.theme!=='other')||(area!=='all'&&f.dataset.area!==area))}document.querySelectorAll('select').forEach(s=>s.addEventListener('change',filter));</script></body></html>`;
+fs.writeFileSync(path.join(directory, 'index.html'), html);
+console.log(JSON.stringify(summary, null, 2));

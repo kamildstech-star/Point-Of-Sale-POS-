@@ -1,0 +1,60 @@
+{
+  "phase": "UX-3 cashier usability",
+  "verified_on": "2026-11-05",
+  "timezone": "Asia/Karachi",
+  "passed": true,
+  "react": {
+    "tests": 245,
+    "files": 22,
+    "failed": 0,
+    "focused_tests": 33,
+    "focused_files": 3
+  },
+  "browser": {
+    "core_checks": 46,
+    "staff_checks": 36,
+    "total_checks": 82,
+    "screenshots": 43,
+    "baseline_screenshots": 4
+  },
+  "production_build": {
+    "passed": true,
+    "assets": [
+      {
+        "name": "index-BPbhh2ku.js",
+        "bytes": 487592
+      },
+      {
+        "name": "index-CEVixbnj.css",
+        "bytes": 64481
+      },
+      {
+        "name": "PosPage-F4Rk6QdW.js",
+        "bytes": 16154
+      }
+    ],
+    "source_sha256": {
+      "src/features/operations/PosPage.jsx": "4e8ad576dd586853f547601d8e9c7442e9be47a2ffce74a5e6e7753bac83cb44",
+      "src/features/operations/OperationUI.jsx": "d2b3976aea1bcd1db6ef6804a7760829ec81e8f600a3369e2668027e081e0d9c",
+      "src/features/operations/posUsability.js": "a5c5337dbebc91229f0ca72b66e6561f88b23e03745601e8063a265050c88977",
+      "src/features/operations/PosQuoteStatus.jsx": "d9afc350f048b150c6df35dcd8364b3325b798a718c58992a2cc352c64452050",
+      "src/styles/pos.css": "60c9b946f4a84b80145aa38a4f9abd5a6ecc4c8b6fb586258f11f5ad5a49ead2",
+      "src/app/App.jsx": "da910bdbaac3dbc6405513b6c34933a0e00e94cc9432b2ca62eca1a292cec03a"
+    },
+    "new_dependencies": 0
+  },
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "backend_changes": false,
+  "evidence": {
+    "react": "docs/audit/private/refinement-ux3-vitest.json",
+    "focused": "docs/audit/private/refinement-ux3-focused-vitest.json",
+    "core": "docs/audit/refinement-ux3-after.json",
+    "staff": "docs/audit/refinement-ux3-staff-browser.json"
+  },
+  "limitations": [
+    "Synthetic HTTP browser fixtures; no working-database writes or fresh live-backend isolation audit.",
+    "Keyboard-wedge events are tested; physical scanner hardware is not.",
+    "UX-4 onward and optional table preferences remain outside this approval."
+  ]
+}

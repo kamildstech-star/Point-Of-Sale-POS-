@@ -1,0 +1,28 @@
+.modal-backdrop { position: fixed; inset: 0; z-index: 1000; background: var(--app-overlay); display: flex; align-items: center; justify-content: center; padding: 24px; overscroll-behavior: contain; }
+.modal-panel { display: flex; flex-direction: column; width: 100%; max-width: 680px; max-height: calc(100dvh - 48px); min-width: 0; background: var(--app-elevated); color: var(--app-text); border: 1px solid var(--app-border); border-radius: var(--app-radius-card); box-shadow: var(--app-dialog-shadow); outline: none; overflow: hidden; }
+.modal-large { max-width: 1040px; }
+.modal-small { max-width: 480px; }
+.modal-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px; border-bottom: 1px solid var(--app-border); flex-shrink: 0; background: var(--app-subtle); }
+.modal-header h2 { margin: 0; font-size: var(--app-text-section); line-height: 1.4; }
+.modal-close { width: var(--app-control-height); height: var(--app-control-height); display: grid; place-items: center; padding: 0; font-size: 24px; line-height: 1; flex-shrink: 0; border-radius: var(--app-radius-control); }
+.modal-body { padding: 4px 20px 20px; overflow-y: auto; overscroll-behavior: contain; min-height: 0; }
+.modal-body > .card { margin: 20px 0; max-width: none; }
+.modal-body .editor-card { margin: 0; max-width: none; }
+.modal-body .footnote { margin-top: 12px; line-height: 1.6; }
+.modal-body .form-actions { position: sticky; bottom: -20px; background: var(--app-elevated); padding: 12px 0 4px; z-index: 1; border-top: 1px solid var(--app-border); margin-top: 16px; }
+.modal-body .error { white-space: normal; }
+.dialog-trigger { margin: 8px 12px 8px 0; }
+.modal-body table { font-size: 13px; }
+.product-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.product-details dt { font-size: 12px; color: var(--app-muted-text); }
+.product-details dd { margin: 8px 0 0; font-weight: 600; overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .modal-backdrop { padding: 12px; }
+  .modal-panel { max-height: calc(100dvh - 24px); }
+  .modal-header { padding: 16px 20px; }
+  .modal-header h2 { font-size: 18px; }
+  .modal-body { padding: 4px 20px 20px; }
+  .modal-body .form-actions { bottom: -20px; }
+  .modal-body .form-grid, .product-details { grid-template-columns: 1fr; }
+}
+@media print { .modal-backdrop { display: none !important; } }

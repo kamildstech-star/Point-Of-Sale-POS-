@@ -1,0 +1,13 @@
+# ADR-004: Original-value returns and tenant-owned Stripe billing
+
+Date: 2026-10-20. Status: implemented locally; production and live charging not approved.
+
+The owner selected unlimited authorized return windows initially, original discounted/taxed amounts, separate confirmed external refunds and damaged quarantine. Returns therefore reference immutable original sale lines and allocate cumulative rounded credits. All new stock/cash/expense/return postings use the existing tenant lock and idempotency mechanism. Reports distinguish invoice value, recorded money movements, lifetime balances and estimated cost. Unknown historical refund evidence remains unknown; neither legacy ledger namespace is merged automatically.
+
+The owner explicitly selected Stripe-hosted recurring Checkout, Customer Portal, provisional configurable USD plans and test mode. Multi-tenant shared staff identities make user-owned billing inappropriate. The official Stripe PHP SDK owns external calls while tenant subscriptions/invoices remain in separate SaaS tables. Existing POS payment tables keep their retail purpose. No card details pass through React/Laravel.
+
+Webhooks verify raw signatures, store unique event IDs/hashes and queue authoritative reconciliation. Short tenant-locked updates use generation checks after external reads. Access depends on verified current status, paid initial/upgrade state or verified trial, configured grace, cancellation/end timestamps and grandfathering policy. Redirects never grant access. Backend quotas count actual records under the tenant lock. Read-only tenants retain data and recovery routes, including protection against legacy Blade writes bypassing subscription access.
+
+Existing tenants get an internal zero-charge preserved-access plan. New tenants need verified subscriptions. Paid migration is explicit and never runs from seeders. Live keys/events are rejected by default; actual Price IDs are required before enabling any test Checkout. Public plan prices and limits are provisional, and changed price terms use versioned codes.
+
+Consequences: tenant-level write serialization favors correctness over maximum throughput; queued billing requires supervision/reconciliation; uncertain Checkout results may need an operator instead of releasing duplicate charge opportunities. Windows DPAPI backups are valid local recovery evidence but need off-host key/retention design for production. Inherited dependency advisories, staging/UAT and real Stripe test-account lifecycle checks block production. See [implementation](../PHASE_6_7.md) and [billing guide](../STRIPE_BILLING.md).

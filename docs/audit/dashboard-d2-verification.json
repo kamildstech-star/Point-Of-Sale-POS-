@@ -1,0 +1,57 @@
+{
+    "verified_on":  "2026-11-03",
+    "phase":  "D2",
+    "backend":  {
+                    "tests":  117,
+                    "assertions":  2207,
+                    "new_dashboard_tests":  32,
+                    "command":  "php artisan test --no-ansi --do-not-cache-result",
+                    "passed":  true,
+                    "isolated_database":  "SQLite :memory:"
+                },
+    "frontend":  {
+                     "tests":  173,
+                     "files":  15,
+                     "command":  "npm.cmd test -- --testTimeout=15000",
+                     "passed":  true,
+                     "production_build":  "passed"
+                 },
+    "browser":  {
+                    "passed":  true,
+                    "fixture_only":  true,
+                    "real_laravel_writes":  false,
+                    "checks":  {
+                                   "authorized_cost_column":  true,
+                                   "reader_no_cost_column":  true,
+                                   "reader_no_cost_value_even_with_stale_payload":  true,
+                                   "reader_retail_price_retained":  true,
+                                   "fixture_only":  true
+                               },
+                    "screenshots":  [
+                                        "design/d2/d2-product-cost-authorized.png",
+                                        "design/d2/d2-product-cost-reader.png"
+                                    ],
+                    "retained_d1_shell_checks":  {
+                                                     "light_dark_360_768_1280_1440":  true,
+                                                     "no_page_overflow":  true,
+                                                     "desktop_pinned_preserved":  true,
+                                                     "collapsed_72px":  true,
+                                                     "collapsed_link_labels":  true,
+                                                     "collapse_persists_reload":  true,
+                                                     "tablet_mobile_drawer":  true,
+                                                     "drawer_focus_and_escape":  true,
+                                                     "permitted_navigation_search":  true,
+                                                     "real_navigation_destination":  true,
+                                                     "verified_business_switch":  true,
+                                                     "tenant_content_reset":  true,
+                                                     "updated_permission_navigation":  true,
+                                                     "restricted_search_no_leak":  true,
+                                                     "synthetic_component_preview_separate":  true,
+                                                     "chart_accessible_exact_value_table":  true
+                                                 }
+                },
+    "sql_smoke":  "dashboard-d2-sql-smoke.json",
+    "migration_preservation":  "dashboard-d2-migration.json",
+    "manual_uat":  "Not marked passed",
+    "staging":  "Not available"
+}

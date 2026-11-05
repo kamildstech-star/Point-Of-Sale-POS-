@@ -1,0 +1,118 @@
+/* D1 tenant shell. Reuses the application's one semantic light/dark theme. */
+.app-shell { --sidebar-width: var(--app-sidebar-width); display: flex; }
+.app-shell--collapsed { --sidebar-width: var(--app-sidebar-collapsed-width); }
+.app-shell > .app-sidebar {
+  position: fixed; inset-block-start: 8px; inset-inline-start: 8px; z-index: 50;
+  width: var(--sidebar-width); height: max-content; max-height: calc(100vh - 16px); max-height: calc(100dvh - 16px);
+  padding: 16px 12px 12px; overflow: hidden; border-radius: 12px; border: 1px solid var(--app-sidebar-active);
+}
+.app-shell > .workspace-main { margin-inline-start: calc(var(--sidebar-width) + 16px); min-width: 0; }
+.app-sidebar .sidebar-brand { display: flex; align-items: center; gap: 8px; min-height: 28px; margin: 0 4px 16px; font-size: 15px; letter-spacing: -.2px; flex-shrink: 0; }
+.sidebar-brand__icon { display: grid; place-items: center; width: 24px; height: 24px; color: var(--app-sidebar-foreground); flex-shrink: 0; }
+.sidebar-brand__icon .remix-icon { margin: 0; }
+.sidebar-brand > .sidebar-label { font-weight: 600; }
+.app-sidebar .nav-caption { margin: 12px 12px 8px !important; font-size: 11px; letter-spacing: .8px; flex-shrink: 0; }
+.app-sidebar > nav { display: block; flex: 0 1 auto; overflow: auto; min-height: 0; margin: 0 !important; padding: 4px !important; scrollbar-width: thin; scrollbar-color: var(--app-sidebar-muted) var(--app-sidebar); overscroll-behavior: contain; }
+.sidebar-group + .sidebar-group { margin-top: 16px; }
+.sidebar-group-heading { font-size: 11px; line-height: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: .3px; color: var(--app-sidebar-muted); margin: 0 8px 4px; }
+.app-sidebar .sidebar-link { display: flex; align-items: center; justify-content: flex-start; gap: 8px; min-height: var(--app-nav-height); margin: 2px 0; padding: 8px; font-size: var(--app-text-label); font-weight: 400; white-space: nowrap; }
+.sidebar-link > .sidebar-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.app-sidebar .sidebar-link.active { background: var(--app-sidebar-active); color: var(--app-sidebar-foreground); box-shadow: inset 3px 0 var(--app-primary); font-weight: 500; }
+.app-sidebar .sidebar-link:focus-visible { outline-offset: 0; }
+.sidebar-context { flex-shrink: 0; min-width: 0; margin-bottom: 12px; }
+.sidebar-context-label { padding: 10px 12px; border-radius: var(--app-radius-control); background: var(--app-sidebar-active); }
+.sidebar-context-label small { display: block; margin-top: 4px; }
+.app-sidebar > .sidebar-bottom { display: flex; align-items: center; gap: 4px; flex-shrink: 0; margin: 12px 0 0 !important; padding: 12px 0 0 !important; border-top: 1px solid var(--app-sidebar-active); }
+.sidebar-business { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1; }
+.sidebar-business > div { min-width: 0; }
+.sidebar-business strong { display: block; font-size: 12px; color: var(--app-sidebar-foreground); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sidebar-business small { display: block; font-size: 12px; margin-top: 4px; }
+.sidebar-collapse { display: grid; place-items: center; padding: 0; width: var(--app-control-height); min-width: var(--app-control-height); height: var(--app-control-height); border: 0; color: var(--app-sidebar-foreground); background: var(--app-sidebar-active); }
+.sidebar-collapse:hover { background: var(--app-action); }
+.sidebar-collapse > .remix-icon { margin: 0; }
+.app-sidebar--collapsed { padding-inline: 8px !important; }
+.app-sidebar--collapsed .sidebar-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.app-sidebar--collapsed .sidebar-brand, .app-sidebar--collapsed > .sidebar-bottom, .app-sidebar--collapsed .sidebar-link { justify-content: center; }
+.app-sidebar--collapsed .nav-caption { margin: 0 !important; }
+.app-sidebar--collapsed .sidebar-link { padding: 8px 4px; }
+.app-sidebar--collapsed .sidebar-context { display: flex; justify-content: center; }
+.app-topbar { position: sticky; top: 0; z-index: 40; min-height: var(--app-header-height); height: auto; padding: 8px 24px; gap: 16px; color: var(--app-text); flex-wrap: wrap; }
+.app-topbar > .topbar-context, .app-topbar > .topbar-actions { display: flex; align-items: center; gap: 12px; width: auto; }
+.topbar-context { min-width: 0; }
+.page-breadcrumb { display: grid; gap: 2px; min-width: 0; line-height: 1.4; }
+.page-breadcrumb > a { color: var(--app-muted-text); font-size: 12px; text-decoration: none; }
+.page-breadcrumb > strong { font-size: 15px; font-weight: 600; }
+.topbar-actions { margin-inline-start: auto; min-width: 0; }
+.shell-icon-button, .app-topbar .theme-toggle { display: inline-flex; justify-content: center; align-items: center; width: var(--app-control-height); min-width: var(--app-control-height); height: var(--app-control-height); padding: 0; }
+.shell-icon-button > .remix-icon { margin: 0; }
+.tenant-switcher { display: flex; align-items: center; gap: 8px; min-height: var(--app-control-height); max-width: 220px; min-width: 0; padding: 6px 10px; }
+.tenant-switcher > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tenant-switcher > .remix-icon { margin: 0; }
+.tenant-switcher__copy { min-width: 0; }
+.tenant-switcher__copy strong { display: block; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
+.tenant-switcher--sidebar { width: 100%; max-width: none; min-height: 56px; gap: 8px; padding: 10px; border-color: transparent; background: var(--app-sidebar-active); color: var(--app-sidebar-foreground); text-align: start; }
+.tenant-switcher--sidebar:hover { background: var(--app-sidebar-active); border-color: var(--app-sidebar-muted); }
+.tenant-switcher--sidebar:focus-visible { outline-color: var(--app-focus); }
+.tenant-switcher--sidebar .tenant-switcher__copy { display: grid; gap: 2px; flex: 1; }
+.tenant-switcher__copy small { font-size: 12px; line-height: 16px; font-weight: 400; color: var(--app-sidebar-muted); }
+.tenant-switcher--sidebar > .remix-icon { width: 18px; height: 18px; }
+.tenant-switcher--sidebar > .remix-icon:last-child { width: 14px; height: 14px; }
+.tenant-switcher--collapsed { width: var(--app-control-height); min-width: var(--app-control-height); height: var(--app-control-height); min-height: var(--app-control-height); padding: 0; justify-content: center; }
+.tenant-switcher--collapsed .tenant-switcher__copy { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
+.tenant-switcher--collapsed > .remix-icon:last-child { display: none; }
+.navigation-search { display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; }
+.navigation-search > .remix-icon { margin: 0; }
+.profile-menu { position: relative; }
+.profile-menu > summary { display: flex; align-items: center; gap: 8px; min-height: var(--app-control-height); padding: 0 4px; color: var(--app-text); border-radius: var(--app-radius-control); list-style: none; }
+.profile-menu > summary::-webkit-details-marker { display: none; }
+.staff-avatar { display: grid; place-items: center; width: 32px; height: 32px; flex-shrink: 0; border-radius: 50%; color: var(--app-link); background: var(--app-accent-subtle); font-weight: 600; }
+.staff-name { max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.profile-panel { position: absolute; inset-inline-end: 0; top: calc(100% + 12px); display: grid; gap: 8px; width: min(280px, calc(100vw - 32px)); padding: 20px; background: var(--app-elevated); border: 1px solid var(--app-border); border-radius: var(--app-radius-card); box-shadow: var(--app-dialog-shadow); overflow-wrap: anywhere; }
+.profile-panel > span { color: var(--app-muted-text); font-size: 12px; }
+.profile-panel > a { margin-top: 4px; min-height: 32px; display: flex; align-items: center; }
+.sign-out-button { display: flex; align-items: center; justify-content: center; min-height: var(--app-control-height); flex-shrink: 0; }
+.skip-link { position: fixed; left: 16px; top: -100px; z-index: 900; background: var(--app-action); color: var(--app-on-action); padding: 12px 16px; border-radius: 8px; }
+.skip-link:focus { top: 12px; }
+#workspace-content:focus { outline: 0; }
+#workspace-content h1[tabindex='-1']:focus { outline: 2px solid var(--app-focus-ring); outline-offset: 6px; scroll-margin-top: calc(var(--app-header-height) + 16px); }
+.shell-error { margin: 16px 24px; }
+.app-shell .content { padding: var(--app-page-padding); }
+.navigation-results { display: grid; gap: 4px; margin: 16px 0 24px; }
+.navigation-results > a { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 12px; border-radius: var(--app-radius-control); color: var(--app-text); text-decoration: none; }
+.navigation-results > a:hover { background: var(--app-hover); }
+.navigation-results > a > .remix-icon:last-child { margin-inline-start: auto; }
+/* The existing Modal provides focus trapping, Escape, inertness and restoration. */
+.modal-backdrop:has(> .modal-navigation) { justify-content: flex-start; padding: 0; }
+.modal-navigation { width: min(320px, 90vw); height: 100vh; height: 100dvh; max-height: 100dvh; max-width: 320px; border-radius: 0; border: 0; background: var(--app-sidebar); }
+.modal-navigation .modal-header { background: var(--app-sidebar); color: var(--app-sidebar-foreground); border-color: var(--app-sidebar-active); padding: 16px; }
+.modal-navigation .modal-close { background: var(--app-sidebar-active); color: var(--app-sidebar-foreground); border-color: var(--app-sidebar-active); }
+.modal-navigation .modal-body { display: flex; flex-direction: column; flex: 1; padding: 0; overflow: hidden; }
+.app-sidebar--drawer { position: static; display: flex; width: 100%; height: 100%; max-height: 100%; padding: 16px; }
+.app-sidebar--drawer > nav { display: block; flex: 1 1 auto; overflow: auto; }
+.app-sidebar--drawer > .nav-caption { display: block; }
+.app-sidebar--drawer > .sidebar-bottom { display: flex; }
+@media (max-width: 1279px) {
+  .app-shell > .workspace-main { margin-inline-start: 0; }
+  .app-shell > .app-sidebar { display: none; }
+  .app-topbar { padding-inline: 20px; }
+  .staff-name { display: none; }
+}
+@media (max-width: 760px) {
+  .app-topbar { flex-wrap: wrap; padding: 12px 16px; gap: 8px; }
+  .app-topbar > .topbar-context { width: 100%; justify-content: flex-start; }
+  .app-topbar > .topbar-actions { width: 100%; gap: 8px; margin: 0; justify-content: flex-end; }
+  .topbar-actions .tenant-switcher { flex: 1; max-width: none; padding-inline: 8px; }
+  .topbar-actions .profile-menu > summary { padding: 0; width: 44px; justify-content: center; }
+  .profile-menu > summary > .remix-icon { display: none; }
+  .sign-out-button { width: 44px; min-width: 44px; padding: 8px; }
+  .sign-out-button > span { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
+  .sign-out-button > .remix-icon { margin: 0; }
+  .app-shell .content { padding: var(--app-page-padding); }
+  .app-sidebar--drawer .sidebar-link { display: flex; margin: 4px 0; min-height: 44px; font-size: 13px; padding: 10px 8px; }
+  .navigation-search { width: 44px; min-width: 44px; padding-inline: 0; }
+  .navigation-search > span { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
+}
+@media print {
+  .app-shell > .workspace-main { margin: 0 !important; }
+  .app-sidebar, .app-topbar, .skip-link { display: none !important; }
+}

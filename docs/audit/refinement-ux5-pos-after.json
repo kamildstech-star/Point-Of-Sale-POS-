@@ -1,0 +1,726 @@
+{
+  "passed": true,
+  "phase": "after",
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "checks": {
+    "light_1440_reflows": true,
+    "light_360_reflows": true,
+    "light_768_reflows": true,
+    "light_1280_reflows": true,
+    "light_1920_reflows": true,
+    "light_checkout_contrast": true,
+    "light_comfortable_density": true,
+    "light_touch_targets": true,
+    "light_exact_server_totals": true,
+    "light_shortcut_ignores_payment_editing": true,
+    "light_F2_focuses_scanner": true,
+    "light_scanner_invalidates_quote": true,
+    "light_mobile_summary_stays_visible": true,
+    "light_mobile_anchor_focuses_payment": true,
+    "light_desktop_summary_sticky": true,
+    "light_complete_action_visible_in_panel": true,
+    "light_1.25_zoom_reflows": true,
+    "light_2_zoom_reflows": true,
+    "dark_1440_reflows": true,
+    "dark_360_reflows": true,
+    "dark_768_reflows": true,
+    "dark_1280_reflows": true,
+    "dark_1920_reflows": true,
+    "dark_checkout_contrast": true,
+    "dark_comfortable_density": true,
+    "dark_touch_targets": true,
+    "dark_exact_server_totals": true,
+    "dark_shortcut_ignores_payment_editing": true,
+    "dark_F2_focuses_scanner": true,
+    "dark_scanner_invalidates_quote": true,
+    "dark_mobile_summary_stays_visible": true,
+    "dark_mobile_anchor_focuses_payment": true,
+    "dark_desktop_summary_sticky": true,
+    "dark_complete_action_visible_in_panel": true,
+    "dark_1.25_zoom_reflows": true,
+    "dark_2_zoom_reflows": true,
+    "initial_search_focus": true,
+    "shortcut_does_not_escape_dialog": true,
+    "expired_quote_blocks_new_checkout": true,
+    "refresh_quote_reenables_checkout": true,
+    "known_rejection_requires_fresh_quote": true,
+    "unconfirmed_locks_editor": true,
+    "same_request_retry_after_quote_expiry": true,
+    "confirmed_receipt_link": true,
+    "explicit_new_sale_resets_and_focuses": true,
+    "no_checkout_automatic_retry": true
+  },
+  "screenshots": [
+    "checkout-light-1440.png",
+    "checkout-light-360.png",
+    "checkout-light-768.png",
+    "checkout-light-1280.png",
+    "checkout-light-1920.png",
+    "payment-anchor-light-360.png",
+    "long-cart-light-1440.png",
+    "checkout-light-zoom-125.png",
+    "checkout-light-zoom-200.png",
+    "checkout-dark-1440.png",
+    "checkout-dark-360.png",
+    "checkout-dark-768.png",
+    "checkout-dark-1280.png",
+    "checkout-dark-1920.png",
+    "payment-anchor-dark-360.png",
+    "long-cart-dark-1440.png",
+    "checkout-dark-zoom-125.png",
+    "checkout-dark-zoom-200.png",
+    "quote-expired.png",
+    "checkout-rejected.png",
+    "checkout-unconfirmed.png",
+    "checkout-completed.png"
+  ],
+  "measurements": {},
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search=SYNTH-SHIRT&scan=1"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "2"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          },
+          {
+            "variant_id": 10,
+            "qty": "1"
+          },
+          {
+            "variant_id": 11,
+            "qty": "1"
+          },
+          {
+            "variant_id": 12,
+            "qty": "1"
+          },
+          {
+            "variant_id": 13,
+            "qty": "1"
+          },
+          {
+            "variant_id": 14,
+            "qty": "1"
+          },
+          {
+            "variant_id": 15,
+            "qty": "1"
+          },
+          {
+            "variant_id": 16,
+            "qty": "1"
+          },
+          {
+            "variant_id": 17,
+            "qty": "1"
+          },
+          {
+            "variant_id": 18,
+            "qty": "1"
+          },
+          {
+            "variant_id": 19,
+            "qty": "1"
+          },
+          {
+            "variant_id": 20,
+            "qty": "1"
+          },
+          {
+            "variant_id": 21,
+            "qty": "1"
+          },
+          {
+            "variant_id": 22,
+            "qty": "1"
+          },
+          {
+            "variant_id": 23,
+            "qty": "1"
+          },
+          {
+            "variant_id": 24,
+            "qty": "1"
+          },
+          {
+            "variant_id": 25,
+            "qty": "1"
+          },
+          {
+            "variant_id": 26,
+            "qty": "1"
+          },
+          {
+            "variant_id": 27,
+            "qty": "1"
+          },
+          {
+            "variant_id": 28,
+            "qty": "1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search=SYNTH-SHIRT&scan=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search=SYNTH-SHIRT"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "2"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          },
+          {
+            "variant_id": 10,
+            "qty": "1"
+          },
+          {
+            "variant_id": 11,
+            "qty": "1"
+          },
+          {
+            "variant_id": 12,
+            "qty": "1"
+          },
+          {
+            "variant_id": 13,
+            "qty": "1"
+          },
+          {
+            "variant_id": 14,
+            "qty": "1"
+          },
+          {
+            "variant_id": 15,
+            "qty": "1"
+          },
+          {
+            "variant_id": 16,
+            "qty": "1"
+          },
+          {
+            "variant_id": 17,
+            "qty": "1"
+          },
+          {
+            "variant_id": 18,
+            "qty": "1"
+          },
+          {
+            "variant_id": 19,
+            "qty": "1"
+          },
+          {
+            "variant_id": 20,
+            "qty": "1"
+          },
+          {
+            "variant_id": 21,
+            "qty": "1"
+          },
+          {
+            "variant_id": 22,
+            "qty": "1"
+          },
+          {
+            "variant_id": 23,
+            "qty": "1"
+          },
+          {
+            "variant_id": 24,
+            "qty": "1"
+          },
+          {
+            "variant_id": 25,
+            "qty": "1"
+          },
+          {
+            "variant_id": 26,
+            "qty": "1"
+          },
+          {
+            "variant_id": 27,
+            "qty": "1"
+          },
+          {
+            "variant_id": 28,
+            "qty": "1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/checkout",
+      "body": {
+        "idempotency_key": "4f17d3cf-609a-4bd4-a93d-644d105a49a7",
+        "quote_id": 51,
+        "payments": [
+          {
+            "method_id": 1,
+            "amount": "2875.00",
+            "reference": ""
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/cash/sessions"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/payment-methods"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/price-lists"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/quotes",
+      "body": {
+        "cash_session_id": 5,
+        "customer_id": null,
+        "price_list_id": null,
+        "discount_amount": "0",
+        "items": [
+          {
+            "variant_id": 9,
+            "qty": "1"
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/checkout",
+      "body": {
+        "idempotency_key": "fd8ab0f1-e1d9-4f07-b2a5-2c13ab5b9a3e",
+        "quote_id": 51,
+        "payments": [
+          {
+            "method_id": 1,
+            "amount": "2875.00",
+            "reference": ""
+          }
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pos/checkout",
+      "body": {
+        "idempotency_key": "fd8ab0f1-e1d9-4f07-b2a5-2c13ab5b9a3e",
+        "quote_id": 51,
+        "payments": [
+          {
+            "method_id": 1,
+            "amount": "2875.00",
+            "reference": ""
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    }
+  ]
+}

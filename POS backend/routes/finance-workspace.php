@@ -1,0 +1,47 @@
+<?php
+
+use App\Http\Controllers\Api\V1\BillingController as B;
+use App\Http\Controllers\Api\V1\FinanceController as F;
+use App\Http\Controllers\Api\V1\WorkspaceController as W;
+use Illuminate\Support\Facades\Route;
+
+Route::get('returns', [F::class, 'returns']);
+Route::get('returns/{id}', [F::class, 'returnDetail'])->whereNumber('id');
+Route::post('sales/{id}/returns', [F::class, 'createReturn'])->whereNumber('id');
+Route::post('sales/{id}/void', [F::class, 'cancel'])->whereNumber('id');
+Route::post('returns/{id}/approve', [F::class, 'approveReturn'])->whereNumber('id');
+Route::post('returns/{id}/post', [F::class, 'postReturn'])->whereNumber('id');
+Route::post('returns/{id}/refunds', [F::class, 'refund'])->whereNumber('id');
+Route::post('returns/{id}/exchange', [F::class, 'exchange'])->whereNumber('id');
+Route::post('cash/sessions/{id}/movements', [F::class, 'movement'])->whereNumber('id');
+Route::post('cash/sessions/{id}/close', [F::class, 'close'])->whereNumber('id');
+Route::get('expenses/categories', [F::class, 'categories']);
+Route::post('expenses/categories', [F::class, 'category']);
+Route::get('expenses', [F::class, 'expenses']);
+Route::post('expenses', [F::class, 'expense']);
+Route::post('expenses/{id}/approve', [F::class, 'approveExpense'])->whereNumber('id');
+Route::get('reports/summary', [F::class, 'report']);
+Route::post('legacy/financial-reconciliation', [F::class, 'legacy']);
+Route::get('billing/plans', [B::class, 'plans']);
+Route::get('billing/subscription', [B::class, 'subscription']);
+Route::get('billing/invoices', [B::class, 'invoices']);
+Route::get('billing/usage', [B::class, 'usage']);
+Route::post('billing/checkout', [B::class, 'checkout'])->middleware('throttle:bulk-operations');
+Route::post('billing/checkout/{id}/expire', [B::class, 'expire'])->whereNumber('id');
+Route::post('billing/portal', [B::class, 'portal'])->middleware('throttle:bulk-operations');
+Route::get('workspace/settings', [W::class, 'settings']);
+Route::patch('workspace/settings', [W::class, 'saveSettings']);
+Route::get('workspace/audit', [W::class, 'auditLog']);
+Route::get('workspace/alerts', [W::class, 'alerts']);
+Route::post('workspace/alerts/{id}/read', [W::class, 'readAlert'])->whereNumber('id');
+Route::get('workspace/templates', [W::class, 'templates']);
+Route::match(['put', 'patch'], 'workspace/templates/{code}', [W::class, 'saveTemplate']);
+Route::get('workspace/imports', [W::class, 'imports']);
+Route::post('workspace/imports', [W::class, 'previewImport'])->middleware('throttle:bulk-operations');
+Route::post('workspace/imports/{id}/post', [W::class, 'postImport'])->whereNumber('id');
+Route::get('workspace/exports', [W::class, 'exports']);
+Route::post('workspace/exports', [W::class, 'createExport'])->middleware('throttle:bulk-operations');
+Route::get('workspace/exports/{id}/download', [W::class, 'download'])->whereNumber('id');
+Route::get('workspace/support', [W::class, 'support']);
+Route::post('workspace/support', [W::class, 'createSupport']);
+Route::get('workspace/operations', [W::class, 'operations']);

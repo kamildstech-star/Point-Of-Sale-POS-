@@ -1,0 +1,21 @@
+{
+    "checked_at": "2026-11-03T14:03:23+00:00",
+    "driver": "mysql",
+    "read_only": true,
+    "working_data_writes": 0,
+    "checks": {
+        "summary": true,
+        "trend": true,
+        "branches": true,
+        "topProducts": true,
+        "recentSales": true,
+        "inventory": true,
+        "purchasing": true,
+        "shift": true,
+        "accounting": true,
+        "approvals": true,
+        "alerts": true,
+        "cashier": true,
+        "staffActivity": true
+    }
+}

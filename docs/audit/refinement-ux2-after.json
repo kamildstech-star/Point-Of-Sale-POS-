@@ -1,0 +1,2039 @@
+{
+  "passed": true,
+  "phase": "after",
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "checks": {
+    "products_light_contrast": true,
+    "light_first_server_page_only": true,
+    "light_compact_table_sizes": true,
+    "light_sticky_header_within_table": true,
+    "light_next_page_server_range": true,
+    "light_no_match_and_filter_chip": true,
+    "light_clear_resets_search_and_page": true,
+    "products_light_360_reflow": true,
+    "products_light_768_reflow": true,
+    "products_light_1280_reflow": true,
+    "products_light_1920_reflow": true,
+    "light_products_mobile_headings_remain_readable": true,
+    "products_light_1.25_zoom_reflow": true,
+    "products_light_2_zoom_reflow": true,
+    "product-form_light_contrast": true,
+    "light_keyboard_expands_and_enters_optional_section": true,
+    "light_form_sections_and_optional_disclosure": true,
+    "light_server_error_reveals_optional_field_and_keeps_values": true,
+    "light_error_summary_at_form_top": true,
+    "product-form_light_360_reflow": true,
+    "product-form_light_768_reflow": true,
+    "product-form_light_1280_reflow": true,
+    "product-form_light_1920_reflow": true,
+    "light_desktop_form_two_columns": true,
+    "light_product-form_mobile_targets": true,
+    "product-form_light_1.25_zoom_reflow": true,
+    "product-form_light_2_zoom_reflow": true,
+    "inventory_light_contrast": true,
+    "light_exact_inventory_identifiers_and_quantities": true,
+    "inventory_light_360_reflow": true,
+    "inventory_light_768_reflow": true,
+    "inventory_light_1280_reflow": true,
+    "inventory_light_1920_reflow": true,
+    "light_inventory_mobile_headings_remain_readable": true,
+    "inventory_light_1.25_zoom_reflow": true,
+    "inventory_light_2_zoom_reflow": true,
+    "inventory-form_light_contrast": true,
+    "inventory-form_light_360_reflow": true,
+    "inventory-form_light_768_reflow": true,
+    "inventory-form_light_1280_reflow": true,
+    "inventory-form_light_1920_reflow": true,
+    "light_inventory-form_mobile_targets": true,
+    "inventory-form_light_1.25_zoom_reflow": true,
+    "inventory-form_light_2_zoom_reflow": true,
+    "purchase-orders_light_contrast": true,
+    "purchase-orders_light_360_reflow": true,
+    "purchase-orders_light_768_reflow": true,
+    "purchase-orders_light_1280_reflow": true,
+    "purchase-orders_light_1920_reflow": true,
+    "light_purchase-orders_mobile_headings_remain_readable": true,
+    "purchase-orders_light_1.25_zoom_reflow": true,
+    "purchase-orders_light_2_zoom_reflow": true,
+    "purchase-form_light_contrast": true,
+    "purchase-form_light_360_reflow": true,
+    "purchase-form_light_768_reflow": true,
+    "purchase-form_light_1280_reflow": true,
+    "purchase-form_light_1920_reflow": true,
+    "light_purchase-form_mobile_targets": true,
+    "purchase-form_light_1.25_zoom_reflow": true,
+    "purchase-form_light_2_zoom_reflow": true,
+    "setup_light_contrast": true,
+    "setup_light_360_reflow": true,
+    "setup_light_768_reflow": true,
+    "setup_light_1280_reflow": true,
+    "setup_light_1920_reflow": true,
+    "light_setup_mobile_headings_remain_readable": true,
+    "setup_light_1.25_zoom_reflow": true,
+    "setup_light_2_zoom_reflow": true,
+    "sales_light_contrast": true,
+    "light_clear_keeps_personal_view": true,
+    "sales_light_360_reflow": true,
+    "sales_light_768_reflow": true,
+    "sales_light_1280_reflow": true,
+    "sales_light_1920_reflow": true,
+    "light_sales_mobile_headings_remain_readable": true,
+    "sales_light_1.25_zoom_reflow": true,
+    "sales_light_2_zoom_reflow": true,
+    "customers_light_contrast": true,
+    "light_phone_is_not_a_number": true,
+    "customers_light_360_reflow": true,
+    "customers_light_768_reflow": true,
+    "customers_light_1280_reflow": true,
+    "customers_light_1920_reflow": true,
+    "light_customers_mobile_headings_remain_readable": true,
+    "customers_light_1.25_zoom_reflow": true,
+    "customers_light_2_zoom_reflow": true,
+    "light_edit_reuses_product_dialog": true,
+    "light_edit_saves_and_refreshes": true,
+    "light_empty_catalog": true,
+    "light_error_is_not_empty": true,
+    "light_retry": true,
+    "light_inventory_filtered_empty": true,
+    "products_dark_contrast": true,
+    "dark_first_server_page_only": true,
+    "dark_compact_table_sizes": true,
+    "dark_sticky_header_within_table": true,
+    "dark_next_page_server_range": true,
+    "dark_no_match_and_filter_chip": true,
+    "dark_clear_resets_search_and_page": true,
+    "products_dark_360_reflow": true,
+    "products_dark_768_reflow": true,
+    "products_dark_1280_reflow": true,
+    "products_dark_1920_reflow": true,
+    "dark_products_mobile_headings_remain_readable": true,
+    "products_dark_1.25_zoom_reflow": true,
+    "products_dark_2_zoom_reflow": true,
+    "product-form_dark_contrast": true,
+    "dark_keyboard_expands_and_enters_optional_section": true,
+    "dark_form_sections_and_optional_disclosure": true,
+    "dark_server_error_reveals_optional_field_and_keeps_values": true,
+    "dark_error_summary_at_form_top": true,
+    "product-form_dark_360_reflow": true,
+    "product-form_dark_768_reflow": true,
+    "product-form_dark_1280_reflow": true,
+    "product-form_dark_1920_reflow": true,
+    "dark_desktop_form_two_columns": true,
+    "dark_product-form_mobile_targets": true,
+    "product-form_dark_1.25_zoom_reflow": true,
+    "product-form_dark_2_zoom_reflow": true,
+    "inventory_dark_contrast": true,
+    "dark_exact_inventory_identifiers_and_quantities": true,
+    "inventory_dark_360_reflow": true,
+    "inventory_dark_768_reflow": true,
+    "inventory_dark_1280_reflow": true,
+    "inventory_dark_1920_reflow": true,
+    "dark_inventory_mobile_headings_remain_readable": true,
+    "inventory_dark_1.25_zoom_reflow": true,
+    "inventory_dark_2_zoom_reflow": true,
+    "inventory-form_dark_contrast": true,
+    "inventory-form_dark_360_reflow": true,
+    "inventory-form_dark_768_reflow": true,
+    "inventory-form_dark_1280_reflow": true,
+    "inventory-form_dark_1920_reflow": true,
+    "dark_inventory-form_mobile_targets": true,
+    "inventory-form_dark_1.25_zoom_reflow": true,
+    "inventory-form_dark_2_zoom_reflow": true,
+    "purchase-orders_dark_contrast": true,
+    "purchase-orders_dark_360_reflow": true,
+    "purchase-orders_dark_768_reflow": true,
+    "purchase-orders_dark_1280_reflow": true,
+    "purchase-orders_dark_1920_reflow": true,
+    "dark_purchase-orders_mobile_headings_remain_readable": true,
+    "purchase-orders_dark_1.25_zoom_reflow": true,
+    "purchase-orders_dark_2_zoom_reflow": true,
+    "purchase-form_dark_contrast": true,
+    "purchase-form_dark_360_reflow": true,
+    "purchase-form_dark_768_reflow": true,
+    "purchase-form_dark_1280_reflow": true,
+    "purchase-form_dark_1920_reflow": true,
+    "dark_purchase-form_mobile_targets": true,
+    "purchase-form_dark_1.25_zoom_reflow": true,
+    "purchase-form_dark_2_zoom_reflow": true,
+    "setup_dark_contrast": true,
+    "setup_dark_360_reflow": true,
+    "setup_dark_768_reflow": true,
+    "setup_dark_1280_reflow": true,
+    "setup_dark_1920_reflow": true,
+    "dark_setup_mobile_headings_remain_readable": true,
+    "setup_dark_1.25_zoom_reflow": true,
+    "setup_dark_2_zoom_reflow": true,
+    "sales_dark_contrast": true,
+    "dark_clear_keeps_personal_view": true,
+    "sales_dark_360_reflow": true,
+    "sales_dark_768_reflow": true,
+    "sales_dark_1280_reflow": true,
+    "sales_dark_1920_reflow": true,
+    "dark_sales_mobile_headings_remain_readable": true,
+    "sales_dark_1.25_zoom_reflow": true,
+    "sales_dark_2_zoom_reflow": true,
+    "customers_dark_contrast": true,
+    "dark_phone_is_not_a_number": true,
+    "customers_dark_360_reflow": true,
+    "customers_dark_768_reflow": true,
+    "customers_dark_1280_reflow": true,
+    "customers_dark_1920_reflow": true,
+    "dark_customers_mobile_headings_remain_readable": true,
+    "customers_dark_1.25_zoom_reflow": true,
+    "customers_dark_2_zoom_reflow": true,
+    "dark_edit_reuses_product_dialog": true,
+    "dark_edit_saves_and_refreshes": true,
+    "dark_empty_catalog": true,
+    "dark_error_is_not_empty": true,
+    "dark_retry": true,
+    "dark_inventory_filtered_empty": true,
+    "unchanged_decimal_and_optional_payload": true
+  },
+  "screenshots": [
+    "products-light-1440.png",
+    "products-light-no-match.png",
+    "products-light-360.png",
+    "products-light-1920.png",
+    "products-light-zoom-200.png",
+    "product-form-light-1440.png",
+    "product-form-light-validation.png",
+    "product-form-light-360.png",
+    "product-form-light-1920.png",
+    "product-form-light-zoom-200.png",
+    "inventory-light-1440.png",
+    "inventory-light-360.png",
+    "inventory-light-1920.png",
+    "inventory-light-zoom-200.png",
+    "inventory-form-light-1440.png",
+    "inventory-form-light-360.png",
+    "inventory-form-light-1920.png",
+    "inventory-form-light-zoom-200.png",
+    "purchase-orders-light-1440.png",
+    "purchase-orders-light-360.png",
+    "purchase-orders-light-1920.png",
+    "purchase-orders-light-zoom-200.png",
+    "purchase-form-light-1440.png",
+    "purchase-form-light-360.png",
+    "purchase-form-light-1920.png",
+    "purchase-form-light-zoom-200.png",
+    "setup-light-1440.png",
+    "setup-light-360.png",
+    "setup-light-1920.png",
+    "setup-light-zoom-200.png",
+    "sales-light-1440.png",
+    "sales-light-360.png",
+    "sales-light-1920.png",
+    "sales-light-zoom-200.png",
+    "customers-light-1440.png",
+    "customers-light-360.png",
+    "customers-light-1920.png",
+    "customers-light-zoom-200.png",
+    "products-light-empty.png",
+    "products-light-error.png",
+    "inventory-light-no-match.png",
+    "products-dark-1440.png",
+    "products-dark-no-match.png",
+    "products-dark-360.png",
+    "products-dark-1920.png",
+    "products-dark-zoom-200.png",
+    "product-form-dark-1440.png",
+    "product-form-dark-validation.png",
+    "product-form-dark-360.png",
+    "product-form-dark-1920.png",
+    "product-form-dark-zoom-200.png",
+    "inventory-dark-1440.png",
+    "inventory-dark-360.png",
+    "inventory-dark-1920.png",
+    "inventory-dark-zoom-200.png",
+    "inventory-form-dark-1440.png",
+    "inventory-form-dark-360.png",
+    "inventory-form-dark-1920.png",
+    "inventory-form-dark-zoom-200.png",
+    "purchase-orders-dark-1440.png",
+    "purchase-orders-dark-360.png",
+    "purchase-orders-dark-1920.png",
+    "purchase-orders-dark-zoom-200.png",
+    "purchase-form-dark-1440.png",
+    "purchase-form-dark-360.png",
+    "purchase-form-dark-1920.png",
+    "purchase-form-dark-zoom-200.png",
+    "setup-dark-1440.png",
+    "setup-dark-360.png",
+    "setup-dark-1920.png",
+    "setup-dark-zoom-200.png",
+    "sales-dark-1440.png",
+    "sales-dark-360.png",
+    "sales-dark-1920.png",
+    "sales-dark-zoom-200.png",
+    "customers-dark-1440.png",
+    "customers-dark-360.png",
+    "customers-dark-1920.png",
+    "customers-dark-zoom-200.png",
+    "products-dark-empty.png",
+    "products-dark-error.png",
+    "inventory-dark-no-match.png"
+  ],
+  "measurements": {
+    "products-light": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 600,
+        "width": 1144,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 36,
+        "width": 336.6875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 95.3125,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 15
+    },
+    "product-form-light": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 600,
+        "width": 1144,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 36,
+        "width": 336.6875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 95.3125,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 15
+    },
+    "inventory-light": {
+      "body": {
+        "height": 1032.5,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1129,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 156.921875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1117,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "inventory-form-light": {
+      "body": {
+        "height": 1032.5,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 156.921875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "purchase-orders-light": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 184.296875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "purchase-form-light": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 184.296875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "setup-light": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 86.5,
+        "width": 1144,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 111.71875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1142,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 1
+    },
+    "sales-light": {
+      "body": {
+        "height": 1009,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1129,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": {
+        "height": 16,
+        "width": 16,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 81.3125,
+        "font": "13px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1117,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "customers-light": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 142.359375,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 46,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 15
+    },
+    "products-dark": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 600,
+        "width": 1144,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 36,
+        "width": 336.6875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 95.3125,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "product-form-dark": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 600,
+        "width": 1144,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": {
+        "height": 36,
+        "width": 336.6875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 95.3125,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 15
+    },
+    "inventory-dark": {
+      "body": {
+        "height": 1032.5,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1129,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 156.921875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1117,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "inventory-form-dark": {
+      "body": {
+        "height": 1032.5,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 156.921875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "purchase-orders-dark": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 184.296875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "purchase-form-dark": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 184.296875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "setup-dark": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": {
+        "height": 86.5,
+        "width": 1144,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 111.71875,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1142,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 1
+    },
+    "sales-dark": {
+      "body": {
+        "height": 1009,
+        "width": 1425,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1129,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1177,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": {
+        "height": 16,
+        "width": 16,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "button": {
+        "height": 36,
+        "width": 81.3125,
+        "font": "13px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1117,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 14
+    },
+    "customers-dark": {
+      "body": {
+        "height": 1000,
+        "width": 1440,
+        "font": "14px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "title": {
+        "height": 27.5,
+        "width": 1144,
+        "font": "22px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "sidebar": {
+        "height": 984,
+        "width": 232,
+        "font": "14px",
+        "padding": "16px 12px 12px",
+        "gap": "normal"
+      },
+      "nav": {
+        "height": 40,
+        "width": 188,
+        "font": "13px",
+        "padding": "8px",
+        "gap": "8px"
+      },
+      "navIcon": {
+        "height": 18,
+        "width": 18,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "header": {
+        "height": 58,
+        "width": 1192,
+        "font": "13px",
+        "padding": "8px 24px",
+        "gap": "16px"
+      },
+      "card": null,
+      "control": null,
+      "button": {
+        "height": 36,
+        "width": 142.359375,
+        "font": "14px",
+        "padding": "7px 12px",
+        "gap": "normal"
+      },
+      "row": {
+        "height": 44,
+        "width": 1132,
+        "font": "13px",
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "kpi": null,
+      "visibleRows": 16
+    }
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=2&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search=missing"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/products",
+      "body": {
+        "name": "Synthetic new item",
+        "description": "Keep optional details",
+        "product_type": "simple",
+        "track_inventory": true,
+        "active": true,
+        "category_id": null,
+        "brand_id": null,
+        "tax_class_id": null,
+        "variant": {
+          "sku": "SYNTH-NEW",
+          "name": null,
+          "base_unit_id": "1",
+          "default_cost": "0.0000",
+          "default_price": "12.3456",
+          "tracking_mode": "none",
+          "active": true
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/balances?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/balances?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/purchasing/orders?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/suppliers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/purchasing/orders?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/suppliers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sales?due=0&branch_id=1&own=1&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products/1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/products/1",
+      "body": {
+        "name": "Updated synthetic item",
+        "description": "Original optional description",
+        "product_type": "simple",
+        "track_inventory": true,
+        "active": true,
+        "category_id": null,
+        "brand_id": null,
+        "tax_class_id": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/balances?location_id=3&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-07&to=2026-11-05&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/sales-trend?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/branch-performance?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/top-products?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-07&to=2026-11-05&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=2&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search=missing"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/products",
+      "body": {
+        "name": "Synthetic new item",
+        "description": "Keep optional details",
+        "product_type": "simple",
+        "track_inventory": true,
+        "active": true,
+        "category_id": null,
+        "brand_id": null,
+        "tax_class_id": null,
+        "variant": {
+          "sku": "SYNTH-NEW",
+          "name": null,
+          "base_unit_id": "1",
+          "default_cost": "0.0000",
+          "default_price": "12.3456",
+          "tracking_mode": "none",
+          "active": true
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/balances?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/balances?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/purchasing/orders?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/suppliers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/purchasing/orders?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/suppliers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sales?due=0&branch_id=1&own=1&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/customers?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products/1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/units"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/categories"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/brands"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/tax-classes"
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/products/1",
+      "body": {
+        "name": "Updated synthetic item",
+        "description": "Original optional description",
+        "product_type": "simple",
+        "track_inventory": true,
+        "active": true,
+        "category_id": null,
+        "brand_id": null,
+        "tax_class_id": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/products?page=1&search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/balances?location_id=3&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    }
+  ]
+}

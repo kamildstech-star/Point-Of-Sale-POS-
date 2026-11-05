@@ -1,0 +1,73 @@
+{
+    "date":  "2026-11-02",
+    "passed":  true,
+    "fixture_only":  true,
+    "real_laravel_writes":  false,
+    "theme_foundations":  {
+                              "light":  {
+                                            "theme":  "light",
+                                            "background":  "rgb(245, 247, 251)",
+                                            "card":  "rgb(255, 255, 255)",
+                                            "font":  "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+                                            "minimum_text_contrast":  5.11545934014105,
+                                            "failures":  [
+
+                                                         ]
+                                        },
+                              "dark":  {
+                                           "theme":  "dark",
+                                           "background":  "rgb(11, 18, 32)",
+                                           "card":  "rgb(21, 31, 49)",
+                                           "font":  "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+                                           "minimum_text_contrast":  6.958932509516232,
+                                           "failures":  [
+
+                                                        ]
+                                       },
+                              "checks":  {
+                                             "local_inter":  true,
+                                             "light_default":  true,
+                                             "both_palettes":  true,
+                                             "unchanged_navigation":  true,
+                                             "persistence_reload":  true,
+                                             "isolated_users":  true,
+                                             "keyboard_toggle_focus":  true,
+                                             "unsaved_form_and_focus_retained":  true,
+                                             "modal_bounds_320_390_720_834":  true,
+                                             "zoom_200_percent":  true
+                                         }
+                          },
+    "sidebar":  {
+                    "desktop_pinned_both_axes":  true,
+                    "viewport_height_bounded":  true,
+                    "short_menu_fits_content":  true,
+                    "last_menu_keyboard_reachable":  true,
+                    "mobile_sticky":  true,
+                    "mobile_internal_horizontal_scroll":  true,
+                    "print_column_removed":  true
+                },
+    "record_actions":  {
+                           "product_edit_prefilled":  true,
+                           "shared_edit_form":  true,
+                           "update_and_archive_once":  true,
+                           "delete_cancel_no_request":  true,
+                           "category_edit_preserves_slug":  true,
+                           "category_archive_refresh":  true,
+                           "desktop_mobile_bounds":  true
+                       },
+    "price_preserved":  true,
+    "desktop":  {
+                    "x":  200,
+                    "y":  24,
+                    "width":  1040,
+                    "height":  952,
+                    "bottom":  976
+                },
+    "mobile":  {
+                   "x":  12,
+                   "y":  51.390625,
+                   "width":  366,
+                   "height":  741.203125,
+                   "bottom":  792.59375
+               }
+}

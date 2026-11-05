@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Universal POS — Compact UI comparison</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;padding:24px;font:14px/1.5 system-ui,sans-serif;color:#1e293b;background:#f5f7fb}h1{font-size:24px}h2{font-size:18px;margin-top:32px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}figure{margin:0;background:white;border:1px solid #cbd5e1;border-radius:8px;overflow:hidden}figcaption{padding:12px;font-weight:600}img{display:block;width:100%;height:auto}a{color:#1d4ed8}p{max-width:900px}@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+<h1>Universal POS — Compact Enterprise UI</h1>
+<p>Before and after at 1440px. Open an image for its full resolution. Synthetic data only. Management pages use compact density; checkout retains larger touch controls.</p>
+<p><a href="../../COMPACT_UI.md">Implementation, sizing measurements and test notes</a></p>
+<main id="gallery"></main>
+<script>
+  const screens={dashboard:'Owner Overview',products:'Products','product-form':'Add product',reports:'Reports',checkout:'Point of sale'};
+  for(const [key,label] of Object.entries(screens)){
+    const section=document.createElement('section'),title=document.createElement('h2'),grid=document.createElement('div');title.textContent=label;grid.className='grid';section.append(title,grid);
+    for(const [folder,theme,caption] of [['before','light','Before'],['after','light','After — light'],['after','dark','After — dark']]){
+      const figure=document.createElement('figure'),description=document.createElement('figcaption'),link=document.createElement('a'),img=document.createElement('img');
+      description.textContent=caption;link.href=`${folder}/${key}-${theme}-1440.png`;img.src=link.href;img.alt=`${label}, ${caption}`;img.loading='lazy';link.append(img);figure.append(description,link);grid.append(figure);
+    }document.querySelector('#gallery').append(section);
+  }
+</script>
+</html>

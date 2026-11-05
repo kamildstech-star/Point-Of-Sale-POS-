@@ -1,0 +1,62 @@
+/* Keep navigation independent of the length or width of a workspace page. */
+.workspace { --sidebar-width: 250px; }
+
+@media (min-width: 761px) {
+  .workspace > .sidebar {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    z-index: 30;
+    width: var(--sidebar-width);
+    height: max-content;
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+  .workspace > .workspace-main { margin-inline-start: var(--sidebar-width); }
+  .workspace > .sidebar > .wordmark,
+  .workspace > .sidebar > .nav-caption,
+  .workspace > .sidebar > .sidebar-bottom { flex-shrink: 0; }
+  .workspace > .sidebar > .nav-caption { margin-top: 24px; }
+  .workspace > .sidebar > nav {
+    flex: 0 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-inline: 8px;
+    margin-inline: -8px;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+  }
+  .workspace > .sidebar > .sidebar-bottom { margin-top: 0; padding-top: 20px; }
+}
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  .workspace { --sidebar-width: 200px; }
+}
+
+@media (max-width: 760px) {
+  .workspace > .sidebar {
+    position: sticky;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    z-index: 30;
+    width: 100%;
+    padding: 16px 20px;
+  }
+  .workspace > .sidebar > nav {
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-block: 4px;
+    scrollbar-width: thin;
+    overscroll-behavior-inline: contain;
+  }
+  .workspace > .sidebar > nav > a { flex-shrink: 0; white-space: nowrap; }
+  .workspace > .workspace-main { margin-inline-start: 0; }
+}
+
+@media print {
+  .workspace > .workspace-main { margin-inline-start: 0; }
+}

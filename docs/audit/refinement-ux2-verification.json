@@ -1,0 +1,47 @@
+{
+  "phase": "UX-2 core",
+  "verified_on": "2026-11-05",
+  "timezone": "Asia/Karachi",
+  "passed": true,
+  "react": {
+    "tests": 229,
+    "files": 21,
+    "failed": 0
+  },
+  "browser": {
+    "core_checks": 185,
+    "staff_checks": 36,
+    "total_checks": 221,
+    "core_screenshots": 82,
+    "staff_screenshots": 21,
+    "total_screenshots": 103,
+    "copied_baselines": 6
+  },
+  "production_build": {
+    "passed": true,
+    "assets": [
+      {
+        "name": "index-BW5UMCsx.css",
+        "bytes": 59978
+      },
+      {
+        "name": "index-DDD_bpr7.js",
+        "bytes": 494969
+      }
+    ],
+    "new_dependencies": 0
+  },
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "backend_changes": false,
+  "evidence": {
+    "react": "docs/audit/private/refinement-ux2-vitest.json",
+    "core": "docs/audit/refinement-ux2-after.json",
+    "staff": "docs/audit/refinement-ux2-staff-browser.json"
+  },
+  "limitations": [
+    "Browser previews use synthetic HTTP fixtures, not the working Laravel database.",
+    "No physical scanner testing or fresh live-backend isolation audit.",
+    "Optional table density/preferences and UX-3+ are not included."
+  ]
+}

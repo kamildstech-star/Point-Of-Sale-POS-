@@ -1,17 +1,23 @@
 # Best Uniform POS: System and Contributor Guide
 
-Last analyzed: 2026-10-13.
+> Phase 0-1 update (2026-10-19): this guide preserves the legacy analysis baseline. Laravel now lives in POS backend and the React JavaScript shell in POS Frontend. New Sanctum session APIs, safe serialization, audit/recovery tooling and tests are documented in [docs/IMPLEMENTATION.md](docs/IMPLEMENTATION.md). Historical dependency/API/test claims below predate this implementation. Business workflows and historical migrations were preserved.
+
+Last reviewed: 2026-10-19. Original full analysis: 2026-10-13.
 
 This guide describes the code currently in this working tree, including local changes. It is intended for developers and coding agents working on the Point of Sale (POS). It records implemented behavior separately from incomplete or legacy features.
+
+The latest review compared the current source at commit `0bca7d9` with the previously analyzed project and rechecked sale/return handlers, route definitions, and local setup prerequisites. Application source and migrations are unchanged. However, `vendor/autoload.php` is currently missing, so Laravel cannot boot until Composer dependencies are restored. Historical runtime results below are dated and do not verify the present environment.
 
 The analysis covered routes, controllers, middleware, models, all 45 migrations, seeders, configuration, tests, and the main POS and storefront views. The migrations declare 27 tables, excluding Laravel's migration-tracking table. The database schema below is reconstructed from migration source; no live database schema or customer records were inspected, and migrations and seeders were not executed. Whether every migration has been applied to a particular installation must be checked separately.
 
 ## Contents
 
 - [System Overview](#system-overview)
+- [How the Project Works](#how-the-project-works)
 - [Architecture and File Map](#architecture-and-file-map)
 - [Authentication and Permissions](#authentication-and-permissions)
 - [Business Workflows](#business-workflows)
+- [Main Endpoint Reference](#main-endpoint-reference)
 - [Database Schema](#database-schema)
 - [Setup and Operations](#setup-and-operations)
 - [Known Gaps and Risks](#known-gaps-and-risks)
@@ -36,7 +42,7 @@ There is no separate API route file, SPA application, payment-gateway integratio
 | Component | Source and Use |
 | --- | --- |
 | PHP | `^8.2` in [composer.json](composer.json). |
-| Laravel | `^11.0`; installed runtime reported **11.8.0** during analysis. |
+| Laravel | `^11.0`; `composer.lock` pins **11.8.0**, also observed during the original runtime analysis. The current checkout is missing the Composer autoloader. |
 | Authentication scaffolding | `laravel/ui ^4.5`, plus custom login actions and middleware. |
 | Database access | Eloquent models and query builder. Configuration defaults to SQLite, but the dashboard contains MySQL-specific `DATE_FORMAT` SQL. MySQL/MariaDB compatibility matters for the actual POS. |
 | PDFs | `barryvdh/laravel-dompdf ^3.0`; report controllers mostly instantiate `Dompdf` directly. |
@@ -47,6 +53,63 @@ There is no separate API route file, SPA application, payment-gateway integratio
 | Time zone | `APP_TIMEZONE`, defaulting to `Asia/Karachi` in [config/app.php](config/app.php). Invoice formatting explicitly uses the same zone. |
 
 Dependency constraints above come from the project manifests, not a claim about the latest available package versions.
+
+## How the Project Works
+
+### A Typical Working Day
+
+This walkthrough explains the implemented screens and their intended order of use. It is based on source inspection; it does not imply that every operation has passed an end-to-end test.
+
+1. **Sign in:** open `/login`. Staff need role 1 or 2 and permission for the selected screen. The seeded Super Admin has all declared permissions.
+2. **Prepare the catalog:** add products, product-specific sizes, and schools with margin percentages. A product describes the item; its stock varies by school and size.
+3. **Set up inventory:** create a stock record for the school/product/size combination, with quantity, cost, and selling price. Its generated code is used by the POS scanner input.
+4. **Make a sale:** open `/order`, enter or look up a customer, select items and quantities, enter any discount, and record payment figures. The browser previews totals; the controller reads prices from stock and saves the order and lines.
+5. **Issue the invoice:** the AJAX response supplies an order ID, and the browser opens `/invoice/{orderId}` as a printable HTML invoice. The sale is available in the orders list.
+6. **Handle returns:** look up an order on `/return` and submit returned quantities. This increases order-line return counters and available stock; a separate monetary refund transaction is not implemented.
+7. **Review the day:** inspect sales, return, and stock reports, enter dealer receipts/payments, and save daily closing figures. Current reporting and accounting formulas differ, so their totals do not automatically reconcile.
+
+### Example: Sale and Partial Return
+
+Assume stock starts at 10 shirts, selling price is 1,000, school margin is 10%, and the customer buys two shirts with a 5% discount.
+
+| Stage | Inventory | Stored or Reported Amounts |
+| --- | --- | --- |
+| Before sale | `stocks.quantity = 10` | Catalog and stock records already exist. |
+| Sale saved | Quantity becomes 8. | Line quantity 2, returned 0, unit price 1,000, school margin 200, pre-discount total 2,200. Order discount is 110 and order total is 2,090. |
+| One shirt returned | Quantity becomes 9. | Line `returned` becomes 1 and order `is_return` becomes 1. Original order total remains 2,090; no refund or legacy return row is inserted. |
+| Reports read the sale | Quantity remains 9. | Sales reports value the remaining unit at 1,100 before discount. Return reports value the returned unit at 1,100. Daily accounts still sum the original order total. |
+
+This illustrates why an invoice, a report based on net quantities, and a daily account can show different amounts: their implementation uses different calculations and data sources.
+
+### Where Information Lives
+
+| Information | Storage |
+| --- | --- |
+| Staff and POS customer identity | `users`; customer rows can have null role and credentials. |
+| Product and size definitions | `products`, `sizes`. |
+| School details and margin | `schools`. |
+| Current availability, cost, selling price, and scanner code | `stocks`, identified by school/product/size. |
+| Sale totals, payment figures, and flags | `orders`. |
+| Historical selling price, quantities, returns, and margin | `order_items`. |
+| Dealer transactions and stored balances | `ledgers`, linked polymorphically to `business_dealers`. |
+| Daily closing totals and selected ledger IDs | `daily_account`. |
+| Low-stock threshold | `settings.low_stock_alert` means the row with key `low_stock_alert`, not a separate column. |
+| Public storefront content | Primarily Blade markup and static assets; controllers do not load the POS catalog. |
+
+Sale line prices and margins are stored at sale time. Product, school, and size labels are resolved through related records, so renaming catalog entries can change historical display labels. Stock stores the current balance rather than a complete movement history.
+
+### Feature Status
+
+| Area | Current Implementation |
+| --- | --- |
+| Catalog, inventory, sales, invoice | Database-backed handlers and views exist, with validation and quantity/concurrency gaps. |
+| Returns | Current creation uses order-line counters; legacy editing uses separate return tables. |
+| Reports and PDFs | Controllers/templates exist; discount and date-boundary discrepancies remain. |
+| Roles and permissions | JSON permission lists and middleware exist, with fixed role-ID restrictions. |
+| Dealer management | Models, views, and routes exist; routed dealer CRUD controller is missing. |
+| Ledger and daily closing | Handlers exist; balance conventions and totals need reconciliation. |
+| Public catalog, account, cart, checkout | Presentation pages exist; local customer and checkout persistence is incomplete. |
+| Product/school images, season, gender | Schema columns exist; active CRUD does not populate them. |
 
 ## Architecture and File Map
 
@@ -279,6 +342,39 @@ The views include copied Shopify/Uniformers markup, scripts, links, and form act
 
 Recent migrations add product/school image fields and product season/gender enums, but the current catalog controllers do not save those fields. No local upload workflow, customer address table, cart table, delivery/shipping model, or checkout handler was found.
 
+## Main Endpoint Reference
+
+These are session-based web endpoints, not a public REST API. Administrative requests require the middleware and permissions documented above. POST forms and AJAX calls need Laravel's CSRF token and the authenticated session. Preserve the path spelling and capitalization used in the route files.
+
+| Method and Path | Action / Result |
+| --- | --- |
+| `GET /login`, `POST /loginpost` | Show admin login; authenticate and redirect to dashboard. |
+| `GET /` | Dashboard, summary metrics, recent orders, and shared tasks. |
+| `POST /product/create`, `POST /size/create` | Create product and product-specific size. |
+| `POST /school.create` | Create a school and percentage margin; the dot is part of the registered path. |
+| `POST /stock/create` | Create stock and its CRUD log. |
+| `GET /order` | Load the POS screen and catalog/stock data. |
+| `POST /phoneCheck`, `POST /nameCheck` | Return JSON customer suggestions from users. |
+| `POST /order/create` | Save sale/lines, deduct stock, check alerts, and return success/order ID JSON. |
+| `GET /orders`, `GET /view/order/{id}` | Order listing and details. |
+| `GET /invoice/{orderId}` | Printable HTML invoice. |
+| `GET /cancel/order/{id}` | Restore quantities and mark cancelled; this GET changes data. |
+| `GET /getOrder/{id}` | Load JSON order lines for returns. Inner joins can omit an order with no header school or matching stock. |
+| `POST /return/create`, `GET /returns` | Update returned counters/stock; list returned orders. |
+| `GET /dailySales/fetch`, `GET /monthlySales/fetch`, `GET /annuallySales/fetch` | Grouped sales report JSON. |
+| `GET /returnSales/fetch`, `GET /Stocks/report/index` | Return-value report JSON and stock rows. |
+| `POST /dailySales/download`, `POST /monthlySales/download`, `POST /annuallySales/download` | Sales report PDFs. |
+| `POST /stocks/download`, `POST /sales/download` | Stock and return-sales PDFs respectively. |
+| `GET /ledger/{id?}` | Dealer ledger. The controller requires a valid dealer ID despite the optional route parameter. |
+| `POST /ledger/create/` | Add a dealer ledger transaction. |
+| `POST /dailyIncome`, `POST /dailyOutcome` | Add receipt/payment ledger entries. |
+| `POST /dailyAccount/create` | Save closing figures and ledger references. |
+| `POST /role/permission` | Store selected permission IDs in role JSON. |
+| `GET /frontend`, `GET /test`, `GET /all-products` | Public storefront views. |
+| `GET /frontend/account`, `GET /frontend/addresses`, `GET /frontend/cart` | Account/address/cart templates without a local persistence workflow. |
+
+Additional CRUD, edit, and delete routes are in [routes/web.php](routes/web.php). Incomplete actions are listed under [Known Gaps and Risks](#known-gaps-and-risks).
+
 ## Database Schema
 
 ### Reading This Schema
@@ -417,6 +513,8 @@ Model methods need to be checked against actual columns:
 
 ### Configuration
 
+Current local setup (2026-10-19): `.env` and root `node_modules` exist, but `vendor/autoload.php` and `public/build/manifest.json` do not. Restore locked PHP dependencies with `composer install` from the project root before running Artisan or PHPUnit. Build assets when using Vite-managed views. Preserve the existing `.env`; missing dependencies do not require rebuilding the database or regenerating the application key.
+
 Use PHP 8.2+, Composer, Node/npm for asset work, and a dedicated development database. The supplied `.env.example` defaults to SQLite; an installation intended to exercise the MySQL-specific dashboard should configure a compatible MySQL/MariaDB database. The actual `.env` values were not printed or copied into this guide.
 
 | Variable | Purpose / Checked-In Default |
@@ -530,7 +628,19 @@ These are observations from the present source, not fixes performed as part of c
 
 ## Verification Baseline
 
-The following checks were performed while writing this document:
+### Latest Review: 2026-10-19
+
+| Check | Result |
+| --- | --- |
+| Compare application source, migrations, views, configuration, manifests, and tests against `4114521` | No changes in those paths at commit `0bca7d9`. Rechecked the order/return handlers and route definitions. |
+| Attempt to bootstrap Laravel for route inspection | Blocked: `vendor/autoload.php` is missing. Restore Composer dependencies before runtime verification. |
+| Parse Composer lock file | Laravel 11.8.0, Laravel UI 4.5.2, and Laravel Dompdf 3.0.0 are locked. |
+| Local prerequisite paths | `.env`, root `node_modules`, and `public/node_modules` exist; Vite build manifest is absent. Secret values were not read. |
+| Application tests | Not rerun because the Composer autoloader is absent. Historical results below describe unchanged test source, not a successful current run. |
+
+### Historical Runtime Checks: 2026-10-13
+
+The following checks were performed during the original analysis when PHP dependencies were available:
 
 | Check | Result |
 | --- | --- |

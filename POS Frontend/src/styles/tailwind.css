@@ -1,0 +1,26 @@
+/* Utilities only: the existing application keeps its intentional native
+   control/table styles rather than acquiring a global reset during UI-1. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source("../");
+
+@custom-variant dark (&:where(.dark, .dark *));
+@theme inline {
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--app-bg);
+  --color-foreground: var(--app-text);
+  --color-card: var(--app-card);
+  --color-card-foreground: var(--app-text);
+  --color-popover: var(--app-elevated);
+  --color-popover-foreground: var(--app-text);
+  --color-muted: var(--app-subtle);
+  --color-muted-foreground: var(--app-muted-text);
+  --color-border: var(--app-border);
+  --color-input: var(--app-input-border);
+  --color-ring: var(--app-focus-ring);
+  --color-primary: var(--app-action);
+  --color-primary-foreground: var(--app-on-action);
+  --color-destructive: var(--app-danger-text);
+  --radius-lg: var(--app-radius-card);
+  --radius-md: var(--app-radius-control);
+}

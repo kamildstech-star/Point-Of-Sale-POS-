@@ -1,0 +1,85 @@
+{
+  "phase": "UX-4 capability-based dashboards",
+  "verified_on": "2026-11-05",
+  "passed": true,
+  "react": {
+    "tests": 263,
+    "files": 23,
+    "failed": 0,
+    "focused_tests": 43,
+    "focused_files": 3
+  },
+  "backend": {
+    "tests": 48,
+    "assertions": 1161,
+    "passed": true,
+    "suites": [
+      "DashboardFoundationTest",
+      "StaffDashboardTest"
+    ],
+    "database": "forced SQLite :memory:",
+    "evidence": "Fresh artisan test console result recorded in docs/UX4_REFINEMENT.md",
+    "note": "Optional PHPUnit result-cache write warning; tests passed."
+  },
+  "browser": {
+    "checks": 144,
+    "screenshots": 42,
+    "baseline_screenshots": 36,
+    "evidence": "docs/audit/refinement-ux4-after.json"
+  },
+  "production_build": {
+    "passed": true,
+    "assets": [
+      {
+        "name": "BusinessDashboard-qdtGgLqg.js",
+        "bytes": 12167
+      },
+      {
+        "name": "CapabilityDashboard-C9R7oTZO.js",
+        "bytes": 4860
+      },
+      {
+        "name": "DateRangeFilter-gHl5KA9G.js",
+        "bytes": 17725
+      },
+      {
+        "name": "index-BbJgI05Z.css",
+        "bytes": 64829
+      },
+      {
+        "name": "index-DT1qZYIE.js",
+        "bytes": 490660
+      },
+      {
+        "name": "StaffDashboard-BMJMqv4A.js",
+        "bytes": 14819
+      }
+    ],
+    "source_sha256": {
+      "src/features/dashboard/dashboardRegistry.js": "c7ba9c5beb7ac7befd5af3c8085c27088297d499bfcded073b412f66d27e0fb5",
+      "src/features/dashboard/DashboardWidgets.jsx": "8da616d12a405da0bf5b40d20921afe08f0784ed96b850cdeca0044ffc6c2e28",
+      "src/features/dashboard/CapabilityDashboard.jsx": "ef21872778f06907410829456432c5dcfd3bd768f400c52604bcd348740acc8f",
+      "src/features/dashboard/BusinessDashboard.jsx": "f76b8fafadfeaec6996eae2f71edb9b1d6d5c0d71cf2b77f1b06264b610180a8",
+      "src/features/dashboard/StaffDashboard.jsx": "a4648669aa0359a6280a89b1927d25eedfe289e5f148e98cf164c4af3e7a51e8",
+      "src/features/dashboard/useBusinessDashboard.js": "8e2d7c249f3d1092db304627b02a9105f776bd058c3d7502281b5524be45f505",
+      "src/features/dashboard/WorkspaceOverview.jsx": "25e867abed62022489c934c2770cc41dc7c09aa987518528cc0a24d840847f71",
+      "src/styles/dashboard.css": "e85d762e547494537f061dec29ec05896e1e4bee904d6f0c44820c6544e52aef"
+    },
+    "new_dependencies": 0
+  },
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "database_migrations": 0,
+  "backend_code_changes": false,
+  "evidence": {
+    "full": "docs/audit/private/refinement-ux4-vitest.json",
+    "focused": "docs/audit/private/refinement-ux4-focused-vitest.json",
+    "browser": "docs/audit/refinement-ux4-after.json",
+    "before": "docs/audit/refinement-ux4-before.json"
+  },
+  "limits": [
+    "No staging server or production deployment.",
+    "No new financial APIs, verified profit, bank or delivery metrics.",
+    "Broader dashboard D5-D7 requirements are separate; UX-5 awaits review."
+  ]
+}

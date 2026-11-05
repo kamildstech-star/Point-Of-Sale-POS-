@@ -18,3 +18,13 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/POS Frontend/node_modules/
+/POS Frontend/dist/
+/POS Frontend/coverage/
+/POS Frontend/.env*
+!/POS Frontend/.env.example
+/POS backend/storage/**
+!/POS backend/storage/**/
+!/POS backend/storage/**/.gitignore
+/POS backend/bootstrap/cache/*.php
+/docs/audit/private/

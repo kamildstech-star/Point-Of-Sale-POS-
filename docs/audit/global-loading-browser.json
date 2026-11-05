@@ -1,0 +1,53 @@
+{
+    "date":  "2026-11-02",
+    "passed":  true,
+    "fixture_only":  true,
+    "real_laravel_writes":  false,
+    "global_loading":  {
+                           "checks":  {
+                                          "single_passive_indeterminate_indicator":  true,
+                                          "initial_list_skeleton":  true,
+                                          "both_themes":  true,
+                                          "mobile_bounds":  true,
+                                          "reduced_motion":  true,
+                                          "existing_rows_during_refresh":  true,
+                                          "aria_busy_on_data":  true,
+                                          "inline_refresh_indicator":  true,
+                                          "concurrent_requests":  true,
+                                          "accessible_modal_host":  true,
+                                          "modal_close_does_not_reset_pending":  true,
+                                          "completed_requests_clear_indicator":  true
+                                      }
+                       },
+    "theme_foundations":  {
+                              "local_inter":  true,
+                              "light_default":  true,
+                              "both_palettes":  true,
+                              "unchanged_navigation":  true,
+                              "persistence_reload":  true,
+                              "isolated_users":  true,
+                              "keyboard_toggle_focus":  true,
+                              "unsaved_form_and_focus_retained":  true,
+                              "modal_bounds_320_390_720_834":  true,
+                              "zoom_200_percent":  true
+                          },
+    "sidebar":  {
+                    "desktop_pinned_both_axes":  true,
+                    "viewport_height_bounded":  true,
+                    "short_menu_fits_content":  true,
+                    "last_menu_keyboard_reachable":  true,
+                    "mobile_sticky":  true,
+                    "mobile_internal_horizontal_scroll":  true,
+                    "print_column_removed":  true
+                },
+    "record_actions":  {
+                           "product_edit_prefilled":  true,
+                           "shared_edit_form":  true,
+                           "update_and_archive_once":  true,
+                           "delete_cancel_no_request":  true,
+                           "category_edit_preserves_slug":  true,
+                           "category_archive_refresh":  true,
+                           "desktop_mobile_bounds":  true
+                       },
+    "price_preserved":  true
+}

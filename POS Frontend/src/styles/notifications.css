@@ -1,0 +1,33 @@
+﻿#pos-toast-root {
+  --toastify-font-family: var(--app-font);
+  --toastify-color-light: var(--app-elevated);
+  --toastify-color-dark: var(--app-elevated);
+  --toastify-text-color-light: var(--app-text);
+  --toastify-text-color-dark: var(--app-text);
+  --toastify-color-success: var(--app-success-text);
+  --toastify-color-error: var(--app-danger-text);
+  --toastify-color-warning: var(--app-warning-text);
+  --toastify-color-info: var(--app-info-text);
+  --toastify-color-progress-success: var(--app-success-text);
+  --toastify-color-progress-error: var(--app-danger-text);
+  --toastify-color-progress-warning: var(--app-warning-text);
+  --toastify-color-progress-info: var(--app-info-text);
+  --toastify-color-progress-light: var(--app-primary);
+  --toastify-icon-color-success: var(--app-success-text);
+  --toastify-icon-color-error: var(--app-danger-text);
+  --toastify-icon-color-warning: var(--app-warning-text);
+  --toastify-icon-color-info: var(--app-info-text);
+  --toastify-toast-width: min(380px, calc(100vw - 24px));
+  --toastify-toast-bd-radius: var(--app-radius-card);
+  --toastify-toast-shadow: var(--app-shadow);
+  --toastify-z-index: 2000;
+}
+#pos-toast-root .Toastify__toast { background: var(--app-elevated); color: var(--app-text); border: 1px solid var(--app-border); font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+#pos-toast-root .Toastify__close-button { width: 28px; height: 28px; min-height: 28px; padding: 4px; margin: 0; border: 0; border-radius: 4px; background: var(--app-elevated); color: var(--app-text); display: grid; place-items: center; opacity: 1; }
+#pos-toast-root .Toastify__close-button:hover { background: var(--app-hover); }
+#pos-toast-root .Toastify__toast-container { width: min(380px, calc(100vw - 24px)); }
+@media (max-width: 480px) { #pos-toast-root .Toastify__toast-container { top: max(10px, env(safe-area-inset-top)); right: 12px; left: auto; padding: 0; } }
+@media (prefers-reduced-motion: reduce) { #pos-toast-root .Toastify__toast { animation-duration: 1ms !important; transition-duration: 1ms !important; } }
+/* Preserve Toastify's animation-end dismissal timer while hiding its moving bar. */
+@media (prefers-reduced-motion: reduce) { #pos-toast-root .Toastify__progress-bar { visibility: hidden; } }
+@media print { #pos-toast-root { display: none !important; } }

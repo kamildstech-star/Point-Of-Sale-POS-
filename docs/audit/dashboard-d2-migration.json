@@ -1,0 +1,12 @@
+{
+    "checked_at": "2026-11-03T09:15:11+00:00",
+    "driver": "mysql",
+    "migration": "2026_11_03_160000_create_dashboard_access_foundation",
+    "original_tables_checked": 98,
+    "business_rows_unchanged": true,
+    "changed_tables": [],
+    "environment_unchanged": true,
+    "existing_role_grants_unchanged": true,
+    "platform_grants_created": 0,
+    "explicit_access_policies_created": 0
+}
