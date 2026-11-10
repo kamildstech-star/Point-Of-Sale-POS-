@@ -82,6 +82,16 @@
 .business-dashboard .dashboard-kpi-grid:not(.dashboard-secondary-metrics) .kpi-card:first-child { border-color: var(--app-accent-border); }
 .dashboard-detail-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 16px; margin-block: var(--app-page-gap); }
 .dashboard-detail-grid > * { min-width: 0; }
+.dashboard-series-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.dashboard-series-grid > section { min-width: 0; }
+.specialist-widgets > .chart-card { margin-block: var(--app-page-gap); }
+.staff-dashboard--associate > .quick-actions { margin-bottom: var(--app-page-gap); }
+.platform-shell .topbar-actions { display: flex; align-items: center; gap: 12px; }
+.platform-shell .app-sidebar .sidebar-link { display: flex; align-items: center; gap: 8px; }
+.platform-business-return { display: none; }
+@media (max-width: 1279px) { .platform-business-return { display: inline-flex; margin-inline-start: 12px; } }
+.platform-period { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+@media (max-width: 900px) { .dashboard-series-grid { grid-template-columns: 1fr; } }
 .dashboard-section { margin-block: 24px; }
 .dashboard-section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
 .dashboard-section-heading h2, .dashboard-section-heading p { margin: 0; }

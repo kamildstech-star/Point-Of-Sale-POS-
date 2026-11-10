@@ -17,6 +17,12 @@ export const dashboardWidgets = {
   'staff-activity': { resource: 'staff-activity', permits: tenant => company(tenant) && all('reports.view', 'team.view')(tenant) },
   alerts: { resource: 'alerts', permits: tenant => all('inventory.view')(tenant) && tenant.dashboard.allowed_widgets.includes('inventory') },
   cashier: { resource: 'cashier-summary', permits: any('cash.open', 'sales.view', 'sales.create') },
+  'inventory-trend': { resource: 'inventory-trend', permits: all('inventory.view') },
+  'purchase-orders': { resource: 'purchase-orders', permits: all('purchases.view') },
+  'supplier-overview': { resource: 'supplier-overview', permits: all('purchases.view') },
+  'accounting-trend': { resource: 'accounting-trend', permits: tenant => company(tenant) && all('reports.view')(tenant) },
+  'accounting-exceptions': { resource: 'accounting-exceptions', permits: tenant => company(tenant) && all('reports.view')(tenant) },
+  'personal-sales': { resource: 'personal-sales', permits: all('sales.view') },
 };
 
 export function allowsWidget(tenant, widget) {
@@ -46,8 +52,10 @@ export function dashboardPlan(tenant) {
     else if (allowsWidget(tenant, 'sales')) kind = 'sales';
     else if (allowsWidget(tenant, 'inventory')) kind = 'inventory';
   }
-  const layout = layouts[kind];
-  const widgets = layout.widgets.filter(widget => allowsWidget(tenant, widget));
+  if ((tenant.dashboard?.profile === 'sales_associate' || kind === 'sales') && allowsWidget(tenant, 'personal-sales')) kind = 'associate';
+  const layout = kind === 'associate' ? { title: 'Sales Associate Dashboard', widgets: ['personal-sales'] } : layouts[kind];
+  const specialist = ['inventory', 'purchasing', 'accounting'].includes(kind) ? ['inventory-trend', 'purchase-orders', 'supplier-overview', 'accounting-trend', 'accounting-exceptions'] : [];
+  const widgets = [...layout.widgets, ...specialist].filter(widget => allowsWidget(tenant, widget) && !(widget === 'sales-trend' && specialist.includes('accounting-trend') && allowsWidget(tenant, 'accounting-trend')));
   const resources = [...new Set(widgets.map(widget => dashboardWidgets[widget].resource))];
   // Summary is the primary snapshot when present; other failures stay local.
   resources.sort((a, b) => (a === 'summary' ? -1 : b === 'summary' ? 1 : 0));

@@ -44,6 +44,11 @@ export default function InventoryPage() {
     setLines([]);
     setDoc(null);
   }
+  useEffect(() => {
+    if (search.get('create') !== '1') return;
+    if (can('inventory.adjust') && ['adjustments', 'counts'].includes(tab)) start(tab);
+    const next = new URLSearchParams(search); next.delete('create'); setSearch(next, { replace: true });
+  }, [search.toString()]);
   async function save(fields) {
     if (form.kind === 'reservations' && lines.length !== 1) throw {
       response: {

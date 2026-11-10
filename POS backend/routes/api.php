@@ -17,6 +17,7 @@ Route::prefix('v1')->middleware('web')->withoutMiddleware(\Laravel\Sanctum\Http\
         Route::post('auth/logout', [AuthController::class, 'logout']);
         Route::get('me/context', [\App\Http\Controllers\Api\V1\DashboardContextController::class, 'show']);
         Route::get('platform/context', [\App\Http\Controllers\Api\V1\DashboardContextController::class, 'platform'])->middleware(\App\Http\Middleware\RequirePlatformPermission::class);
+        Route::get('platform/dashboard', [\App\Http\Controllers\Api\V1\PlatformDashboardController::class, 'index'])->middleware([\App\Http\Middleware\RequirePlatformPermission::class, 'throttle:dashboard-api']);
         Route::middleware(RequireLegacyStaff::class)->group(function () {
             Route::get('me', [AuthController::class, 'me']);
             Route::get('auth/me', [AuthController::class, 'me']);

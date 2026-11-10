@@ -1,0 +1,5 @@
+"FeedbackID","Role","TenantFixture","BranchPolicy","Scenario","ObservedBehavior","ExpectedBehavior","Severity","DeviceBrowser","Theme","Evidence","DefectID","Status","Reviewer","ReviewDate"
+"D7-PILOT-CASHIER","Cashier","","","New Sale, scanner, Hold/Recall and uncertain checkout retry","","","","","","","","Pending","",""
+"D7-PILOT-MANAGER","Branch manager","","","Branch scope, staff activity and approval drilldowns","","","","","","","","Pending","",""
+"D7-PILOT-SPECIALISTS","Inventory/Purchasing/Accountant","","","Source totals, unit separation, document links and missing-data labels","","","","","","","","Pending","",""
+"D7-PILOT-PLATFORM","Platform operator","","","Aggregate-only workspace, permission revocation and pilot rollback","","","","","","","","Pending","",""

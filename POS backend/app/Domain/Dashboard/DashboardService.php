@@ -19,7 +19,7 @@ final class DashboardService extends Operation
 
     private ?array $financialSnapshot = null;
 
-    public function __construct(private DashboardPeriod $period)
+    public function __construct(private DashboardPeriod $period, private bool $forceOwnSales = false)
     {
         $this->aggregate = new DecimalAggregate();
         $this->capabilities = new DashboardCapabilities($this->context());
@@ -32,7 +32,7 @@ final class DashboardService extends Operation
 
     private function records(string $table, bool $personal = false): Builder
     {
-        return (new RecordScope($this->context(), $this->period->branchId === null ? null : [$this->period->branchId], $personal && $this->capabilities->ownSales()))->query($table);
+        return (new RecordScope($this->context(), $this->period->branchId === null ? null : [$this->period->branchId], $personal && ($this->forceOwnSales || $this->capabilities->ownSales())))->query($table);
     }
 
     private function inPeriod(Builder $query, string $column): Builder
@@ -76,7 +76,7 @@ final class DashboardService extends Operation
         return $this->financialSnapshot = ['totals' => $totals, 'invoice_count' => $sales['count'], 'posted_return_count' => $returns['count'],
             'voided_invoice_count' => $this->sales()->where('sale_status', 'voided')->count(), 'posted_cancellation_count' => $this->returns()->where('kind', 'cancel')->count(),
             'average_invoice_value_including_tax' => $sales['count'] ? Decimal::round(bcdiv($totals['invoiced_sales'], (string) $sales['count'], 8), $this->scale()) : null,
-            'sales_scope' => $this->capabilities->ownSales() ? 'own' : 'permitted_branches',
+            'sales_scope' => $this->forceOwnSales || $this->capabilities->ownSales() ? 'own' : 'permitted_branches',
             'basis' => 'Original invoices by sold_at, including invoices later voided; subtract posted return/cancellation credits by posted_at, including credits for older invoices. Never exclude a voided invoice and also subtract its cancellation credit. Invoice count counts original invoices; average invoice value is before return credits.'];
     }
 
@@ -90,7 +90,7 @@ final class DashboardService extends Operation
         }
         if ($this->period->compare && $this->capabilities->allows('sales')) {
             $previous = $this->period->previous();
-            $comparison = (new self($previous))->financial();
+            $comparison = (new self($previous, $this->forceOwnSales))->financial();
             $changes = [];
             foreach (['net_sales_including_tax', 'net_sales_excluding_tax'] as $key) {
                 $base = $comparison['totals'][$key];
@@ -130,7 +130,7 @@ final class DashboardService extends Operation
             $series[] = ['date' => $day, 'net_sales_including_tax' => $including, 'net_tax' => $netTax, 'net_sales_excluding_tax' => Decimal::sub($including, $netTax)];
         }
 
-        return ['series' => $series, 'comparison_series' => $this->period->compare ? (new self($this->period->previous()))->trend()['series'] : null, 'basis' => $this->financial()['basis']];
+        return ['series' => $series, 'comparison_series' => $this->period->compare ? (new self($this->period->previous(), $this->forceOwnSales))->trend()['series'] : null, 'basis' => $this->financial()['basis']];
     }
 
     public function branches(): array
@@ -243,11 +243,17 @@ final class DashboardService extends Operation
         $sales = $this->financial();
         $payments = $this->inPeriod($this->records('sale_payments', true), 'recorded_at');
         $refunds = $this->inPeriod($this->records('refunds', true), 'refunded_at');
+        $expensesQuery = $this->inPeriod($this->records('retail_expenses')->where('status', 'posted'), 'posted_at');
+        $currency = $this->context()->tenant()->currency_code;
+        if ((clone $payments)->where('currency_code', '<>', $currency)->exists() || (clone $refunds)->where('currency_code', '<>', $currency)->exists()
+            || (clone $expensesQuery)->where('currency_code', '<>', $currency)->exists() || $this->records('sales', true)->where('currency_code', '<>', $currency)->exists()) {
+            throw new Conflict('Mixed-currency accounting requires an approved currency conversion policy.');
+        }
         $external = $this->aggregate->totals((clone $payments)->where('method_type_snapshot', '<>', 'exchange'), ['amount' => 'amount'])['amount'];
         $externalRefunds = $this->aggregate->totals((clone $refunds)->where('method_type_snapshot', '<>', 'exchange'), ['amount' => 'amount'])['amount'];
         $exchangeIn = $this->aggregate->totals((clone $payments)->where('method_type_snapshot', 'exchange'), ['amount' => 'amount'])['amount'];
         $exchangeOut = $this->aggregate->totals((clone $refunds)->where('method_type_snapshot', 'exchange'), ['amount' => 'amount'])['amount'];
-        $expenses = $this->aggregate->totals($this->inPeriod($this->records('retail_expenses')->where('status', 'posted'), 'posted_at'), ['amount' => 'amount'])['amount'];
+        $expenses = $this->aggregate->totals($expensesQuery, ['amount' => 'amount'])['amount'];
         $balances = $this->aggregate->totals($this->records('sales', true), ['receivables' => $this->aggregate->dueSql(), 'refunds_due' => $this->aggregate->dueSql(true)]);
 
         return ['net_sales_excluding_tax' => $sales['totals']['net_sales_excluding_tax'], 'posted_expenses' => $expenses,
@@ -403,5 +409,14 @@ final class DashboardService extends Operation
     private function pagination($page): array
     {
         return ['current_page' => $page->currentPage(), 'per_page' => $page->perPage(), 'total' => $page->total(), 'last_page' => $page->lastPage()];
+    }
+
+    public function personalSales(): array
+    {
+        $own = new self($this->period, true);
+        return ['scope' => 'own', 'sales' => $own->financial(), 'series' => $own->trend()['series'], 'receipts' => $own->recentSales(),
+            'customers_on_invoices' => $this->context()->allows('customers.view') ? $own->sales()->whereNotNull('customer_id')->distinct()->count('customer_id') : null,
+            'assigned_customers' => null, 'follow_ups' => null,
+            'basis' => 'Your original invoices by sold_at and posted credits against your invoices by posting time. Personal scope is mandatory even when another role grants reports. Customer count means distinct named customers on your invoices, not assignments; assignments and follow-ups are not stored.'];
     }
 }

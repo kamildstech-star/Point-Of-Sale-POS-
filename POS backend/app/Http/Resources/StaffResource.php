@@ -25,6 +25,7 @@ class StaffResource extends JsonResource
                 });
             } catch (\Symfony\Component\HttpKernel\Exception\HttpException $exception) { $request->session()->forget('active_tenant_id'); $permissions = []; }
         }
+        $platformPermissions = app(\App\Domain\Tenancy\PlatformAccess::class)->permissions($this->id);
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -33,6 +34,8 @@ class StaffResource extends JsonResource
             // Only the shell permission is mapped. Future business APIs require
             // tenant-aware authorization, introduced in phase 2.
             'permissions' => $permissions,
+            'platform_permissions' => $platformPermissions,
+            'platform_dashboard_enabled' => in_array('dashboard.platform.view', $platformPermissions, true) && (bool) config('dashboard.enabled') && (bool) config('dashboard.platform_enabled'),
             'active_tenant' => $tenant,
         ];
     }

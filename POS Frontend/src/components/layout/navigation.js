@@ -24,6 +24,7 @@ export function navigationFor(user) {
     { to: '/billing', label: 'Plans & billing', icon: 'billing', visible: business && can('billing.manage') },
     { to: '/legacy', label: 'Legacy mapping', icon: 'legacy', visible: business && user.active_tenant.is_legacy && can('legacy.view') },
     { to: '/workspace-tools', label: 'Workspace tools', icon: 'tools', visible: business && toolsPermissions.some(can) },
+    { to: '/platform/dashboard', label: 'Platform dashboard', icon: 'overview', visible: user?.platform_dashboard_enabled && user?.platform_permissions?.includes('dashboard.platform.view') },
   ].filter(item => item.visible).map(item => ({ ...item, group: workspace.has(item.to) ? 'workspace' : operations.has(item.to) ? 'operations' : 'management' }));
 }
 

@@ -42,6 +42,11 @@ export default function PurchasingPage() {
     setLines([]);
     setDoc(null);
   }
+  useEffect(() => {
+    if (search.get('create') !== '1') return;
+    if (can('purchases.manage')) start();
+    const next = new URLSearchParams(search); next.delete('create'); setSearch(next, { replace: true });
+  }, [search.toString()]);
   async function load(row) {
     setForm(null);
     setError(null);

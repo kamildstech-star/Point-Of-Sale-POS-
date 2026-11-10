@@ -1,5 +1,7 @@
 # Phases 0 and 1 implementation
 
+Latest dashboard update (2026-11-06): [DASHBOARD_D5_D6_D7.md](DASHBOARD_D5_D6_D7.md) documents the implemented specialist/personal/platform projections, backend support audit, local verification and pilot/rollback controls. D7 staging/device acceptance, pilot feedback and human sign-off remain pending. The earlier phase notes below describe their original scope.
+
 The professional UI refinement track has completed its UX-0 audit and implements UX-1 dashboard hierarchy/grouped navigation. See [UX1_REFINEMENT.md](UX1_REFINEMENT.md) for the reference-based sidebar, role/scope preservation, screenshots and phase review boundary.
 
 The React workspace now follows the Compact Enterprise sizing guide: compact management pages and a separate comfortable checkout profile. See [COMPACT_UI.md](COMPACT_UI.md) for the audit, shared components, sizing comparison, screenshots and verification. This UI refinement does not advance the separate dashboard D5–D7 phases.
@@ -14,7 +16,7 @@ Dashboard D2 supplies server-resolved access context, explicit branch/personal s
 
 Dashboard D3 connects the business owner/admin Overview screens to those APIs, with scoped KPIs, sales/branch charts, product rankings, stock alerts, approvals, quick actions and functioning report/document filters. See [DASHBOARD_D3.md](DASHBOARD_D3.md).
 
-Dashboard D4 adds the cashier and branch-manager Overview profiles, always-personal cashier metrics, branch staff activity and a real versioned Hold/Recall cart workflow with fresh quoting and atomic checkout. See [DASHBOARD_D4.md](DASHBOARD_D4.md). Existing staff access is preserved; explicit branch/personal restrictions remain enforced. D5–D7 remain pending.
+Dashboard D4 adds the cashier and branch-manager Overview profiles, always-personal cashier metrics, branch staff activity and a real versioned Hold/Recall cart workflow with fresh quoting and atomic checkout. See [DASHBOARD_D4.md](DASHBOARD_D4.md). Existing staff access is preserved; explicit branch/personal restrictions remain enforced. Subsequent D5–D7 engineering is documented above.
 
 The React sidebar fits its menus, stays pinned during desktop page scrolling and provides internal overflow for long menus. Mobile/tablet now use the D1 drawer. See [SIDEBAR_LAYOUT.md](SIDEBAR_LAYOUT.md).
 

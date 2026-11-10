@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Domain\Dashboard\DashboardCapabilities;
 use App\Domain\Dashboard\DashboardPeriod;
 use App\Domain\Dashboard\DashboardService;
+use App\Domain\Dashboard\SpecialistDashboardService;
 use App\Domain\Tenancy\TenantQueries;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\DashboardResource;
@@ -22,6 +23,8 @@ class DashboardController extends Controller
         'approvals' => ['approvals', 'approvals'], 'shift-summary' => ['shift', 'shift'], 'inventory-summary' => ['inventory', 'inventory'],
         'purchasing-summary' => ['purchasing', 'purchasing'], 'accounting-summary' => ['accounting', 'accounting'],
         'cashier-summary' => ['cashier', 'cashier'], 'staff-activity' => ['staff-activity', 'staffActivity'],
+        'inventory-trend' => ['inventory-trend', 'inventoryTrend'], 'purchase-orders' => ['purchase-orders', 'purchaseOrders'], 'supplier-overview' => ['supplier-overview', 'supplierOverview'],
+        'accounting-trend' => ['accounting-trend', 'accountingTrend'], 'accounting-exceptions' => ['accounting-exceptions', 'accountingExceptions'], 'personal-sales' => ['personal-sales', 'personalSales'],
     ];
 
     public function index(Request $request, string $resource, ?int $id = null)
@@ -40,7 +43,7 @@ class DashboardController extends Controller
         // Re-resolve membership/permissions and validate branch selection BEFORE cache access.
         // The fingerprint includes actor, all effective grants and explicit restrictions.
         $revision = (int) $this->query('audit_logs')->max('id');
-        $key = 'dashboard:v3:'.$this->context()->id().':'.hash('sha256', json_encode([
+        $key = 'dashboard:v4:'.$this->context()->id().':'.hash('sha256', json_encode([
             $this->context()->accessFingerprint(), $capabilities->toArray(), $period->key(), $resource, $id,
             $revision, $this->context()->tenant()->currency_code, config('app.timezone'),
         ], JSON_THROW_ON_ERROR));
@@ -49,7 +52,7 @@ class DashboardController extends Controller
         $hit = is_array($cached);
         if (! $hit) {
             $cached = DB::transaction(function () use ($method, $period, $id) {
-                $service = new DashboardService($period);
+                $service = in_array($method, ['inventoryTrend', 'purchaseOrders', 'supplierOverview', 'accountingTrend', 'accountingExceptions'], true) ? new SpecialistDashboardService($period) : new DashboardService($period);
 
                 return ['payload' => $id === null ? $service->$method() : $service->$method($id), 'generated_at' => now()->toIso8601String(), 'currency_scale' => $service->currencyScale()];
             });
@@ -60,7 +63,7 @@ class DashboardController extends Controller
         $meta = ['tenant_id' => $this->context()->id(), 'access_fingerprint' => $this->context()->accessFingerprint(),
             'scope' => $this->context()->branchRestricted() || $period->branchId !== null ? 'branch' : 'tenant',
             'branch_ids' => $period->branchId === null ? $this->context()->allowedBranchIds() : [$period->branchId],
-            'sales_scope' => $resource === 'cashier-summary' || $capabilities->ownSales() ? 'own' : 'permitted_branches', 'currency' => $this->context()->tenant()->currency_code,
+            'sales_scope' => in_array($resource, ['cashier-summary', 'personal-sales'], true) || $capabilities->ownSales() ? 'own' : 'permitted_branches', 'currency' => $this->context()->tenant()->currency_code,
             'cash_session_id' => $period->cashSessionId,
             'currency_scale' => $cached['currency_scale'], 'timezone' => $period->timezone, 'from' => $period->from, 'to' => $period->to,
             'start_inclusive' => $period->start()->toIso8601String(), 'end_exclusive' => $period->end()->toIso8601String(),

@@ -1,0 +1,571 @@
+{
+  "passed": true,
+  "fixture_only": true,
+  "working_database_writes": 0,
+  "checks": {
+    "inventory-light_title": true,
+    "inventory-light_contrast": true,
+    "inventory-light_button_names": true,
+    "inventory-light_chart_labels": true,
+    "inventory-light_1440_reflows": true,
+    "inventory-light_360_reflows": true,
+    "inventory-light_768_reflows": true,
+    "inventory-light_1280_reflows": true,
+    "inventory-light_zoom_200_reflows": true,
+    "inventory-light_keyboard_chart_data": true,
+    "inventory-light_chart_table_caption": true,
+    "inventory-dark_title": true,
+    "inventory-dark_contrast": true,
+    "inventory-dark_button_names": true,
+    "inventory-dark_chart_labels": true,
+    "inventory-dark_1440_reflows": true,
+    "inventory-dark_360_reflows": true,
+    "inventory-dark_768_reflows": true,
+    "inventory-dark_1280_reflows": true,
+    "inventory-dark_zoom_200_reflows": true,
+    "inventory-dark_keyboard_chart_data": true,
+    "inventory-dark_chart_table_caption": true,
+    "inventory_planned_resources_only": true,
+    "purchasing-light_title": true,
+    "purchasing-light_contrast": true,
+    "purchasing-light_button_names": true,
+    "purchasing-light_chart_labels": true,
+    "purchasing-light_1440_reflows": true,
+    "purchasing-light_360_reflows": true,
+    "purchasing-light_768_reflows": true,
+    "purchasing-light_1280_reflows": true,
+    "purchasing-light_zoom_200_reflows": true,
+    "purchasing-dark_title": true,
+    "purchasing-dark_contrast": true,
+    "purchasing-dark_button_names": true,
+    "purchasing-dark_chart_labels": true,
+    "purchasing-dark_1440_reflows": true,
+    "purchasing-dark_360_reflows": true,
+    "purchasing-dark_768_reflows": true,
+    "purchasing-dark_1280_reflows": true,
+    "purchasing-dark_zoom_200_reflows": true,
+    "purchasing_planned_resources_only": true,
+    "accounting-light_title": true,
+    "accounting-light_contrast": true,
+    "accounting-light_button_names": true,
+    "accounting-light_chart_labels": true,
+    "accounting-light_1440_reflows": true,
+    "accounting-light_360_reflows": true,
+    "accounting-light_768_reflows": true,
+    "accounting-light_1280_reflows": true,
+    "accounting-light_zoom_200_reflows": true,
+    "accounting-light_keyboard_chart_data": true,
+    "accounting-light_chart_table_caption": true,
+    "accounting-dark_title": true,
+    "accounting-dark_contrast": true,
+    "accounting-dark_button_names": true,
+    "accounting-dark_chart_labels": true,
+    "accounting-dark_1440_reflows": true,
+    "accounting-dark_360_reflows": true,
+    "accounting-dark_768_reflows": true,
+    "accounting-dark_1280_reflows": true,
+    "accounting-dark_zoom_200_reflows": true,
+    "accounting-dark_keyboard_chart_data": true,
+    "accounting-dark_chart_table_caption": true,
+    "accounting_planned_resources_only": true,
+    "associate-light_title": true,
+    "associate-light_contrast": true,
+    "associate-light_button_names": true,
+    "associate-light_chart_labels": true,
+    "associate-light_1440_reflows": true,
+    "associate-light_360_reflows": true,
+    "associate-light_768_reflows": true,
+    "associate-light_1280_reflows": true,
+    "associate-light_zoom_200_reflows": true,
+    "associate-light_keyboard_chart_data": true,
+    "associate-light_chart_table_caption": true,
+    "associate-dark_title": true,
+    "associate-dark_contrast": true,
+    "associate-dark_button_names": true,
+    "associate-dark_chart_labels": true,
+    "associate-dark_1440_reflows": true,
+    "associate-dark_360_reflows": true,
+    "associate-dark_768_reflows": true,
+    "associate-dark_1280_reflows": true,
+    "associate-dark_zoom_200_reflows": true,
+    "associate-dark_keyboard_chart_data": true,
+    "associate-dark_chart_table_caption": true,
+    "associate_planned_resources_only": true,
+    "platform-light_title": true,
+    "platform-light_contrast": true,
+    "platform-light_button_names": true,
+    "platform-light_chart_labels": true,
+    "platform-light_1440_reflows": true,
+    "platform-light_360_reflows": true,
+    "platform-light_768_reflows": true,
+    "platform-light_1280_reflows": true,
+    "platform-light_zoom_200_reflows": true,
+    "platform-light_keyboard_chart_data": true,
+    "platform-light_chart_table_caption": true,
+    "platform-dark_title": true,
+    "platform-dark_contrast": true,
+    "platform-dark_button_names": true,
+    "platform-dark_chart_labels": true,
+    "platform-dark_1440_reflows": true,
+    "platform-dark_360_reflows": true,
+    "platform-dark_768_reflows": true,
+    "platform-dark_1280_reflows": true,
+    "platform-dark_zoom_200_reflows": true,
+    "platform-dark_keyboard_chart_data": true,
+    "platform-dark_chart_table_caption": true,
+    "platform_planned_resources_only": true,
+    "platform_no_tenant_requests": true,
+    "platform_no_tenant_switcher": true,
+    "adjustment_keeps_branch": true,
+    "movement_server_pagination": true,
+    "adjustment_existing_modal": true,
+    "purchase_existing_modal": true,
+    "inventory_empty": true,
+    "local_error": true,
+    "retry_rechecks_context": true,
+    "slow_request_named_loader": true,
+    "pilot_rollback_old_summary": true,
+    "rollback_no_new_requests": true,
+    "platform_disabled": true,
+    "platform_revocation_clears_totals": true,
+    "no_mutations": true
+  },
+  "screenshots": [
+    "inventory-light-1440.png",
+    "inventory-light-360.png",
+    "inventory-light-details.png",
+    "inventory-dark-1440.png",
+    "inventory-dark-360.png",
+    "inventory-dark-details.png",
+    "purchasing-light-1440.png",
+    "purchasing-light-360.png",
+    "purchasing-light-details.png",
+    "purchasing-dark-1440.png",
+    "purchasing-dark-360.png",
+    "purchasing-dark-details.png",
+    "accounting-light-1440.png",
+    "accounting-light-360.png",
+    "accounting-light-details.png",
+    "accounting-dark-1440.png",
+    "accounting-dark-360.png",
+    "accounting-dark-details.png",
+    "associate-light-1440.png",
+    "associate-light-360.png",
+    "associate-light-details.png",
+    "associate-dark-1440.png",
+    "associate-dark-360.png",
+    "associate-dark-details.png",
+    "platform-light-1440.png",
+    "platform-light-360.png",
+    "platform-light-details.png",
+    "platform-dark-1440.png",
+    "platform-dark-360.png",
+    "platform-dark-details.png",
+    "adjustment-modal.png",
+    "purchase-order-modal.png",
+    "inventory-empty.png",
+    "inventory-error.png",
+    "inventory-slow.png",
+    "inventory-rollback.png",
+    "platform-disabled.png",
+    "platform-revoked.png"
+  ],
+  "timings_ms": {
+    "inventory-light": 670,
+    "inventory-dark": 483,
+    "purchasing-light": 409,
+    "purchasing-dark": 420,
+    "accounting-light": 398,
+    "accounting-dark": 656,
+    "associate-light": 335,
+    "associate-dark": 501,
+    "platform-light": 722,
+    "platform-dark": 480,
+    "inventory-interactions": 779,
+    "purchasing-form": 812,
+    "empty": 713,
+    "error": 446,
+    "slow": 367,
+    "rollback": 864,
+    "platform-disabled": 278,
+    "platform-revoked": 437
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory-trend?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory-trend?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/purchase-orders?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/supplier-overview?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/purchase-orders?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/supplier-overview?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/accounting-trend?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/accounting-exceptions?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/accounting-trend?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/accounting-exceptions?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/personal-sales?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/personal-sales?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/platform/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/platform/dashboard?from=2026-10-08&to=2026-11-06"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/platform/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/platform/dashboard?from=2026-10-08&to=2026-11-06"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory-trend?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&branch_id=2&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&branch_id=2&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory-trend?from=2026-10-08&to=2026-11-06&branch_id=2&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory-trend?from=2026-10-08&to=2026-11-06&branch_id=2&per_page=5&limit=5&page=2"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&branch_id=2&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&branch_id=2&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/inventory/adjustments?branch_id=2&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/purchase-orders?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/supplier-overview?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/purchasing/orders?page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/suppliers"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/catalog/locations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/pos/products?search="
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory-trend?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory-trend?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory-trend?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/inventory-trend?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/me/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/summary?from=2026-10-08&to=2026-11-06&compare=1&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/alerts?from=2026-10-08&to=2026-11-06&per_page=5&limit=5&page=1"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/platform/context"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/platform/context"
+    }
+  ]
+}

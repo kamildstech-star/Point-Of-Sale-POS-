@@ -12,6 +12,8 @@ Edit/delete update: use the pencil/trash icons for editable records. Additional 
 
 Validation update: forms now show JavaScript and Laravel errors beside fields. Test the invalid-input variations in [FORM_VALIDATION.md](FORM_VALIDATION.md), including direct API submissions that bypass the client. This update does not mark any manual case as passed.
 
+Dashboard D5–D7 update (2026-11-05): specialist activity, mandatory personal associate sales, an aggregate-only platform workspace and pilot controls are documented in [DASHBOARD_D5_D6_D7.md](DASHBOARD_D5_D6_D7.md). Additional D567 cases in the CSV supplement the original 257-case pack. Automated evidence is separate from manual UAT; complete [the role sign-off matrix](DASHBOARD_ROLE_SIGNOFF.md) and [pilot feedback](DASHBOARD_PILOT_FEEDBACK.csv) before widening rollout. Staging/device acceptance remains pending.
+
 ## 1. Test environment and prerequisites
 
 1. Use a **disposable UAT copy restored into a separately named database**, with matching backend/frontend configuration. Browser tests create real records in that copy. Do not test cancellation, stock changes, suspension, corrupt backups or cutover against the only working/source database.

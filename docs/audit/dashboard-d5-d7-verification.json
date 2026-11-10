@@ -1,0 +1,821 @@
+{
+  "phase": "Dashboard D5–D7",
+  "verified_on": "2026-11-06",
+  "passed": true,
+  "scope": "D5/D6 engineering and D7 local verification/rollout preparation; live pilot and human acceptance pending.",
+  "working_database_writes": 0,
+  "new_migrations": 0,
+  "live_deployment": false,
+  "specialist_default_enabled": false,
+  "platform_default_enabled": false,
+  "react": {
+    "tests": 293,
+    "files": 25,
+    "passed": 293,
+    "failed": 0
+  },
+  "laravel": {
+    "tests": 65,
+    "assertions": 1550,
+    "failures": 0,
+    "errors": 0,
+    "isolated_database": "SQLite :memory:"
+  },
+  "browser": {
+    "checks": 316,
+    "groups": [
+      {
+        "title": "D5/D6 — specialists, personal sales and platform",
+        "checks": 126,
+        "screenshots": 38,
+        "evidence": "dashboard-d5-d7-browser.json"
+      },
+      {
+        "title": "D7 — existing roles and custom permissions",
+        "checks": 144,
+        "screenshots": 42,
+        "evidence": "dashboard-d7-role-after.json"
+      },
+      {
+        "title": "D7 — cashier and checkout regressions",
+        "checks": 46,
+        "screenshots": 22,
+        "evidence": "dashboard-d7-pos-after.json"
+      }
+    ],
+    "screenshots": 102,
+    "baseline_screenshots": 16,
+    "widths": [
+      360,
+      768,
+      1280,
+      1440
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "fixture_only": true
+  },
+  "production_build": {
+    "passed": true,
+    "initial_js": {
+      "name": "index-BfoXj0at.js",
+      "bytes": 419100,
+      "sha256": "8f98b61a43ae8cf45a6dd1a4d4c485b14c3d4bf30263f7aba1519848639484e3"
+    },
+    "prior_ux5_initial_js": {
+      "name": "index-C_9Kqbu5.js",
+      "bytes": 416871
+    },
+    "bytes_added_to_initial_js": 2229,
+    "note": "Bundle bytes, not a production latency or MySQL performance benchmark. Specialist/platform views load on demand.",
+    "assets": [
+      {
+        "name": "BillingPage-qz86Rdxq.js",
+        "bytes": 5548,
+        "sha256": "a55b9a21ad27216a5565afd8e11677664c7cb795813689ad35f7a9d0d9d7d237"
+      },
+      {
+        "name": "BranchSwitcher-CQuHE3bN.js",
+        "bytes": 1139,
+        "sha256": "11c2a85a298102fa2843b08167bef14944d1748f02cbbcca89c8a9154065c54e"
+      },
+      {
+        "name": "BusinessDashboard-Dqh8K2yC.js",
+        "bytes": 12256,
+        "sha256": "e81ef08962ae8b19ee93d5c112579cfda37c3459924805676d7ade53f7b14a4d"
+      },
+      {
+        "name": "CapabilityDashboard-Ce6ZZxZk.js",
+        "bytes": 5686,
+        "sha256": "5f51b48491c6c8fa662b56e22b3c76a2129ba0363d70a8390edd20ae69157661"
+      },
+      {
+        "name": "CashPage-C8H-U5iI.js",
+        "bytes": 4671,
+        "sha256": "0d399799b1e9481f4302a4d792719611e94382c44add5b6b62d3e25317a81063"
+      },
+      {
+        "name": "CatalogPage-B4czcZOR.js",
+        "bytes": 4680,
+        "sha256": "91377a6b2f15d69fb37bf789e498fe9c9467045c7a2dc7c4e6ef31c38445b8ca"
+      },
+      {
+        "name": "DashboardDrilldown-DLScAwnx.js",
+        "bytes": 826,
+        "sha256": "3d5fbab602e802c818f5d2d5fff887c0310677936c12cdf9cd28d68b0e223151"
+      },
+      {
+        "name": "DashboardWidgets-C9Y5gHZH.js",
+        "bytes": 10148,
+        "sha256": "c01ac8a0e89484255b66ba7d7d128f9da8d46a960ac0552c98d0ff1d9df33b7c"
+      },
+      {
+        "name": "DateRangeFilter-Ddz-YD2Y.js",
+        "bytes": 6639,
+        "sha256": "d3285211848b113c0166802f8b8bc5cc6cbe83507115fcc646b938041b88bbf6"
+      },
+      {
+        "name": "ExpensesPage-DVrgZ8c7.js",
+        "bytes": 2740,
+        "sha256": "af1c005620d430c59aa8ac0690594deacb5ff66855db4ed118c80e78dd5d9713"
+      },
+      {
+        "name": "HeldCartControls-jI94PL3L.js",
+        "bytes": 7127,
+        "sha256": "1c917c432b67c0635abff59163a724517dd8275e8161d06e6450e54507145a41"
+      },
+      {
+        "name": "index-BfoXj0at.js",
+        "bytes": 419100,
+        "sha256": "8f98b61a43ae8cf45a6dd1a4d4c485b14c3d4bf30263f7aba1519848639484e3"
+      },
+      {
+        "name": "index-DhHPyHoc.css",
+        "bytes": 65793,
+        "sha256": "02dfd012baee5104aa641ffa90ffbc22998584659148d887ee862a656902597b"
+      },
+      {
+        "name": "InventoryPage-0L0HCrbc.js",
+        "bytes": 6723,
+        "sha256": "e73aa1d5702afaadface497443f333beea6b9ff8311d4a864b667c622fb40865"
+      },
+      {
+        "name": "LegacyPage-DQyLE7eR.js",
+        "bytes": 7301,
+        "sha256": "ec37f584c0dc8c8c57e62aa6042163fc2b6f1fcd6eab829d34704323d8689fa8"
+      },
+      {
+        "name": "PlatformWorkspace-DW7u0IqX.js",
+        "bytes": 7613,
+        "sha256": "e947196bfb8727139b1d12400111158ccdbbcd2d59ab44af20ce18fcb532c505"
+      },
+      {
+        "name": "PosPage-NZBTFZoQ.js",
+        "bytes": 16154,
+        "sha256": "e2a47002611ffbbd407c39d86492cc1221c21176642e307ac7610d0fc4b63224"
+      },
+      {
+        "name": "PosSettingsPage-Dt2uz0-P.js",
+        "bytes": 3625,
+        "sha256": "6a5d63619579e751a9f02fc3ac946f60422b57519fd796f7b6a74e9f00b6c995"
+      },
+      {
+        "name": "ProductForms-Bom6vm9o.js",
+        "bytes": 4848,
+        "sha256": "7c8082e4f18073c1d472fdd0d095b06183f802871ad8205f3ad53f83eacf918c"
+      },
+      {
+        "name": "ProductPage-CwRrAskh.js",
+        "bytes": 5682,
+        "sha256": "0117b6ab8cc5d1c6194b12ee79c8e5e80ee772200a43c460e9c7ac6727be5957"
+      },
+      {
+        "name": "PurchasingPage-C6e5zmjM.js",
+        "bytes": 7861,
+        "sha256": "3f60b2a315cc77f9f447baaadd6834475954d7f6093a451afe7153f1863190fe"
+      },
+      {
+        "name": "ReferencePage-CLLgiOzI.js",
+        "bytes": 9434,
+        "sha256": "730274192425716e15def578a105abe5b2d724cfade502274dfd540570ab5ce4"
+      },
+      {
+        "name": "ReportsPage-DVCQd9qF.js",
+        "bytes": 3336,
+        "sha256": "2268db8668f0d9dde0af9254428e0d4a26ca2e4d8abdf6f668cead8ab16ae9e9"
+      },
+      {
+        "name": "ReturnsPage-98yZGIXX.js",
+        "bytes": 6029,
+        "sha256": "3dd7e3ed2b2f1ede95ce0766081de44d9b828bb356353ca34ee4f66c7583f5fb"
+      },
+      {
+        "name": "SalesAssociateDashboard-DuLuHs2h.js",
+        "bytes": 4439,
+        "sha256": "77528cb7c9f253be675fc8d6bf69ed2e1dd7f75d49cfa4a667528be34bfcadf3"
+      },
+      {
+        "name": "SalesPage-BwsjgDnp.js",
+        "bytes": 5598,
+        "sha256": "195e64f8ed1fd4a0f50a346dea2b37582adb0aec8dc679f1a61b2d60c5787a34"
+      },
+      {
+        "name": "SpecialistWidgets-DWMSrrIt.js",
+        "bytes": 9418,
+        "sha256": "b18bab080dab7dc1bb230d3fe6c7d635aeadea37ef9c064f02a0fbca49d87680"
+      },
+      {
+        "name": "StaffDashboard-D8pMSTx2.js",
+        "bytes": 14911,
+        "sha256": "1890067d12b1b35569df6738b6ca6ad486e3f8544791b9fdda84a1dab69d1a9a"
+      },
+      {
+        "name": "TeamPage-CULucz4E.js",
+        "bytes": 4631,
+        "sha256": "e0afcd73203c74ce485e46eb8f48ff271e5f2f03cace5824f87136e443e711c4"
+      },
+      {
+        "name": "WorkspaceToolsPage-BpVK0e8d.js",
+        "bytes": 8451,
+        "sha256": "fc6847afa11ee9e2b4ce1e4f72e2090d6e9b39700061dfc7c4716b9b18329156"
+      }
+    ]
+  },
+  "manual_acceptance": {
+    "new_uat_cases": 20,
+    "status": "Not Run",
+    "role_signoff": "Pending",
+    "pilot_feedback": "Pending",
+    "staging": "No staging server supplied",
+    "devices": "Pending",
+    "representative_mysql_performance": "Pending"
+  },
+  "source_files": [
+    {
+      "path": "POS Frontend/src/api/client.js",
+      "sha256": "9d3d98fce93966bfacda617c390ebb5ab3fe2403fd55bd4cb1faf0440a07c8a8"
+    },
+    {
+      "path": "POS Frontend/src/api/errors.js",
+      "sha256": "ddb712f2b8ce90f6943b135c7ef18d1c64debb62f761bd6f03fdd179f301bb57"
+    },
+    {
+      "path": "POS Frontend/src/api/workspace.js",
+      "sha256": "c8991be21fb57db55b5efb654d8668da42518050b0132908f8002937ad41b1c3"
+    },
+    {
+      "path": "POS Frontend/src/app/App.jsx",
+      "sha256": "cc7c33196f698eab62cfc0dcd963a554b461c3042999f113305b3386860de759"
+    },
+    {
+      "path": "POS Frontend/src/auth/AuthProvider.jsx",
+      "sha256": "663f0c76e8bfb29881609eebc6de1c0f681f79346135e6f79281654c9045a6c9"
+    },
+    {
+      "path": "POS Frontend/src/components/GlobalLoader.jsx",
+      "sha256": "36df7a065abf9bad96048ff80ec0899f042faef8bf2769eec91fdb0357c8b172"
+    },
+    {
+      "path": "POS Frontend/src/components/GlobalToaster.jsx",
+      "sha256": "c729112b69812642854ca60472bc1bf1036aa00a1b97fa445128c7faeebdc586"
+    },
+    {
+      "path": "POS Frontend/src/components/Icon.jsx",
+      "sha256": "3afb74bf389b9bcd28f7a6aad27513b4c7a4320ef548e703587ad72496914883"
+    },
+    {
+      "path": "POS Frontend/src/components/LoadingState.jsx",
+      "sha256": "198e184698555f3b0ecec308b141ddd18335255889b2e493a28b854704c3fc40"
+    },
+    {
+      "path": "POS Frontend/src/components/LookupSelect.jsx",
+      "sha256": "562f3ba982dd19e8d1ac657d2fbf7ea742c5b74fd18c3becf98fcf705f5ff7f1"
+    },
+    {
+      "path": "POS Frontend/src/components/Modal.jsx",
+      "sha256": "20d73af93fd2bfb3507b2c46f21252c2309383c123bdff368fc4dae6380a6cd7"
+    },
+    {
+      "path": "POS Frontend/src/components/RecordActions.jsx",
+      "sha256": "08e85f04c7d7bbd23f45499d80bed6c61e1621e759e51c6b506724a28d2fa485"
+    },
+    {
+      "path": "POS Frontend/src/components/WorkspaceForm.jsx",
+      "sha256": "a046f41259faf192cdd372d2a139ac0b9289a7a3f6885129db70ba19aa2d222c"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/AlertList.jsx",
+      "sha256": "6ce8535a6090197871229f48c2b9b9b54d0ccd3f11d31ae9eb63faae1a54810b"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/BranchSwitcher.jsx",
+      "sha256": "99b0130a9c56d216b5507315461bdb6035873d3294bb1c401d27047504973fea"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/ChartCard.jsx",
+      "sha256": "662c8c6f4128dc35766d1d71154aaeba1882699276320815a028bdb351f76b74"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/DashboardContext.jsx",
+      "sha256": "9752bc84f39e89746ab7478b0ef49c9b970480448c92e640dee08bc837b2907d"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/DateRangeFilter.jsx",
+      "sha256": "a90e3546c6df4e766492539da6baf708040c1951c58615fc4ef25bbf189ac533"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/EmptyState.jsx",
+      "sha256": "921ecb67c74b898e32283bc30778150edf7459a765dec7a3e4bb39e6fb6cee3f"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/KpiCard.jsx",
+      "sha256": "cd66ef97256597685f9e2a3c24fa93078e1c99d77f430ed1a61118139755bc2c"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/PageHeader.jsx",
+      "sha256": "bf381890b617bcc567c479e88bde6ff1c8f22dc8901b1bd9d91f210579447978"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/QuickActionGrid.jsx",
+      "sha256": "2c75e2138ae78b922e40f7dfdd746b2efbe9e464b1305838ac678daef4765aaf"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/TrendChart.jsx",
+      "sha256": "0bfbd986ef42a9d751639ba21a4852d795703379d1a339ea71f34bfe52618969"
+    },
+    {
+      "path": "POS Frontend/src/components/dashboard/format.js",
+      "sha256": "aafebdfd4736b98c2862a1c8d75670ebb7e507e6eca67b45d3616703eea5eb86"
+    },
+    {
+      "path": "POS Frontend/src/components/layout/AppSidebar.jsx",
+      "sha256": "c616fca6beaa4352c167aeae74ca264d332ee7dcee28059bc3ab9044bfc749bd"
+    },
+    {
+      "path": "POS Frontend/src/components/layout/NavigationDrawer.jsx",
+      "sha256": "e8af49bff65a90b52592a49f62dd345bfcefb29cf54b02c71889e1a715e051f6"
+    },
+    {
+      "path": "POS Frontend/src/components/layout/NavigationFinder.jsx",
+      "sha256": "439c4b309c009f904c15b2abf20c789443d2a6211b96d3f3d80db1ea455de438"
+    },
+    {
+      "path": "POS Frontend/src/components/layout/RouteAccessibility.jsx",
+      "sha256": "3de833b66bc57ef588c20d18ca46c44a722b609a05e54c04de6b2262366f800c"
+    },
+    {
+      "path": "POS Frontend/src/components/layout/TenantSwitcher.jsx",
+      "sha256": "da339ee19853f2b199f35c7f33fe6e6b30e8b923dc13dfd7e400d8df14025785"
+    },
+    {
+      "path": "POS Frontend/src/components/layout/Topbar.jsx",
+      "sha256": "0ce37f9ebadcca22294b0feb6b414ff2b1049d70e7e6cef696fb22c792331422"
+    },
+    {
+      "path": "POS Frontend/src/components/layout/navigation.js",
+      "sha256": "3af8d68d72461146d268a3313e147fbf5fb56ab4b0176e688df253cd0f48a3d6"
+    },
+    {
+      "path": "POS Frontend/src/components/ui/DensityProvider.jsx",
+      "sha256": "e4cc052045ab55a1eeb473a9c80755d5af47cd24c9c8cd4288424beaf977b171"
+    },
+    {
+      "path": "POS Frontend/src/components/ui/ListPatterns.jsx",
+      "sha256": "a8e3d2714c38fbb9b1ff6ce9850a0a697198d556217a520ece37fb4326bd3a76"
+    },
+    {
+      "path": "POS Frontend/src/components/ui/TableViewport.jsx",
+      "sha256": "0618cc6393701e8239f82a056ff46189cfc43991d398dd29bda1bb3a902e258d"
+    },
+    {
+      "path": "POS Frontend/src/components/ui/primitives.jsx",
+      "sha256": "883785b81c919803c6bc27639add29ba68f8b2153c716cfc7d40af8767ffb976"
+    },
+    {
+      "path": "POS Frontend/src/components/ui/tableColumns.js",
+      "sha256": "7d297d76af299f5d6aaa2cb15ddb614847ec10a536cc228d8269e6b20a655e55"
+    },
+    {
+      "path": "POS Frontend/src/features/BusinessPage.jsx",
+      "sha256": "a8ea26709ac0acdc93bf01705c6965e269f12738281d9eb1c8ded067c3057a17"
+    },
+    {
+      "path": "POS Frontend/src/features/CatalogPage.jsx",
+      "sha256": "cf0d83067f9b133fad0092985a4665c2b75208f2626e482afdb630982b6a0c98"
+    },
+    {
+      "path": "POS Frontend/src/features/CategoryFields.jsx",
+      "sha256": "4d978311c0b97d6da4bfb7b365e20359423a4d901fc0e24c9d67d670fe601a50"
+    },
+    {
+      "path": "POS Frontend/src/features/LegacyEvidence.jsx",
+      "sha256": "d95cc19811e62e97384a262c9825c886e96151130e06278477c6c6cca5c8a1b9"
+    },
+    {
+      "path": "POS Frontend/src/features/LegacyPage.jsx",
+      "sha256": "71b084f6bc17d39ee23ab2a1da42eaf57495bd6da9ea565665ded6693a82fe5c"
+    },
+    {
+      "path": "POS Frontend/src/features/ProductForms.jsx",
+      "sha256": "e8dd5b8c5b77543c4f125d6e4c49cd6857ca9b9bbf2a8693e3de04bc7da8e4a4"
+    },
+    {
+      "path": "POS Frontend/src/features/ProductPage.jsx",
+      "sha256": "58063e5920b929ec96b6b1b15abe33693aa1a822ff926c7028b995306c9ead8b"
+    },
+    {
+      "path": "POS Frontend/src/features/ReferencePage.jsx",
+      "sha256": "f6bd79c83d9298373af56f5faf976d753d843da0e4da8f2c0c96ac66cdcb0575"
+    },
+    {
+      "path": "POS Frontend/src/features/RegistrationPage.jsx",
+      "sha256": "d1b64953ce4f9765772d5cf3b6b33a45d114943191b14333027898fbb9f042d9"
+    },
+    {
+      "path": "POS Frontend/src/features/TeamPage.jsx",
+      "sha256": "06295d33d1e1e915e9b4eb836ac5ddf08156bc7c5f5104d48520e756d3fe202a"
+    },
+    {
+      "path": "POS Frontend/src/features/catalogReferences.js",
+      "sha256": "cdf242265a42f850b2401570dfa76eee20bf71330a12ed629f1b5af37de81d68"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/BusinessDashboard.jsx",
+      "sha256": "f76b8fafadfeaec6996eae2f71edb9b1d6d5c0d71cf2b77f1b06264b610180a8"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/CapabilityDashboard.jsx",
+      "sha256": "fdee33397f46e80916beeb0daa69f98b447182dbb38155e4e2617b35fe63982c"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/DashboardWidgets.jsx",
+      "sha256": "8da616d12a405da0bf5b40d20921afe08f0784ed96b850cdeca0044ffc6c2e28"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/PlatformWorkspace.jsx",
+      "sha256": "1edf186b28bd87d08a8a198f33a422a2012847407ae4ac7c2430709d46f65f54"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/SalesAssociateDashboard.jsx",
+      "sha256": "e2ed3f34c479c45b0d657d18e7480dc9c686883e0baeb0eaf6eb03a73b22a830"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/SpecialistWidgets.jsx",
+      "sha256": "100398177cefc858fffdb3bea789c5da0e0dfc8273f25916cccd674fc642d7db"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/StaffDashboard.jsx",
+      "sha256": "a4648669aa0359a6280a89b1927d25eedfe289e5f148e98cf164c4af3e7a51e8"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/WorkspaceOverview.jsx",
+      "sha256": "f5a5fce06890af260dcc1cdf72dd8bbc310382874c3a0fa956ee682399cc2dbb"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/dashboardData.js",
+      "sha256": "3ed45fa48453fbd28b78dbf5d18f14f42655ef53bb7de0ef4726f86a30ae3c08"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/dashboardRegistry.js",
+      "sha256": "506bdaef745ad836b0541db74199c3351f6db47885ed0acbb82e5e8cc396ff22"
+    },
+    {
+      "path": "POS Frontend/src/features/dashboard/useBusinessDashboard.js",
+      "sha256": "ff8dd5199466d75eb2771f6d04ce68a963474db0f72ec7da25fe543677851140"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/BillingPage.jsx",
+      "sha256": "41e046fe456b32e09e92425373b54c8148f5aa8ba8d61d5ce8e9da438c300694"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/CashPage.jsx",
+      "sha256": "eeed4e01f443bc8e748285853c40677917b3de71184aa4e3d1d23e9e3e2115d2"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/DashboardDrilldown.jsx",
+      "sha256": "7fcf0532fc9df65917d3349943ff8484379af70e0f973e011ea09e734b6b8bca"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/ExpensesPage.jsx",
+      "sha256": "79bc4b59505436ba8be7aa949a68ce78e10c7565b55af06e9a28b3fbfd4743b7"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/HeldCartControls.jsx",
+      "sha256": "fe00f50fbdbbae7a5162ca47df861241b347ee167dc303819d0a2d5ef5b57ce9"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/HeldCartLoader.jsx",
+      "sha256": "1d7bba9b9a548ca7086b3ee857a33cfb61fbaf9d1457a0a10c8ec686b054098f"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/HeldCartsDialog.jsx",
+      "sha256": "f1b3d2790fc038c75808798a19511fae838ef45eb92f8f98c652618ccc137a0f"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/InventoryPage.jsx",
+      "sha256": "7d2095d0deb457b1111eb6a7c8fa21869792b239efb299034ce848039b983775"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/LegacyCustomers.jsx",
+      "sha256": "5fd373892bb26f9e5201d765aa9f8f83bcd182bcbb8923b84f0304e7fcb763e5"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/OperationUI.jsx",
+      "sha256": "d2b3976aea1bcd1db6ef6804a7760829ec81e8f600a3369e2668027e081e0d9c"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/OperationsNav.jsx",
+      "sha256": "2cb3d64f23bb4f59d62ec4d8a2ae3788cd65f5f30918187af1607d1c8c6a474e"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/OperationsReferencePage.jsx",
+      "sha256": "962a5debd2f171cc1a242997858f4d02ee2957707150f20924eaa60da2bfbb1c"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/PosPage.jsx",
+      "sha256": "4e8ad576dd586853f547601d8e9c7442e9be47a2ffce74a5e6e7753bac83cb44"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/PosQuoteStatus.jsx",
+      "sha256": "d9afc350f048b150c6df35dcd8364b3325b798a718c58992a2cc352c64452050"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/PosSettingsPage.jsx",
+      "sha256": "e2155cb258afd19a365944882f05ed9bb225f41ec874dd7d2aaae72385e6c5cf"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/PurchasingPage.jsx",
+      "sha256": "a2b59e5c932e06f16a2236e7e94bb10b0aa6c3737257e80609c4404c6dccbd83"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/ReportsPage.jsx",
+      "sha256": "b0451c7e03cbe2bd64a5f746ed95b4582f6f496802e0a7a1cb9607a9ce6f1e14"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/ReturnsPage.jsx",
+      "sha256": "6e5f7b5f82bda9bc3a8875e5044eaa1709c3d6e65ac6017e50c06cc953b8f2f9"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/SalesPage.jsx",
+      "sha256": "55daa5b40f3dd3b553e33aa27fe47a3fcd7ca4672eb50cbd4e4dec7cd65959fe"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/WorkspaceToolsPage.jsx",
+      "sha256": "8db3f8af3a18d0c7d38eadd1f5ad1310900b0b3ed542ca9013370c0e43bb9994"
+    },
+    {
+      "path": "POS Frontend/src/features/operations/posUsability.js",
+      "sha256": "a5c5337dbebc91229f0ca72b66e6561f88b23e03745601e8063a265050c88977"
+    },
+    {
+      "path": "POS Frontend/src/icons/catalog.js",
+      "sha256": "f253cea2de7bdb925115ef2ba244ab43e13d53f7c8b0d6875a6a393c965b68df"
+    },
+    {
+      "path": "POS Frontend/src/icons/legacy.js",
+      "sha256": "ad27507ac12b58fb9cc1af144372c3c7608803d482a5f0635348df69576e6c52"
+    },
+    {
+      "path": "POS Frontend/src/layouts/TenantLayout.jsx",
+      "sha256": "e6175b94f625cbb9fed13710d37a8ad9aece4e3f75285a16878af01e2f068149"
+    },
+    {
+      "path": "POS Frontend/src/loading/activity.js",
+      "sha256": "81383dd9f80bc1ba94338b8e960a0b7a08353db2bfb9564dce673cf585e213ee"
+    },
+    {
+      "path": "POS Frontend/src/loading/host.js",
+      "sha256": "9debccd6feee4a38b14e72a45699cb9d7bb44290bdc73ca016077a4b3b7a83f1"
+    },
+    {
+      "path": "POS Frontend/src/loading/trackAdapter.js",
+      "sha256": "16f445417536b0816978449f5793f9e068d8338eaee893f412e10ed09a49fef0"
+    },
+    {
+      "path": "POS Frontend/src/loading/useDelayedBusy.js",
+      "sha256": "b4bd60374ec12d1cdd09370d647720e1a11d6c4f48adb57427cf5eca104a55fb"
+    },
+    {
+      "path": "POS Frontend/src/main.jsx",
+      "sha256": "7e6f6f95d26710126a63bbcccac8bd6a521a438bd185d3396c1b8752a300d238"
+    },
+    {
+      "path": "POS Frontend/src/notifications/apiMessages.js",
+      "sha256": "ea73575fc848fb9bd40fb0b11b36f70ec7c8234c5e2f6a2fab28c9597f4db591"
+    },
+    {
+      "path": "POS Frontend/src/notifications/host.js",
+      "sha256": "607ef312e99858f14b2eb3d0fa95b2beae759362eae7772b7a9502ff00baedc2"
+    },
+    {
+      "path": "POS Frontend/src/notifications/index.js",
+      "sha256": "264bf6a7fdfde4d8327107c1f69d0c84f2a2abe60dc281a4fd7fb5505b5cdecd"
+    },
+    {
+      "path": "POS Frontend/src/styles/app.css",
+      "sha256": "1772dd9a4db9e45922829f6b35689a203a7441fb12064fe70e2308848125a107"
+    },
+    {
+      "path": "POS Frontend/src/styles/dashboard.css",
+      "sha256": "5c807a70c16538b4956dc720fc050ae937852640bb65546433f9779dd1cd1ffa"
+    },
+    {
+      "path": "POS Frontend/src/styles/foundations.css",
+      "sha256": "bcefb8e0a81842eefc944e7db4125f20662331bcb8761eea78247aaa837b7329"
+    },
+    {
+      "path": "POS Frontend/src/styles/icons.css",
+      "sha256": "f755438f69684b417f1208176618d5dc4ed8eb9750d32681419f7cec2dd08d99"
+    },
+    {
+      "path": "POS Frontend/src/styles/layout.css",
+      "sha256": "94eef2dcef8e8a19c0b992295ed6a3d5b5d0231d96ff47b1c52af23ae33933f2"
+    },
+    {
+      "path": "POS Frontend/src/styles/loading.css",
+      "sha256": "160d3697acbe20c21c979241cc12877ac07f0cd4c036f5bac95b1fcb8cc77167"
+    },
+    {
+      "path": "POS Frontend/src/styles/modal.css",
+      "sha256": "1125270e67e673d673cc6a6081d3d9bb9faa35de892549f7d1f1186c6d4c3e18"
+    },
+    {
+      "path": "POS Frontend/src/styles/notifications.css",
+      "sha256": "79ddcfc3a68162c133a416f0b14fc8c25b39c0f1683ff2f3e1b4cc389f65e385"
+    },
+    {
+      "path": "POS Frontend/src/styles/pos.css",
+      "sha256": "60c9b946f4a84b80145aa38a4f9abd5a6ecc4c8b6fb586258f11f5ad5a49ead2"
+    },
+    {
+      "path": "POS Frontend/src/styles/shell.css",
+      "sha256": "5f1a83def88cdaa32fb82612ed7216d7661c8214cfc7caf945d010a4c2f5406b"
+    },
+    {
+      "path": "POS Frontend/src/styles/tailwind.css",
+      "sha256": "611b15e78e98b75ee5c4d9c9a6d7087138957d8e33479b6c6ec59819f48ad7b1"
+    },
+    {
+      "path": "POS Frontend/src/styles/tokens.css",
+      "sha256": "da89a734a52eab6557e88fd57980f8a0477913f43e3bc63be1976451200377a4"
+    },
+    {
+      "path": "POS Frontend/src/test/Accessibility.test.jsx",
+      "sha256": "f28042800f81267eb48068d769c178271c78b238c884ac1ae98e92b86a6138b0"
+    },
+    {
+      "path": "POS Frontend/src/test/App.test.jsx",
+      "sha256": "583d717ace9d915daafd5f5c7537254b09643e0d1da0664682454a7a15729c63"
+    },
+    {
+      "path": "POS Frontend/src/test/BusinessDashboard.test.jsx",
+      "sha256": "783bb0f10e0b9128c87834c5921af878861697db536bae9b10ec8b5dd29d1c76"
+    },
+    {
+      "path": "POS Frontend/src/test/CompactUi.test.jsx",
+      "sha256": "eef976862ba13cc5e73b02cd895e7c2be1e7ec11d0badd8e84fe298ae5205bbb"
+    },
+    {
+      "path": "POS Frontend/src/test/DashboardCapabilities.test.jsx",
+      "sha256": "1ca34e8cc63050ddca00c13b6db256d1e40340e4fd232b90824997b35f8680b8"
+    },
+    {
+      "path": "POS Frontend/src/test/DashboardComponents.test.jsx",
+      "sha256": "752a913e0505f3ba889749ed5533d35c9b4fb08518f91f866267ef094e06177f"
+    },
+    {
+      "path": "POS Frontend/src/test/DashboardDrilldowns.test.jsx",
+      "sha256": "98263e9377ae67a5eb470ff7434d543955aae54bf122a93554c4cd2680993452"
+    },
+    {
+      "path": "POS Frontend/src/test/DashboardShell.test.jsx",
+      "sha256": "5adf966925b263aaaccddc23322c15f755b4bcc114f9020bc48c0b31642206a1"
+    },
+    {
+      "path": "POS Frontend/src/test/FinanceBilling.test.jsx",
+      "sha256": "93db51cb578ba5cf10dd6743a9c8632b87bb1b99d36868fd4d737d13e155720f"
+    },
+    {
+      "path": "POS Frontend/src/test/HeldCartsFlow.test.jsx",
+      "sha256": "727a82d39d661421e6cb26f629c0f44ee1a071067ab648aea4e46f0e4d17858f"
+    },
+    {
+      "path": "POS Frontend/src/test/InventoryPos.test.jsx",
+      "sha256": "2883c87ea2ba1d2bb0b660325a29b525d8c25ed9cbeec34a3c13c3de00c1f757"
+    },
+    {
+      "path": "POS Frontend/src/test/ListingForms.test.jsx",
+      "sha256": "b7a5abeb4e68db606a39635d5737dab2374a124f5ab9023a89038b92addefa2a"
+    },
+    {
+      "path": "POS Frontend/src/test/Loading.test.jsx",
+      "sha256": "4a081bab66d05cc429de1a5d223c1c2e209bb5dc3f6dd6c58ee9b42dd2afcf2f"
+    },
+    {
+      "path": "POS Frontend/src/test/Modal.test.jsx",
+      "sha256": "84619df33f329c6f9580521f03735b764e5931e2eef20f896daa07e13ecffa29"
+    },
+    {
+      "path": "POS Frontend/src/test/ModalFlows.test.jsx",
+      "sha256": "a25f678354333b8f504458bd74d90bc830c18468dbb7b3b6007334aa0556a690"
+    },
+    {
+      "path": "POS Frontend/src/test/Notifications.test.jsx",
+      "sha256": "5eae8e3b7181039147b3b61eda7c237fd03b4e6b624c00b076461cb0921b12ec"
+    },
+    {
+      "path": "POS Frontend/src/test/PosUsability.test.jsx",
+      "sha256": "e3ea70373bb1dbca8b779db80efedf39a7de459d4f3949857bab0109404b8939"
+    },
+    {
+      "path": "POS Frontend/src/test/RecordActions.test.jsx",
+      "sha256": "6c04eb11aa4c31d8c15a619ea5cdcd13c11bd013f6a32afc3a4fe637b0145845"
+    },
+    {
+      "path": "POS Frontend/src/test/RemixIcons.test.jsx",
+      "sha256": "fcdbf6dea12cfcb452b9fe8e9a7c52a319f17212b2ceb6c14362e1d3a24c4edf"
+    },
+    {
+      "path": "POS Frontend/src/test/SpecialistDashboard.test.jsx",
+      "sha256": "c0658600644527f6296893b5a9f8a9b3429f551c53adea56a0d64c5524f02e2d"
+    },
+    {
+      "path": "POS Frontend/src/test/StaffDashboard.test.jsx",
+      "sha256": "96afb9b729e192e09710d0399b486f6f0ec45efbcaaa7fff332012b7e491facf"
+    },
+    {
+      "path": "POS Frontend/src/test/TenantCatalog.test.jsx",
+      "sha256": "bfc6b7a04470d9db6182582ba017b90cc88963cbc9bdf2328184bcc5b8804a24"
+    },
+    {
+      "path": "POS Frontend/src/test/Theme.test.jsx",
+      "sha256": "68a5d2ab74d025b348d6660542403d90ed91a89d3497639b319c576c921b91e7"
+    },
+    {
+      "path": "POS Frontend/src/test/Validation.test.jsx",
+      "sha256": "6d126fad95ad08570fe814b95cd468b188ff1d60240f4540a6a774ee44b401db"
+    },
+    {
+      "path": "POS Frontend/src/test/client.test.js",
+      "sha256": "a1b91163918a7d8538389358c6cb2d0a36145225d7e788cdc045348426fb8125"
+    },
+    {
+      "path": "POS Frontend/src/test/fixtures/businessDashboard.js",
+      "sha256": "c9c1bb470352ed005667748ddfb9ddee1adefef8f93a0f13813c14eec1a148fb"
+    },
+    {
+      "path": "POS Frontend/src/test/fixtures/specialistDashboard.js",
+      "sha256": "6a4f78a51f3927a75ac93872537604f341d2667c248e8154a3029a840f85db01"
+    },
+    {
+      "path": "POS Frontend/src/test/setup.js",
+      "sha256": "3d2ae994fd4243581eec04a4bc1f27542de8e27bb11e5ac2d89ac45e770c404d"
+    },
+    {
+      "path": "POS Frontend/src/theme/ThemeProvider.jsx",
+      "sha256": "22f2d4ed51c11dcc3b37e1b31f795d5c99873c6d3c56b27fe692467e28299601"
+    },
+    {
+      "path": "POS Frontend/src/theme/ThemeToggle.jsx",
+      "sha256": "4b6ec16138b8da686d317d063085b658942cdf397aa73e941df63e9c212a3755"
+    },
+    {
+      "path": "POS Frontend/src/theme/preference.js",
+      "sha256": "d6e1f223ea257c547cd6dfd596897809bab04873759b32624d0d39fda95bab7f"
+    },
+    {
+      "path": "POS Frontend/src/validation/forms.js",
+      "sha256": "a08acd98afed39bb03ec58e2d1ec4f15b9f63bb1aefe9662f4d0e74569cdd7ed"
+    },
+    {
+      "path": "POS backend/app/Domain/Dashboard/DashboardCapabilities.php",
+      "sha256": "fbed637e9be26820d229d61296abc81083a76261db196d38eea98796494f1975"
+    },
+    {
+      "path": "POS backend/app/Domain/Dashboard/DashboardPeriod.php",
+      "sha256": "f08f9dc44938c0f85f9cd5053b19ff0df42fe98c89a195b099d5bd2ac0f6b1c6"
+    },
+    {
+      "path": "POS backend/app/Domain/Dashboard/DashboardService.php",
+      "sha256": "f865b9e6de24b2aa72956f5383318e67c5f10ab8a937d0fe7daec5d31e41ee24"
+    },
+    {
+      "path": "POS backend/app/Domain/Dashboard/DecimalAggregate.php",
+      "sha256": "527f61bf873e1d0b9cfb88aa67e87f4f3a66c56bec273ae15ede4902514aa889"
+    },
+    {
+      "path": "POS backend/app/Domain/Dashboard/SpecialistDashboardService.php",
+      "sha256": "305dcf4c4d4f9b7a0782c203751741b0d3dbe13fe89b7302b97e0b307f196236"
+    },
+    {
+      "path": "POS backend/app/Http/Controllers/Api/V1/DashboardContextController.php",
+      "sha256": "488f76eae0f651b0d66bdb6cf63cf9e8d7e5820d0f0f14a1c2e5a4f420d7e65e"
+    },
+    {
+      "path": "POS backend/app/Http/Controllers/Api/V1/DashboardController.php",
+      "sha256": "c92d68d44d68b866b63be1e7195889245eb823207a13959d07ac690eaac1a413"
+    },
+    {
+      "path": "POS backend/app/Http/Controllers/Api/V1/PlatformDashboardController.php",
+      "sha256": "290954edeb89266e7ce7661b1668807d98a1e7a791dbad1dbda7f47b4bfa0487"
+    },
+    {
+      "path": "POS backend/app/Http/Resources/StaffResource.php",
+      "sha256": "863186c24a360af5766728abce7a15876ae9188433aaf6fba69d2c58d93b66d4"
+    },
+    {
+      "path": "POS backend/config/dashboard.php",
+      "sha256": "5a47b153b5ddd01c28079f6fc556680c86401778b8f11301c787cc589d643560"
+    },
+    {
+      "path": "POS backend/routes/api.php",
+      "sha256": "dad3be5aef6ef3844f2e8b67f1a95cd5b5d23b0fcd374e66593b389fa1a9cad7"
+    },
+    {
+      "path": "POS backend/tests/Feature/SpecialistDashboardTest.php",
+      "sha256": "be394b41125c79bfa4d7ebb90e78d2017b1704c896b10c5ce282e4aaadd9f09e"
+    }
+  ]
+}

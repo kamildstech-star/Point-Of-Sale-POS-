@@ -6,6 +6,8 @@ Reviewed 2026-11-02 against the [supplied specification](UNIVERSAL_POS_ROLE_BASE
 
 **Subsequent UI refinement, 2026-11-05:** the separately approved [UX-4 refinement](UX4_REFINEMENT.md) adds a capability registry and specialist/custom summary views using the APIs already implemented in D2. Inventory, purchasing and accounting summaries now have useful React compositions. This does not complete the broader D5–D7 specialist/platform and release requirements below.
 
+**Latest scope, 2026-11-05:** the user's combined D5–D7 request authorizes the remaining dashboard engineering. [DASHBOARD_D5_D6_D7.md](DASHBOARD_D5_D6_D7.md) records the confirmed backend sources, implemented specialist/personal/platform projections, tests, screenshots and pilot/rollback controls. D5/D6 engineering and D7 local QA/rollout preparation are implemented; staging, physical-device acceptance, pilot feedback and human role/release sign-off remain pending. New specialist/platform pilots default off. The earlier status paragraphs and D0 findings below are historical.
+
 The original D0 pass changed no application code, dependency, environment, migration, permission grant, customer record or transaction. It saved only the supplied specification and this audit. No live database, credentials or Stripe account was accessed; schema findings come from source/migrations and prior implementation documentation, not a fresh live-schema audit.
 
 The specification's section 13 says: “Then implement each phase sequentially, seeking approval before expanding scope.” Its D0 acceptance requires review of the widget/data map. This document makes that review concrete before D1 begins.

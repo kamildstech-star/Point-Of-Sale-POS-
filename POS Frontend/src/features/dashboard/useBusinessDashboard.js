@@ -36,12 +36,12 @@ export default function useBusinessDashboard(tenantId, filters, revision, pages)
       for (let attempt = 0; attempt < 2; attempt++) {
         const outcomes = await Promise.allSettled(paths.map(resource => workspaceApi.get(destination(`dashboard/${resource}`, {
           ...selection, compare: resource === 'summary' ? 1 : undefined,
-          per_page: 5, limit: 5, page: resetPagination ? 1 : resource === 'branch-performance' ? pages.branches : resource === 'staff-activity' ? pages.staff : ['recent-sales', 'cashier-summary'].includes(resource) ? pages.receipts : 1,
+          per_page: 5, limit: 5, page: resetPagination ? 1 : resource === 'branch-performance' ? pages.branches : resource === 'staff-activity' ? pages.staff : resource === 'inventory-trend' ? pages.units : resource === 'purchase-orders' ? pages.orders : resource === 'supplier-overview' ? pages.suppliers : resource === 'accounting-exceptions' ? pages.exceptions : ['recent-sales', 'cashier-summary', 'personal-sales'].includes(resource) ? pages.receipts : 1,
         }), config)));
         if (!active()) return;
         const responses = {}, errors = {};
         outcomes.forEach((outcome, index) => {
-          if (outcome.status === 'fulfilled') { verifySnapshot(outcome.value, tenant, selection, paths[index] === 'cashier-summary' ? 'own' : tenant.dashboard.sales_scope); responses[paths[index]] = outcome.value; }
+          if (outcome.status === 'fulfilled') { verifySnapshot(outcome.value, tenant, selection, ['cashier-summary', 'personal-sales'].includes(paths[index]) ? 'own' : tenant.dashboard.sales_scope); responses[paths[index]] = outcome.value; }
           else {
             if ([401, 403, 419].includes(outcome.reason?.response?.status) || index === 0) throw outcome.reason;
             errors[paths[index]] = outcome.reason;

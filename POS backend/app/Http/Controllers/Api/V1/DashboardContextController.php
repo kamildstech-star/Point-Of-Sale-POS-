@@ -41,6 +41,6 @@ class DashboardContextController extends Controller
 
     public function platform(Request $request)
     {
-        return response()->json(['data' => ['user_id' => $request->user()->id, 'permissions' => app(PlatformAccess::class)->permissions($request->user()->id), 'scope' => 'platform']])->header('Cache-Control', 'private, no-store');
+        return response()->json(['data' => ['user_id' => $request->user()->id, 'permissions' => app(PlatformAccess::class)->permissions($request->user()->id), 'scope' => 'platform', 'dashboard_enabled' => (bool) config('dashboard.enabled') && (bool) config('dashboard.platform_enabled')]])->header('Cache-Control', 'private, no-store');
     }
 }

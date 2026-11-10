@@ -11,6 +11,8 @@ import { sameDashboardFilters } from './dashboardData';
 const BusinessDashboard = lazy(() => import('./BusinessDashboard'));
 const StaffDashboard = lazy(() => import('./StaffDashboard'));
 const CapabilityDashboard = lazy(() => import('./CapabilityDashboard'));
+const SalesAssociateDashboard = lazy(() => import('./SalesAssociateDashboard'));
+const firstPages = { branches: 1, receipts: 1, staff: 1, units: 1, orders: 1, suppliers: 1, exceptions: 1 };
 
 export const welcomeActions = [
   { label: 'New sale', to: '/pos', permission: 'sales.create', icon: 'pos', description: 'Open the selling desk' },
@@ -31,8 +33,8 @@ export default function WorkspaceOverview() {
 function DashboardEntry({ user }) {
   const [filters, setFilters] = useState({});
   const [revision, setRevision] = useState(0);
-  const [pages, setPages] = useState({ branches: 1, receipts: 1, staff: 1 });
-  function apply(next) { setFilters(next); setPages({ branches: 1, receipts: 1, staff: 1 }); }
+  const [pages, setPages] = useState(firstPages);
+  function apply(next) { setFilters(next); setPages(firstPages); }
   function onPage(kind, page) { setPages(previous => ({ ...previous, [kind]: page })); }
   return <DashboardRequest key={`${JSON.stringify(filters)}:${revision}:${JSON.stringify(pages)}`} user={user} filters={filters} revision={revision} pages={pages}
     onFilters={apply} onRefresh={() => setRevision(value => value + 1)} onPage={onPage}/>;
@@ -48,7 +50,9 @@ function DashboardRequest({ user, filters, revision, pages, onFilters, onRefresh
     ? <StaffDashboard state={state} onFilters={apply} onRefresh={onRefresh} onPage={onPage}/>
     : ['owner', 'admin'].includes(state.plan.kind)
       ? <BusinessDashboard state={state} onFilters={apply} onRefresh={onRefresh} onBranchPage={page => onPage('branches', page)}/>
-      : <CapabilityDashboard state={state} onFilters={apply} onRefresh={onRefresh} onPage={onPage}/>}</Suspense>;
+      : state.plan.kind === 'associate'
+        ? <SalesAssociateDashboard state={state} onFilters={apply} onRefresh={onRefresh} onPage={onPage}/>
+        : <CapabilityDashboard state={state} onFilters={apply} onRefresh={onRefresh} onPage={onPage}/>}</Suspense>;
 }
 
 export function WelcomeOverview({ user }) {
